@@ -1153,7 +1153,6 @@
 <species id="M_cpd00125_v0" name="5_10_Methylenetetrahydrofolate" compartment="v0" charge="-2" boundaryCondition="false"/>
 <species id="M_cpd00347_v0" name="5_10_Methenyltetrahydrofolate" compartment="v0" charge="-1" boundaryCondition="false"/>
 <species id="M_cpd02701_c0" name="S_Adenosyl_4_methylthio_2_oxobutanoate" compartment="c0" charge="0" boundaryCondition="false"/>
-<species id="M_cpd02701_b" name="S_Adenosyl_4_methylthio_2_oxobutanoate_b" compartment="c0" charge="0" boundaryCondition="true"/>
 <species id="M_cpd16441_c0" name="5_Deoxyribose_1_phosphate" compartment="c0" charge="-2" boundaryCondition="false"/>
 <species id="M_cpd30797_c0" name="5_deoxy_D_ribulose_1_phosphate" compartment="c0" charge="0" boundaryCondition="false"/>
 <species id="M_cpd02172_c0" name="Solanesyl_diphosphate" compartment="c0" charge="-2" boundaryCondition="false"/>

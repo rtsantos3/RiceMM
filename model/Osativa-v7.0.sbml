@@ -671,7 +671,6 @@
 <species id="M_cpd00017_m0" name="S_Adenosyl_L_methionine_m0" compartment="m0" charge="1" boundaryCondition="false"/>
 <species id="M_cpd00800_m0" name="8_Amino_7_oxononanoate_m0" compartment="m0" charge="0" boundaryCondition="false"/>
 <species id="M_cpd02701_m0" name="S_Adenosyl_4_methylthio_2_oxobutanoate_m0" compartment="m0" charge="0" boundaryCondition="false"/>
-<species id="M_cpd02701_b" name="S_Adenosyl_4_methylthio_2_oxobutanoate_m0_b" compartment="m0" charge="0" boundaryCondition="true"/>
 <species id="M_cpd00807_d0" name="L_histidinol_phosphate_d0" compartment="d0" charge="-1" boundaryCondition="false"/>
 <species id="M_cpd00930_d0" name="imidazole_acetol_phosphate_d0" compartment="d0" charge="-2" boundaryCondition="false"/>
 <species id="M_cpd00812_x0" name="5_phosphomevalonate_x0" compartment="x0" charge="-3" boundaryCondition="false"/>

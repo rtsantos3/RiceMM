@@ -1,0 +1,18 @@
+id,name,compartment,reversible,lower bound,upper bound,reaction
+pepc_trans_c0,Phosphoenolpyruvate Carboxylase,c0,,-1000,1000,'oaa_c0’ + ‘p
+pepc_trans_c1,Phosphoenolpyruvate Carboxylase,c1,,-1000,1000,
+ppdk_trans_u0,Pyruvate-Phosphate Dikinase,u0,,-1000,1000,
+ppdk_trans_u1,,u1,,-1000,1000,
+nadp,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,
+,,,,-1000,1000,

@@ -3941,3 +3941,16 @@ pheme_c1,Protoheme
 btcoa_c1,Butanoyl-CoA
 chor_c1,chorismate
 cdpdag_os_c1,CDP-diacylglycerol (oryza sativa specific)
+ptd1ino_os_m1,1-Phosphatidyl-D-myo-inositol (oryza sativa specific)
+ps_os_c1,Phosphatidylserine (oryza sativa specific)
+pgp_os_c1,Phosphatidylglycerophosphate (oryza sativa specific)
+pc_os_c1,Phosphatidylcholine (oryza sativa specific)
+pc_os_m1,Phosphatidylcholine (oryza sativa specific)
+succoa_c1,Succinyl-CoA
+glyc_DASH_R_c1,(R)-Glycerate
+na1_s1,Sodium
+t_DASH_ztnr_c1,trans-Zeatin riboside
+12oxophyt_c1,"(15Z)-12-Oxophyto-10,15-dienoate"
+pyr_v1,Pyruvate
+adp_x1,ADP
+b2coa_c1,Crotonoyl-CoA

@@ -1,6 +1,9 @@
 
-#Derived from B&B functions
+#Derived from B&B functions and some other home-made functions for QoL
 #These scripts are for manipulating models easily
+
+import os
+import pandas as pd
 
 
 #Can be used to set fixed bounds or two bounds
@@ -31,4 +34,18 @@ def set_fix_flux_ratio(r_dict, model):
 
 		#Return constraint
 		return constraint
+
+
+#Medium needs to be formatted 
+#Model is read from csv and needs to be formatted in the following format:
+#exchange reaction | upper bound
+
+
+def read_medium_csv(path, model):
+	
+	if os.path.exists(path):
+		read = pd.read_csv(path)
+	medium_dict = dict(read.values)
+	model.medium = medium_dict
+	return model.medium
 

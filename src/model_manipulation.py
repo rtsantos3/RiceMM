@@ -32,7 +32,7 @@ def set_fix_flux_ratio(r_dict, model):
 		r1_flux = value_list[1]
 
 	#Adding ratio constraints to model
-		constraint = model.problem.Constraint(r0_flux * r1_obj.flux_expression - r1_flux * r0_obj.flux_expression, lb=0, ub=1000)
+		constraint = model.problem.Constraint(r0_flux * r1_obj.flux_expression - r1_flux * r0_obj.flux_expression, lb=0, ub=0)
 		model.add_cons_vars(constraint)
 
 		#Return constraint
@@ -47,7 +47,17 @@ def read_medium_csv(path, model):
 	
 	if os.path.exists(path):
 		read = pd.read_csv(path)
-	medium_dict = dict(read.values)
-	model.medium = medium_dict
-	return model.medium
+		medium_dict = dict(read.values)
+		model.medium = medium_dict
+		return model.medium
 
+	else:
+		print("Path doesn't exist")
+
+	
+
+
+def read_enzyme_rates(path):
+	if os.path.exists(path):
+		read= pd.read_csv(path)
+	

@@ -18,23 +18,25 @@ def set_flux_bounds(r_id, bounds, model):
 
 def set_fix_flux_ratio(r_dict, model):
 	if len(r_dict) == 2: #Needs to be 2
+		key_list = list(r_dict.keys())
+		value_list = list(r_dict.values())
+
 		#First Reaction
-		r1_id = r_dict.keys()[0] 
-		r1_obj = model.reactions.get_by_id(r1_id)
-		r1_flux = r_dict.values()[0] 
+		r0_id = key_list[0]
+		r0_obj = model.reactions.get_by_id(r0_id)
+		r0_flux = value_list[0]
 
 		#Second Reaction
-		r2_id = r_dic.keys()[1]
-		r2_obj = model.reactions.get_by_id(r2_id)
-		r2_flux = r_dict.values()[1]
+		r1_id = key_list[1]
+		r1_obj = model.reactions.get_by_id(r1_id)
+		r1_flux = value_list[1]
 
-		#Adding ratio constraints to model
-		constraint = model.problem.constraint(r1_flux * r2_obj.flux_expression - r2_flux * r1_obj.flux_expression, lb=0, ub=0)
+	#Adding ratio constraints to model
+		constraint = model.problem.Constraint(r0_flux * r1_obj.flux_expression - r1_flux * r0_obj.flux_expression, lb=0, ub=1000)
 		model.add_cons_vars(constraint)
 
 		#Return constraint
 		return constraint
-
 
 #Medium needs to be formatted 
 #Model is read from csv and needs to be formatted in the following format:

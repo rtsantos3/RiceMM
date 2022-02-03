@@ -1,24 +1,24 @@
-ala_DASH_L_c0,L-Alanine
-arg_DASH_L_c0,L-Arginine
-asp_DASH_L_c0,L-Aspartate
-cys_DASH_L_c0,L-Cysteine
-glu_DASH_L_c0,L-Glutamate
+ala-L_c0,L-Alanine
+arg-L_c0,L-Arginine
+asp-L_c0,L-Aspartate
+cys-L_c0,L-Cysteine
+glu-L_c0,L-Glutamate
 gly_c0,Glycine
-his_DASH_L_c0,L-Histidine
-ile_DASH_L_c0,L-Isoleucine
-leu_DASH_L_c0,L-Leucine
-lys_DASH_L_c0,L-Lysine
-met_DASH_L_c0,L-Methionine
-phe_DASH_L_c0,L-Phenylalanine
-pro_DASH_L_c0,L-Proline
-ser_DASH_L_c0,L-Serine
-thr_DASH_L_c0,L-Threonine
-trp_DASH_L_c0,L-Tryptophan
-tyr_DASH_L_c0,L-Tyrosine
-val_DASH_L_c0,L-Valine
-glc_DASH_A_c0,alpha-D-glucose
+his-L_c0,L-Histidine
+ile-L_c0,L-Isoleucine
+leu-L_c0,L-Leucine
+lys-L_c0,L-Lysine
+met-L_c0,L-Methionine
+phe-L_c0,L-Phenylalanine
+pro-L_c0,L-Proline
+ser-L_c0,L-Serine
+thr-L_c0,L-Threonine
+trp-L_c0,L-Tryptophan
+tyr-L_c0,L-Tyrosine
+val-L_c0,L-Valine
+glc-A_c0,alpha-D-glucose
 sucr_c0,Sucrose
-fru_DASH_B_c0,beta-D-fructose
+fru-B_c0,beta-D-fructose
 starch_s0,"Starch (n=4, 4 glucose units)"
 cellulose_c0,Cellulose
 udparab_c0,UDP-L-arabinose
@@ -89,40 +89,40 @@ no3_e,Nitrate
 o2_e,O2
 pi_e,Phosphate
 sucr_e,Sucrose
-fru_DASH_B_e,beta-D-fructose
-glc_DASH_A_e,alpha-D-glucose
+fru-B_e,beta-D-fructose
+glc-A_e,alpha-D-glucose
 so4_e,Sulfate
 hco3_e,Bicarbonate
 hso3_e,Sulfite
 h2s_e,Hydrogen sulfide
 nh4_e,Ammonium
-asn_DASH_L_e,L-Asparagine
-gln_DASH_L_e,L-Glutamine
+asn-L_e,L-Asparagine
+gln-L_e,L-Glutamine
 etoh_e,Ethanol
 ac_e,Acetate
-lac_DASH_L_e,L-Lactate
+lac-L_e,L-Lactate
 tsul_e,Thiosulfate
 fe2_e,Fe2+
 fe3_e,Fe3+
 mg2_e,Magnesium
-ala_DASH_L_e,L-Alanine
-arg_DASH_L_e,L-Arginine
-asp_DASH_L_e,L-Aspartate
-cys_DASH_L_e,L-Cysteine
-glu_DASH_L_e,L-Glutamate
+ala-L_e,L-Alanine
+arg-L_e,L-Arginine
+asp-L_e,L-Aspartate
+cys-L_e,L-Cysteine
+glu-L_e,L-Glutamate
 gly_e,Glycine
-his_DASH_L_e,L-Histidine
-ile_DASH_L_e,L-Isoleucine
-leu_DASH_L_e,L-Leucine
-lys_DASH_L_e,L-Lysine
-met_DASH_L_e,L-Methionine
-phe_DASH_L_e,L-Phenylalanine
-pro_DASH_L_e,L-Proline
-ser_DASH_L_e,L-Serine
-thr_DASH_L_e,L-Threonine
-trp_DASH_L_e,L-Tryptophan
-tyr_DASH_L_e,L-Tyrosine
-val_DASH_L_e,L-Valine
+his-L_e,L-Histidine
+ile-L_e,L-Isoleucine
+leu-L_e,L-Leucine
+lys-L_e,L-Lysine
+met-L_e,L-Methionine
+phe-L_e,L-Phenylalanine
+pro-L_e,L-Proline
+ser-L_e,L-Serine
+thr-L_e,L-Threonine
+trp-L_e,L-Tryptophan
+tyr-L_e,L-Tyrosine
+val-L_e,L-Valine
 photonVis_e,"photon (380 to 750 nm, visible spectrum)"
 photon410_u0,"photon (281 to 306 nm, UVB)"
 photon430_u0,"photon (406 to 454 nm, indigo/blue)"
@@ -151,11 +151,11 @@ hso3_c0,HSO3-
 hco3_c0,Bicarbonate
 h2s_c0,Hydrogen sulfide
 nh4_c0,Ammonium
-asn_DASH_L_c0,L-Asparagine
-gln_DASH_L_c0,L-Glutamine
+asn-L_c0,L-Asparagine
+gln-L_c0,L-Glutamine
 etoh_c0,Ethanol
 ac_c0,Acetate
-lac_DASH_L_c0,L-Lactate
+lac-L_c0,L-Lactate
 tsul_c0,Thiosulfate
 fe2_c0,Fe2+
 fe3_c0,Fe3+
@@ -179,11 +179,11 @@ h_v0,H+
 pi_v0,Phosphate
 pyr_s0,Pyruvate
 2ahethmpp_s0,2-(alpha-Hydroxyethyl)thiamine diphosphate
-alac_DASH_S_s0,(S)-2-Acetolactate
+alac-S_s0,(S)-2-Acetolactate
 thmpp_s0,Thiamine diphosphate
 pyr_m0,Pyruvate
 2ahethmpp_m0,2-(alpha-Hydroxyethyl)thiamine diphosphate
-alac_DASH_S_m0,(S)-2-Acetolactate
+alac-S_m0,(S)-2-Acetolactate
 thmpp_m0,Thiamine diphosphate
 h2o2_v0,Hydrogen peroxide
 o2_v0,O2
@@ -193,15 +193,15 @@ h2o2_x0,Hydrogen peroxide
 o2_x0,O2
 h2o2_m0,Hydrogen peroxide
 o2_m0,O2
-gln_DASH_L_m0,L-Glutamine
+gln-L_m0,L-Glutamine
 akg_m0,2-Oxoglutarate
 fdxrd_m0,Reduced ferredoxin
-glu_DASH_L_m0,L-Glutamate
+glu-L_m0,L-Glutamate
 fdxox_m0,Oxidized ferredoxin
-gln_DASH_L_s0,L-Glutamine
+gln-L_s0,L-Glutamine
 akg_s0,2-Oxoglutarate
 fdxrd_s0,Reduced ferredoxin
-glu_DASH_L_s0,L-Glutamate
+glu-L_s0,L-Glutamate
 fdxox_s0,Oxidized ferredoxin
 co2_s0,CO2
 rb15bp_s0,"D-Ribulose 1,5-bisphosphate"
@@ -249,7 +249,7 @@ gdp_s0,GDP
 56dura_c0,"5,6-dihydrouracil"
 ura_c0,Uracil
 cala_c0,N-Carbamoyl-beta-alanine
-ala_DASH_B_c0,beta-Alanine
+ala-B_c0,beta-Alanine
 dump_c0,dUMP
 mlthf_c0,"5,10-Methylenetetrahydrofolate"
 dhf_c0,"7,8-Dihydrofolate"
@@ -296,12 +296,12 @@ adn_c0,Adenosine
 ade_c0,Adenine
 ade_s0,Adenine
 ahcys_c0,S-Adenosyl-L-homocysteine
-hcys_DASH_L_c0,L-Homocysteine
+hcys-L_c0,L-Homocysteine
 pep_s0,Phosphoenolpyruvate
 pep_c0,Phosphoenolpyruvate
 pyr_c0,Pyruvate
-mal_DASH_L_c0,L-Malate
-mal_DASH_L_s0,L-Malate
+mal-L_c0,L-Malate
+mal-L_s0,L-Malate
 acald_m0,Acetaldehyde
 acald_s0,Acetaldehyde
 accoa_c0,Acetyl-CoA
@@ -322,14 +322,14 @@ glu5sa_m0,L-Glutamate 5-semialdehyde
 glu5sa_s0,L-Glutamate 5-semialdehyde
 nh4_s0,Ammonium
 glx_m0,Glyoxylate
-ala_DASH_L_m0,L-Alanine
+ala-L_m0,L-Alanine
 gly_m0,Glycine
 glx_x0,Glyoxylate
-ala_DASH_L_x0,L-Alanine
+ala-L_x0,L-Alanine
 gly_x0,Glycine
 pyr_x0,Pyruvate
 glx_s0,Glyoxylate
-ala_DASH_L_s0,L-Alanine
+ala-L_s0,L-Alanine
 gly_s0,Glycine
 akg_c0,2-Oxoglutarate
 acglu_c0,N-Acetyl-L-glutamate
@@ -345,13 +345,13 @@ nadh_c0,Nicotinamide adenine dinucleotide - reduced
 gal_c0,D-Galactose
 g1p_c0,D-Glucose 1-phosphate
 tre_c0,Trehalose
-glc_DASH_B_c0,beta-D-glucose
+glc-B_c0,beta-D-glucose
 tre6p_c0,"alpha,alpha'-Trehalose 6-phosphate"
-g6p_DASH_A_c0,alpha-D-glucose 6 phosphate
-b_DASH_glucan_c0,"1,3-beta-D-Glucan"
-b_DASH_glucan_v0,"1,3-beta-D-Glucan"
-glc_DASH_B_v0,beta-D-glucose
-glc_DASH_A_v0,alpha-D-glucose
+g6p-A_c0,alpha-D-glucose 6 phosphate
+b-glucan_c0,"1,3-beta-D-Glucan"
+b-glucan_v0,"1,3-beta-D-Glucan"
+glc-B_v0,beta-D-glucose
+glc-A_v0,alpha-D-glucose
 g1p_v0,D-Glucose 1-phosphate
 udpg_v0,UDPglucose
 mnt_c0,Manninotriose
@@ -366,13 +366,13 @@ dadp_c0,dADP
 dgdp_c0,dGDP
 oaa_c0,Oxaloacetate
 oaa_s0,Oxaloacetate
-mal_DASH_L_x0,L-Malate
+mal-L_x0,L-Malate
 nad_x0,Nicotinamide adenine dinucleotide
 oaa_x0,Oxaloacetate
 nadh_x0,Nicotinamide adenine dinucleotide - reduced
-mal_DASH_L_m0,L-Malate
+mal-L_m0,L-Malate
 oaa_m0,Oxaloacetate
-mal_DASH_L_v0,L-Malate
+mal-L_v0,L-Malate
 nad_v0,Nicotinamide adenine dinucleotide
 oaa_v0,Oxaloacetate
 nadh_v0,Nicotinamide adenine dinucleotide - reduced
@@ -382,7 +382,7 @@ accoa_m0,Acetyl-CoA
 cit_m0,Citrate
 coa_m0,Coenzyme A
 oxa_c0,Oxalate
-asp_DASH_L_s0,L-Aspartate
+asp-L_s0,L-Aspartate
 iasp_s0,Iminoaspartate
 quln_s0,Quinolinate
 nicrnt_s0,Nicotinate D-ribonucleotide
@@ -393,8 +393,8 @@ nac_c0,Nicotinate
 ncam_c0,Nicotinamide
 nmn_c0,NMN
 r5p_c0,alpha-D-Ribose 5-phosphate
-asp_DASH_L_m0,L-Aspartate
-glu_DASH_L_x0,L-Glutamate
+asp-L_m0,L-Aspartate
+glu-L_x0,L-Glutamate
 akg_x0,2-Oxoglutarate
 succ_m0,Succinate
 gtp_m0,GTP
@@ -402,11 +402,11 @@ succoa_m0,Succinyl-CoA
 gdp_m0,GDP
 ahdt_c0,"2-Amino-4-hydroxy-6-(erythro-1,2,3-trihydroxypropyl)dihydropteridinetriphosphate"
 for_c0,Formate
-lys_DASH_L_s0,L-Lysine
+lys-L_s0,L-Lysine
 cadaverine_s0,Cadaverine
 L2aadp_c0,L-2-Aminoadipate
 L2aadp6sa_c0,L-2-Aminoadipate 6-semialdehyde
-saccrp_DASH_L_c0,L-Saccharopine
+saccrp-L_c0,L-Saccharopine
 2oxoadp_c0,2-Oxoadipate
 lpam_m0,Lipoamide
 adhlam_m0,S-Acetyldihydrolipoamide
@@ -419,7 +419,7 @@ sdhlam_m0,S-Succinyldihydrolipoamide
 2oxoadp_m0,2-Oxoadipate
 gdhlam_m0,S-glutaryldihydrolipoyllysine
 gcoa_m0,Glutaryl-CoA
-26dap_DASH_M_s0,"meso-2,6-Diaminoheptanedioate"
+26dap-M_s0,"meso-2,6-Diaminoheptanedioate"
 glyclt_x0,Glycolate
 icit_x0,Isocitrate
 succ_x0,Succinate
@@ -428,9 +428,9 @@ mthgxl_x0,Methylglyoxal
 nh4_x0,Ammonium
 2aobut_x0,L-2-Amino-3-oxobutanoic acid
 co2_x0,CO2
-thr_DASH_L_x0,L-Threonine
+thr-L_x0,L-Threonine
 4pasp_s0,4-Phospho-L-aspartate
-asn_DASH_L_s0,L-Asparagine
+asn-L_s0,L-Asparagine
 for_m0,Formate
 hso3_x0,HSO3-
 so4_x0,Sulfate
@@ -451,29 +451,29 @@ gabutn_c0,4-Guanidinobutanoate
 cbmp_c0,N-Carbamoylputrescine
 agm_c0,Agmatine
 no_c0,Nitric oxide
-citr_DASH_L_c0,L-Citrulline
+citr-L_c0,L-Citrulline
 cbp_c0,Carbamoyl phosphate
-pser_DASH_L_s0,O-Phospho-L-serine
-ser_DASH_L_s0,L-Serine
-cyst_DASH_L_s0,L-Cystathionine
+pser-L_s0,O-Phospho-L-serine
+ser-L_s0,L-Serine
+cyst-L_s0,L-Cystathionine
 2obut_s0,2-Oxobutanoate
-cys_DASH_L_s0,L-Cysteine
-hcys_DASH_L_s0,L-Homocysteine
+cys-L_s0,L-Cysteine
+hcys-L_s0,L-Homocysteine
 acser_c0,O-Acetyl-L-serine
 acser_s0,O-Acetyl-L-serine
-ser_DASH_L_m0,L-Serine
+ser-L_m0,L-Serine
 acser_m0,O-Acetyl-L-serine
 hpyr_s0,Hydroxypyruvate
-ser_DASH_L_x0,L-Serine
+ser-L_x0,L-Serine
 hpyr_x0,Hydroxypyruvate
 mmet_c0,S-Methyl-L-methionine
 5mthglu_x0,5-Methyltetrahydropteroyltri-L-glutamate
-hcys_DASH_L_x0,L-Homocysteine
-met_DASH_L_x0,L-Methionine
+hcys-L_x0,L-Homocysteine
+met-L_x0,L-Methionine
 thglu_x0,Tetrahydropteroyl-tri-L-glutamate
 5mthglu_v0,5-Methyltetrahydropteroyltri-L-glutamate
-hcys_DASH_L_v0,L-Homocysteine
-met_DASH_L_v0,L-Methionine
+hcys-L_v0,L-Homocysteine
+met-L_v0,L-Methionine
 thglu_v0,Tetrahydropteroyl-tri-L-glutamate
 5mthglu_c0,5-Methyltetrahydropteroyltri-L-glutamate
 thglu_c0,Tetrahydropteroyl-tri-L-glutamate
@@ -488,7 +488,7 @@ achms_c0,O-Acetyl-L-homoserine
 sprm_c0,Spermine
 ametam_c0,S-Adenosylmethioninamine
 1acpc_c0,1-Aminocyclopropane-1-carboxylate
-ascb_DASH_L_c0,L-Ascorbate
+ascb-L_c0,L-Ascorbate
 dhdascb_c0,Dehydroascorbate
 cyan_c0,Hydrogen cyanide
 ethylene_c0,Ethylene
@@ -510,13 +510,13 @@ ind3acg_c0,Indole-3-acetyl-beta-1-D-glucoside
 iaainost_c0,indole-3-acetyl-myo-inositol
 iaainostgal_c0,5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
 iaainostarab_c0,Indol-3-ylacetyl-myo-inositol L-arabinoside
-iaa_DASH_ala_c0,indole-3-acetyl-alanine
-iaa_DASH_leu_c0,indole-3-acetyl-leucine
-iaa_DASH_asp_c0,indole-3-acetyl-aspartate
-iaa_DASH_glu_c0,indole-3-acetyl-glutamate
-iaa_DASH_gln_c0,indole-3-acetyl-glutamine
+iaa-ala_c0,indole-3-acetyl-alanine
+iaa-leu_c0,indole-3-acetyl-leucine
+iaa-asp_c0,indole-3-acetyl-aspartate
+iaa-glu_c0,indole-3-acetyl-glutamate
+iaa-gln_c0,indole-3-acetyl-glutamine
 3ig3p_s0,C'-(3-Indolyl)-glycerol 3-phosphate
-trp_DASH_L_s0,L-Tryptophan
+trp-L_s0,L-Tryptophan
 g3p_s0,D-glyceraldehyde 3-phosphate
 indole_s0,Indole
 pphn_c0,Prephenate
@@ -536,17 +536,17 @@ hgentis_c0,Homogentisate
 34hpp_s0,4-Hydroxyphenylpyruvate
 hgentis_s0,Homogentisate
 4mlacac_c0,4-Maleylacetoacetate
-tyr_DASH_L_s0,L-Tyrosine
+tyr-L_s0,L-Tyrosine
 4fumacac_c0,4-Fumarylacetoacetate
 acac_c0,Acetoacetate
 fum_c0,Fumarate
 arogenate_s0,L-Arogenate
-phe_DASH_L_s0,L-Phenylalanine
+phe-L_s0,L-Phenylalanine
 chol_c0,Choline
 betald_c0,Betaine aldehyde
 glybet_c0,Glycine betaine
 glybet_s0,Glycine betaine
-met_DASH_L_s0,L-Methionine
+met-L_s0,L-Methionine
 dmetgly_s0,"N,N-dimethylglycine"
 fad_s0,Flavin adenine dinucleotide oxidized
 fadh2_s0,Flavin adenine dinucleotide reduced
@@ -558,28 +558,28 @@ dhlpro_m0,Dihydrolipolprotein
 thf_m0,"5,6,7,8-Tetrahydrofolate"
 mlthf_m0,"5,10-Methylenetetrahydrofolate"
 man6p_c0,D-Mannose 6-phosphate
-f6p_DASH_B_c0,beta-D-Fructose 6-phosphate
+f6p-B_c0,beta-D-Fructose 6-phosphate
 man1p_c0,D-mannose 1-phosphate
 man_c0,D-Mannose
 mhdascb_c0,Monodehydroascorbate
 mhdascb_s0,Monodehydroascorbate
-ascb_DASH_L_s0,L-Ascorbate
+ascb-L_s0,L-Ascorbate
 mhdascb_m0,Monodehydroascorbate
-ascb_DASH_L_m0,L-Ascorbate
+ascb-L_m0,L-Ascorbate
 dhdascb_s0,Dehydroascorbate
 gthrd_v0,Reduced glutathione
-glu_DASH_L_v0,L-Glutamate
+glu-L_v0,L-Glutamate
 cgly_v0,Cys-Gly
 gluala_c0,5-L-Glutamyl-L-alanine
 cgly_c0,cgly[c]
 5oxpro_c0,5-oxo-L-proline
-cys_DASH_L_v0,L-Cysteine
+cys-L_v0,L-Cysteine
 gly_v0,Glycine
 glucys_s0,gamma-L-Glutamyl-L-cysteine
-cys_DASH_L_m0,L-Cysteine
+cys-L_m0,L-Cysteine
 glucys_m0,gamma-L-Glutamyl-L-cysteine
 gallac_c0,"L-Galactono-1,4-lactone"
-gal_DASH_L_c0,L-Galactose
+gal-L_c0,L-Galactose
 gdpgal_c0,GDP-L-galactose
 gdpmann_c0,GDP-D-mannose
 gdpgul_c0,GDP-L-gulose
@@ -589,24 +589,24 @@ fuc1p_c0,L-Fucose 1-phosphate
 lald_c0,L-Lactaldehyde
 fc1p_c0,L-Fuculose 1-phosphate
 dhap_c0,Dihydroxyacetone phosphate
-fcl_DASH_L_c0,L-fuculose
-fuc_DASH_L_c0,L-Fucose
-fdp_DASH_B_c0,"beta-D-Fructose 1,6-bisphosphate"
-fdp_DASH_B_s0,"beta-D-Fructose 1,6-bisphosphate"
-f6p_DASH_B_s0,beta-D-Fructose 6-phosphate
+fcl-L_c0,L-fuculose
+fuc-L_c0,L-Fucose
+fdp-B_c0,"beta-D-Fructose 1,6-bisphosphate"
+fdp-B_s0,"beta-D-Fructose 1,6-bisphosphate"
+f6p-B_s0,beta-D-Fructose 6-phosphate
 suc6p_c0,sucrose-6-phosphate
-f6p_DASH_B_v0,beta-D-Fructose 6-phosphate
+f6p-B_v0,beta-D-Fructose 6-phosphate
 suc6p_v0,Sucrose 6-phosphate
-g6p_DASH_A_s0,alpha-D-glucose 6 phosphate
-g6p_DASH_B_c0,beta-D-glucose 6-phosphate
-g6p_DASH_B_s0,beta-D-glucose 6-phosphate
+g6p-A_s0,alpha-D-glucose 6 phosphate
+g6p-B_c0,beta-D-glucose 6-phosphate
+g6p-B_s0,beta-D-glucose 6-phosphate
 no2_s0,Nitrite
 no3_v0,Nitrate
 no2_v0,Nitrite
-fru_DASH_B_v0,beta-D-fructose
-g6p_DASH_B_v0,beta-D-glucose 6-phosphate
+fru-B_v0,beta-D-fructose
+g6p-B_v0,beta-D-glucose 6-phosphate
 sucr_v0,Sucrose
-mi3p_DASH_D_c0,1D-myo-Inositol 3-phosphate
+mi3p-D_c0,1D-myo-Inositol 3-phosphate
 hso3_s0,HSO3-
 h2s_s0,Hydrogen sulfide
 uacgam_c0,UDP-N-acetyl-D-glucosamine
@@ -643,7 +643,7 @@ dhf_m0,"7,8-Dihydrofolate"
 for_s0,Formate
 thf_s0,"5,6,7,8-Tetrahydrofolate"
 10fthf_s0,10-Formyltetrahydrofolate
-cala_DASH_L_c0,L-beta-Cyanoalanine
+cala-L_c0,L-beta-Cyanoalanine
 benzald_c0,Benzaldehyde
 manit_c0,Mandelonitrile
 prunasin_c0,(R)-Prunasin
@@ -663,8 +663,8 @@ chor_s0,chorismate
 anth_s0,Anthranilate
 g3p_c0,D-glyceraldehyde 3-phosphate
 r5p_s0,alpha-D-Ribose 5-phosphate
-rib_DASH_D_c0,D-Ribose
-rib_DASH_D_s0,D-Ribose
+rib-D_c0,D-Ribose
+rib-D_s0,D-Ribose
 5apru_s0,5-Amino-6-(5'-phosphoribosylamino)uracil
 5aprbu_s0,5-Amino-6-(5'-phosphoribitylamino)uracil
 dmlz_s0,"6,7-Dimethyl-8-(1-D-ribityl)lumazine"
@@ -677,18 +677,18 @@ fmn_m0,FMN
 fad_m0,Flavin adenine dinucleotide oxidized
 25dhpp_s0,"2,5-Diamino-6-hydroxy-4-(5'-phosphoribosylamino)-pyrimidine"
 db4p_s0,"3,4-dihydroxy-2-butanone 4-phosphate"
-ru5p_DASH_D_c0,D-Ribulose 5-phosphate
-ru5p_DASH_D_s0,D-Ribulose 5-phosphate
+ru5p-D_c0,D-Ribulose 5-phosphate
+ru5p-D_s0,D-Ribulose 5-phosphate
 3pg_c0,3-Phospho-D-glycerate
 13dpg_c0,3-Phospho-D-glyceroyl phosphate
 13dpg_s0,3-Phospho-D-glyceroyl phosphate
 f1p_c0,D-Fructose 1-phosphate
 fald_c0,Formaldehyde
-xu5p_DASH_D_c0,D-Xylulose 5-phosphate
+xu5p-D_c0,D-Xylulose 5-phosphate
 dha_c0,Dihydroxyacetone
-xu5p_DASH_D_s0,D-Xylulose 5-phosphate
+xu5p-D_s0,D-Xylulose 5-phosphate
 dha_s0,Dihydroxyacetone
-his_DASH_L_s0,L-Histidine
+his-L_s0,L-Histidine
 hista_s0,Histamine
 prbatp_s0,1-(5-Phosphoribosyl)-ATP
 pram_s0,5-Phospho-beta-D-ribosylamine
@@ -698,9 +698,9 @@ dcamp_c0,"N6-(1,2-Dicarboxyethyl)-AMP"
 dcamp_s0,"N6-(1,2-Dicarboxyethyl)-AMP"
 fum_s0,Fumarate
 argsuc_c0,N(omega)-(L-Arginino)succinate
-leu_DASH_L_s0,L-Leucine
+leu-L_s0,L-Leucine
 4mop_s0,4-Methyl-2-oxopentanoate
-leu_DASH_L_m0,L-Leucine
+leu-L_m0,L-Leucine
 4mop_m0,4-Methyl-2-oxopentanoate
 gsn_c0,Guanosine
 gua_c0,Guanine
@@ -724,7 +724,7 @@ mi34p_c0,"1D-myo-Inositol 3,4-bisphosphate"
 mi346p_c0,"D-myo-inositol (3,4,6)-trisphosphate"
 mi3456p_c0,"1D-myo-Inositol 3,4,5,6-tetrakisphosphate"
 mi14p_c0,"1D-myo-Inositol 1,4-bisphosphate"
-mi4p_DASH_D_c0,1D-myo-Inositol 4-phosphate
+mi4p-D_c0,1D-myo-Inositol 4-phosphate
 mi134p_c0,"1D-myo-Inositol 1,3,4-trisphosphate"
 mi13456p_c0,"1D-myo-Inositol 1,3,4,5,6-pentakisphosphate"
 mi1345p_c0,"1D-myo-Inositol 1,3,4,5-tetrakisphosphate"
@@ -758,8 +758,8 @@ ppcoa_m0,Propanoyl-CoA
 fadh2_m0,Flavin adenine dinucleotide reduced
 3hibutcoa_m0,(S)-3-Hydroxyisobutyryl-CoA
 23dhmb_m0,"(R)-2,3-Dihydroxy-3-methylbutanoate"
-val_DASH_L_s0,L-Valine
-val_DASH_L_m0,L-Valine
+val-L_s0,L-Valine
+val-L_m0,L-Valine
 methf_m0,"5,10-Methenyltetrahydrofolate"
 methf_s0,"5,10-Methenyltetrahydrofolate"
 methf_c0,"5,10-Methenyltetrahydrofolate"
@@ -767,47 +767,47 @@ methf_c0,"5,10-Methenyltetrahydrofolate"
 5fthf_m0,5-Formyltetrahydrofolate
 5fthf_s0,5-Formyltetrahydrofolate
 2dhp_m0,2-Dehydropantoate
-dad_DASH_2_c0,Deoxyadenosine
+dad-2_c0,Deoxyadenosine
 din_c0,Deoxyinosine
 2dr1p_c0,2-Deoxy-D-ribose 1-phosphate
 pppgpp_c0,"Guanosine 5'-triphosphate,3'-diphosphate"
 ppgpp_c0,"Guanosine 3',5'-bis(diphosphate)"
-pro_DASH_L_m0,L-Proline
+pro-L_m0,L-Proline
 1pyr5c_m0,1-Pyrroline-5-carboxylate
 1pyr5c_c0,1-Pyrroline-5-carboxylate
 1pyr5c_s0,1-Pyrroline-5-carboxylate
-pro_DASH_L_s0,L-Proline
+pro-L_s0,L-Proline
 gcald_c0,Glycolaldehyde
 glyclt_c0,Glycolate
 glyclt_s0,Glycolate
 glcur1p_c0,D-Glucuronate 1-phosphate
 xylan_c0,"1,4-beta-D-Xylan"
-xyl_DASH_D_c0,D-Xylose
+xyl-D_c0,D-Xylose
 udpgalur_c0,UDP-D-galacturonate
 udpddg_c0,UDP-4-dehydro-6-deoxy-D-glucose
 pect_c0,Pectate
 udpkrmn_c0,UDP-4-keto-rhamnose
 udprmn_c0,UDP-L-rhamnose
-glyc_DASH_R_s0,(R)-Glycerate
-glyc_DASH_R_x0,(R)-Glycerate
+glyc-R_s0,(R)-Glycerate
+glyc-R_x0,(R)-Glycerate
 nadph_x0,Nicotinamide adenine dinucleotide phosphate - reduced
 nadp_x0,Nicotinamide adenine dinucleotide phosphate
 cbasp_c0,N-Carbamoyl-L-aspartate
 phom_s0,O-Phospho-L-homoserine
-thr_DASH_L_s0,L-Threonine
-arab_DASH_L_c0,L-Arabinose
-B_DASH_ara1p_c0,beta-L-Arabinose 1-phosphate
+thr-L_s0,L-Threonine
+arab-L_c0,L-Arabinose
+B-ara1p_c0,beta-L-Arabinose 1-phosphate
 udparab_v0,UDP-L-arabinose
-arab_DASH_L_v0,L-Arabinose
+arab-L_v0,L-Arabinose
 3php_s0,3-Phosphohydroxypyruvate
 glcn_c0,D-Gluconate
 6pgc_c0,6-Phospho-D-gluconate
 glcn_s0,D-Gluconate
 6pgc_s0,6-Phospho-D-gluconate
-xylu_DASH_D_c0,D-Xylulose
+xylu-D_c0,D-Xylulose
 3hpp_c0,3-Hydroxypropanoate
 s7p_s0,Sedoheptulose 7-phosphate
-ala_DASH_B_m0,beta-Alanine
+ala-B_m0,beta-Alanine
 3c4mop_s0,(2S)-2-Isopropyl-3-oxosuccinate
 xan_c0,Xanthine
 3psme_s0,3-Phosphate-shikimate
@@ -818,14 +818,14 @@ alltn_c0,Allantoin
 5houdic_c0,"5-Hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate"
 5hiu_c0,5-Hydroxyisourate
 urate_c0,Urate
-hom_DASH_L_s0,L-Homoserine
+hom-L_s0,L-Homoserine
 achms_s0,O-Acetyl-L-homoserine
 succoa_s0,Succinyl-CoA
 suchms_s0,O-Succinyl-L-homoserine
 succ_s0,Succinate
 aspsa_s0,L-Aspartate 4-semialdehyde
-glc_DASH_A_s0,alpha-D-glucose
-glc_DASH_B_s0,beta-D-glucose
+glc-A_s0,alpha-D-glucose
+glc-B_s0,beta-D-glucose
 malt_s0,Maltose
 glucan_s0,alpha-glucan (Amylose)
 e4p_s0,D-Erythrose 4-phosphate
@@ -834,20 +834,20 @@ s17bp_s0,"Sedoheptulose 1,7-bisphosphate"
 cbp_s0,Carbamoyl phosphate
 cbasp_s0,N-Carbamoyl-L-aspartate
 orot_s0,Orotate
-acon_DASH_C_c0,cis-aconitate
-acon_DASH_C_m0,cis-aconitate
-citr_DASH_L_s0,L-Citrulline
+acon-C_c0,cis-aconitate
+acon-C_m0,cis-aconitate
+citr-L_s0,L-Citrulline
 argsuc_s0,N(omega)-(L-Arginino)succinate
-dhor_DASH_S_s0,(S)-Dihydroorotate
+dhor-S_s0,(S)-Dihydroorotate
 6pgl_c0,"6-phospho-D-glucono-1,5-lactone"
 6pgl_s0,"6-phospho-D-glucono-1,5-lactone"
 xtsn_c0,Xanthosine
 pqh2_u0,reduced plastoquinone
 pq_u0,oxidized plastoquinone
 3mop_s0,(S)-3-Methyl-2-oxopentanoate
-ile_DASH_L_s0,L-Isoleucine
+ile-L_s0,L-Isoleucine
 3mop_m0,(S)-3-Methyl-2-oxopentanoate
-ile_DASH_L_m0,L-Isoleucine
+ile-L_m0,L-Isoleucine
 dhpt_m0,Dihydropteroate
 acorn_s0,N2-Acetyl-L-ornithine
 orn_s0,L-Ornithine
@@ -858,13 +858,13 @@ acorn_c0,N2-Acetyl-L-ornithine
 skm_s0,Shikimate
 skm5p_s0,Shikimate 5-phosphate
 3dhsk_s0,3-Dehydroshikimate
-pant_DASH_R_m0,(R)-Pantoate
-pant_DASH_R_c0,(R)-Pantoate
-pnto_DASH_R_c0,(R)-Pantothenate
+pant-R_m0,(R)-Pantoate
+pant-R_c0,(R)-Pantoate
+pnto-R_c0,(R)-Pantothenate
 acg5p_c0,N-Acetyl-L-glutamyl 5-phosphate
 prpncoa_m0,Propenoyl-CoA
 3hpcoa_m0,3-Hydroxypropionyl-CoA
-26dap_DASH_LL_s0,"LL-2,6-Diaminoheptanedioate"
+26dap-LL_s0,"LL-2,6-Diaminoheptanedioate"
 cellb_c0,Cellobiose
 histd_s0,L-Histidinol
 histda_s0,L-Histidinal
@@ -907,7 +907,7 @@ iscssh_s0,IscS with bound sulfur
 iscs_s0,IscS sulfur acceptor protein
 amet_s0,S-Adenosyl-L-methionine
 4crsol_s0,p-Cresol
-dad_DASH_5_s0,5'-Deoxyadenosine
+dad-5_s0,5'-Deoxyadenosine
 thm_c0,Thiamin (Vitamin B1)
 thmpp_c0,Thiamine diphosphate
 fpram_s0,2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine
@@ -933,18 +933,18 @@ pap_s0,"Adenosine 3',5'-bisphosphate"
 paps_c0,3'-Phosphoadenylyl sulfate
 pacald_c0,Phenylacetaldehyde
 2phetoh_c0,Phenylethyl alcohol
-g6p_DASH_A_v0,alpha-D-glucose 6 phosphate
+g6p-A_v0,alpha-D-glucose 6 phosphate
 2mhob_m0,2-Methyl-1-hydroxybutyl-ThPP
 2mbdhl_m0,S-(2-Methylbutanoyl)-dihydrolipoamide
 2mbcoa_m0,(S)-2-Methylbutanoyl-CoA
 2mb2coa_m0,trans-2-Methylbut-2-enoyl-CoA
 3hmbcoa_m0,(S)-3-Hydroxy-2-methylbutyryl-CoA
 2maacoa_m0,2-Methyl-3-acetoacetyl-CoA
-dhor_DASH_S_c0,(S)-Dihydroorotate
+dhor-S_c0,(S)-Dihydroorotate
 orot_c0,Orotate
 hco3_s0,Bicarbonate
 malcoa_s0,Malonyl-CoA
-t_DASH_cinn_c0,trans-Cinnamate
+t-cinn_c0,trans-Cinnamate
 coum_c0,4-Coumarate
 coumcoa_c0,4-Coumaroyl-CoA
 coumald_c0,p-Coumaraldehyde
@@ -953,7 +953,7 @@ fercoa_c0,Feruloyl-CoA
 caffqnt_c0,Caffeoyl quinate
 qnt_c0,Quinate
 conald_c0,Coniferyl aldehyde
-2_DASH_coum_c0,2-Coumarate
+2-coum_c0,2-Coumarate
 skm_c0,Shikimate
 coumskm_c0,4-Coumaroylshikimate
 sinald_c0,Sinapoyl aldehyde
@@ -1109,7 +1109,7 @@ npdp_s0,all-trans-Nonaprenyl diphosphate
 msbq_s0,"2-Methyl-6-solanyl-1,4-benzoquinol"
 plast_s0,Plastoquinone A
 yvite_s0,gamma-Tocopherol (Vitamin E)
-mev_DASH_R_c0,(R)-Mevalonate
+mev-R_c0,(R)-Mevalonate
 5pmev_c0,(R)-5-Phosphomevalonate
 5dpmev_c0,(R)-5-Diphosphomevalonate
 ipdp_c0,Isopentenyl diphosphate
@@ -1136,17 +1136,17 @@ moma_s0,Momilactone A
 stem_s0,Stemar-13-ene
 stem_c0,Stemar-13-ene
 stemol_c0,Stemar-13-enol
-ozln_DASH_S_c0,oryzalexin S
+ozln-S_c0,oryzalexin S
 ecdp_s0,ent-Copalyl diphosphate
 esand_s0,"ent-Sandaracopimara-8(14),15-diene"
 esand_c0,"ent-Sandaracopimara-8(14),15-diene"
 esandol_c0,ent-sandaracopimaradiene-3alpha-ol
-ozln_DASH_D_c0,oryzalexin D
-ozln_DASH_E_c0,oryzalexin E
-ozln_DASH_F_c0,oryzalexin F
-ozln_DASH_A_c0,oryzalexin A
-ozln_DASH_B_c0,oryzalexin B
-ozln_DASH_C_c0,oryzalexin C
+ozln-D_c0,oryzalexin D
+ozln-E_c0,oryzalexin E
+ozln-F_c0,oryzalexin F
+ozln-A_c0,oryzalexin A
+ozln-B_c0,oryzalexin B
+ozln-C_c0,oryzalexin C
 primardn_s0,"ent-Pimara-8(14),15-diene"
 eikaur_s0,ent-Isokaurene
 eikaur_c0,ent-Isokaurene
@@ -1156,19 +1156,19 @@ ecasd_c0,"ent-Cassa-12,15-diene"
 ecasdol_c0,"ent-cassa-12,15-diene-3alpha-ol"
 ecasdal_c0,"ent-cassa-12,15-diene-3alpha-al"
 ecasdate_c0,"ent-cassa-12,15-diene-3alpha-ol-11-keto"
-phtc_DASH_C_c0,phytocassane C
-phtc_DASH_E_c0,phytocassane E
-phtc_DASH_B_c0,phytocassane B
+phtc-C_c0,phytocassane C
+phtc-E_c0,phytocassane E
+phtc-B_c0,phytocassane B
 ecasd2ate_c0,"ent-cassa-12,15-diene-2,3alpha-ol-11-keto"
-phtc_DASH_D_c0,phytocassane D
-phtc_DASH_A_c0,phytocassane A
+phtc-D_c0,phytocassane D
+phtc-A_c0,phytocassane A
 ekaur_s0,ent-Kaurene
 ekaur_c0,ent-Kaurene
 ekaurol_c0,ent-Kaur-16-en-19-ol
 ekaural_c0,ent-Kaurenal
 ekaurate_c0,ent-Kaur-16-en-19-oate
 ehkaurate_c0,ent-7alpha-Hydroxykaur-16-en-19-oate
-ga12_DASH_ald_c0,Gibberellin A12 aldehyde
+ga12-ald_c0,Gibberellin A12 aldehyde
 ga12_c0,Gibberellin A12
 ga53_c0,Gibberellin A53
 ga15_c0,Gibberellin A15 open lactone
@@ -1195,23 +1195,23 @@ ga8cat_c0,Gibberellin A8-catabolite
 vlxan_s0,Violaxanthin
 anxan_s0,Antheraxanthin
 zxan_s0,Zeaxanthin
-a_DASH_carot_s0,alpha-Carotene
+a-carot_s0,alpha-Carotene
 znxan_s0,Zeinoxanthin
-a_DASH_cptxan_s0,alpha-Cryptoxanthin
+a-cptxan_s0,alpha-Cryptoxanthin
 lutein_s0,Lutein
 phyt_s0,all-trans-Phytoene
 phytfl_s0,Phytofluene
-z_DASH_carot_s0,all-trans-zeta-Carotene
-b_DASH_carot_s0,beta-Carotene
-b_DASH_cptxan_s0,beta-Cryptoxanthin
+z-carot_s0,all-trans-zeta-Carotene
+b-carot_s0,beta-Carotene
+b-cptxan_s0,beta-Cryptoxanthin
 nrsprn_s0,all-trans-Neurosporene
 lycop_s0,Lycopene
-b_DASH_zcarot_s0,beta-Zeacarotene
+b-zcarot_s0,beta-Zeacarotene
 dhbzcarot_s0,"7,8-Dihydro-beta-carotene"
 phdp_s0,Prephytoene diphosphate
 nxan_s0,Neoxanthin
-d_DASH_carot_s0,delta-Carotene
-g_DASH_carot_s0,gamma-Carotene
+d-carot_s0,delta-Carotene
+g-carot_s0,gamma-Carotene
 cnxan_s0,9-cis-Neoxanthin
 xanxn_s0,Xanthoxin
 absald_s0,Abscisic aldehyde
@@ -1219,9 +1219,9 @@ acrtnl_s0,C25-Allenic-apo-aldehyde
 abs_s0,Abscisate
 habs_s0,8-Hydroxyabscisate
 phas_s0,Phaseic acid
-ee_DASH_carotl_s0,epsilon-carotene-3-diol
+ee-carotl_s0,epsilon-carotene-3-diol
 lacxan_s0,Lactucaxanthin
-e_DASH_carot_s0,epsilon-Carotene
+e-carot_s0,epsilon-Carotene
 campst43l_c0,Campest-4-en-3beta-ol
 campst43e_c0,Campest-4-en-3-one
 dxcstn_c0,6-Deoxocathasterone
@@ -1258,15 +1258,15 @@ cyart_c0,Cycloartenol
 ipatp_s0,Isopentenyl-ATP
 ipadp_s0,Isopentenyl-ADP
 ipamp_s0,Isopentenyl-AMP
-t_DASH_ztnrtp_s0,trans-zeatin riboside triphosphate
-t_DASH_ztnrdp_s0,trans-zeatin riboside diphosphate
-t_DASH_ztnrp_s0,trans-Zeatin riboside monophosphate
+t-ztnrtp_s0,trans-zeatin riboside triphosphate
+t-ztnrdp_s0,trans-zeatin riboside diphosphate
+t-ztnrp_s0,trans-Zeatin riboside monophosphate
 ipadne_s0,N6-Dimethylallyladenine
 ipadn_s0,Isopentenyl adenosine
-t_DASH_ztn_s0,trans-Zeatin
-t_DASH_ztnr_s0,trans-Zeatin riboside
+t-ztn_s0,trans-Zeatin
+t-ztnr_s0,trans-Zeatin riboside
 dhz_s0,Dihydrozeatin
-t_DASH_ztn_c0,trans-Zeatin
+t-ztn_c0,trans-Zeatin
 ipadne_c0,N6-Dimethylallyladenine
 34hb_c0,3-methyl-4-trans-hydroxy-2-butenal
 ipadn_c0,Isopentenyl adenosine
@@ -1274,20 +1274,20 @@ ipadn_c0,Isopentenyl adenosine
 trna_c0,tRNA
 ptrna_c0,prenyl-tRNA
 ctrna_c0,cis-Prenyl-tRNA
-c_DASH_ztnrp_c0,cis-Zeatin riboside monophosphate
-c_DASH_ztnr_c0,cis-Zeatin riboside
-c_DASH_ztn_c0,cis-Zeatin
-c_DASH_ztn7g_c0,cis-zeatin-7-N-glucoside
-t_DASH_ztn7g_c0,trans-zeatin-7-N-glucoside
+c-ztnrp_c0,cis-Zeatin riboside monophosphate
+c-ztnr_c0,cis-Zeatin riboside
+c-ztn_c0,cis-Zeatin
+c-ztn7g_c0,cis-zeatin-7-N-glucoside
+t-ztn7g_c0,trans-zeatin-7-N-glucoside
 dhz_c0,Dihydrozeatin
 dhz7g_c0,dihydrozeatin-7-N-glucoside
 ipadne7g_c0,isopentenyladenine-7-N-glucoside
-c_DASH_ztn9g_c0,cis-zeatin-9-N-glucoside
-t_DASH_ztn9g_c0,trans-zeatin-9-N-glucoside
+c-ztn9g_c0,cis-zeatin-9-N-glucoside
+t-ztn9g_c0,trans-zeatin-9-N-glucoside
 dhz9g_c0,dihydrozeatin-9-N-glucoside
 ipadne9g_c0,isopentenyladenine-9-N-glucoside
-t_DASH_ztng_c0,trans-zeatin-O-glucoside
-c_DASH_ztng_c0,cis-Zeatin-O-glucoside
+t-ztng_c0,trans-zeatin-O-glucoside
+c-ztng_c0,cis-Zeatin-O-glucoside
 dhzg_c0,Dihydrozeatin-O-glucoside
 4mzym_int1_c0,"4alpha-carboxy-4beta-methyl-5alpha-cholesta-8,24-dien-3beta-ol"
 4mzym_int2_c0,"4alpha-methyl-5alpha-cholesta-8,24-dien-3-one"
@@ -1574,7 +1574,7 @@ cmp_m0,CMP
 pgp_os_m0,Phosphatidylglycerophosphate (oryza sativa specific)
 pg_os_m0,Phosphatidylglycerol (oryza sativa specific)
 clpn_os_m0,Cardiolipin (oryza sativa specific)
-ser_DASH_L_r0,L-Serine
+ser-L_r0,L-Serine
 ps_os_r0,Phosphatidylserine (oryza sativa specific)
 ps_os_m0,Phosphatidylserine (oryza sativa specific)
 pe_os_m0,phosphatidylethanolamine (oryza sativa specific)
@@ -1601,17 +1601,17 @@ dgdg_os_s0,Digalactosyl-diacylglycerol (oryza sativa specific)
 udpsq_s0,UDP-6-sulfoquinovose
 sq12dgr_os_s0,Sulfoquinovosyldiacylglycerol (oryza sativa specific)
 udpg_s0,UDP-glucose
-9_DASH_hpot_s0,"(9S,10E,12Z,15Z)-9-Hydroperoxy-10,12,15-octadecatrienoate"
-9_DASH_hpod_s0,"9(S)-hydroperoxy-10(E),12(Z)-octadecadienoic acid"
-13_DASH_hpot_s0,"(9Z,11E,15Z)-(13S)-Hydroperoxyoctadeca-9,11,15-trienoate"
-13_DASH_hpod_s0,"(9Z,11E)-(13S)-13-hydroperoxyoctadeca-9,11-dienoate"
-3_DASH_non_s0,(3Z)-nonenal
-9_DASH_nonan_s0,9-oxo-nonanoate
-3_DASH_nond_s0,"(3Z,6Z)-nonadienal"
+9-hpot_s0,"(9S,10E,12Z,15Z)-9-Hydroperoxy-10,12,15-octadecatrienoate"
+9-hpod_s0,"9(S)-hydroperoxy-10(E),12(Z)-octadecadienoic acid"
+13-hpot_s0,"(9Z,11E,15Z)-(13S)-Hydroperoxyoctadeca-9,11,15-trienoate"
+13-hpod_s0,"(9Z,11E)-(13S)-13-hydroperoxyoctadeca-9,11-dienoate"
+3-non_s0,(3Z)-nonenal
+9-nonan_s0,9-oxo-nonanoate
+3-nond_s0,"(3Z,6Z)-nonadienal"
 hxnl_s0,hexanal
 12o9dd_s0,12-oxo-c-9-dodecenoate
 hxndl_s0,cis-3-hexenal
-1213s_DASH_epoxlin_s0,"(9Z)-(13S)-12,13-Epoxyoctadeca-9,11,15-trienoate"
+1213s-epoxlin_s0,"(9Z)-(13S)-12,13-Epoxyoctadeca-9,11,15-trienoate"
 12oxophyt_s0,"(15Z)-12-Oxophyto-10,15-dienoate"
 12oxophyt_x0,"(15Z)-12-Oxophyto-10,15-dienoate"
 3o2c2poct_x0,"8-[(1R,2R)-3-Oxo-2-{(Z)-pent-2-enyl}cyclopentyl]octanoate"
@@ -1655,8 +1655,8 @@ gluside_c0,Glucosylceramide
 galgluside_c0,"beta-D-Galactosyl-1,4-beta-D-glucosylceramide"
 oclysLCP_m0,Protein N6-(octanoyl)lysine
 lipACP_m0,Lipoyl-[acyl carrier protein]
-met_DASH_L_m0,L-Methionine
-dad_DASH_5_m0,5'-Deoxyadenosine
+met-L_m0,L-Methionine
+dad-5_m0,5'-Deoxyadenosine
 lipro_m0,a non-lipoylated protein-lipoyl domain
 malACPme_c0,malonyl-ACP methyl ester
 akgACPme_c0,3-Ketoglutaryl-[acp] methyl ester
@@ -1674,8 +1674,8 @@ amob_c0,S-Adenosyl-4-methylthio-2-oxobutanoate
 dann_c0,"7,8-Diaminononanoate"
 dtbt_c0,Dethiobiotin
 btn_c0,Biotin
-dad_DASH_5_c0,5'-Deoxyadenosine
-cys_DASH_prot_c0,Protein-cysteine
+dad-5_c0,5'-Deoxyadenosine
+cys-prot_c0,Protein-cysteine
 frprot_c0,S-Farnesyl protein
 frcysprot_c0,Protein C-terminal S-farnesyl-L-cysteine
 frcysmpest_c0,Farnesylcysteine
@@ -1702,7 +1702,7 @@ dolpglc_c0,Dolichyl beta-D-glucosyl phosphate
 G10598_c0,(Glc)1 (GlcNAc)2 (Man)9 (PP-Dol)1
 G10599_c0,(Glc)2 (GlcNAc)2 (Man)9 (PP-Dol)1
 G00008_c0,(Glc)3 (GlcNAc)2 (Man)9 (PP-Dol)1
-Asn_DASH_X_DASH_Ser_DASH_FSLASH_DASH_Thr_c0,protein-linked asparagine residue (N-glycosylation site)
+Asn-X-Ser-FSLASH-Thr_c0,protein-linked asparagine residue (N-glycosylation site)
 G00009_c0,(Glc)3 (GlcNAc)2 (Man)9 (Asn)1
 G00171_c0,(Glc)2 (GlcNAc)2 (Man)9 (Asn)1
 G00010_c0,(Glc)1 (GlcNAc)2 (Man)9 (Asn)1
@@ -1739,7 +1739,7 @@ trnaala_m0,tRNA(Ala)
 alatrna_m0,L-Alanyl-tRNA(Ala)
 trnaarg_c0,tRNA(Arg)
 argtrna_c0,L-Arginyl-tRNA(Arg)
-arg_DASH_L_s0,L-Arginine
+arg-L_s0,L-Arginine
 trnaarg_s0,tRNA(Arg)
 argtrna_s0,L-Arginyl-tRNA(Arg)
 trnacys_c0,tRNA(Cys)
@@ -1768,10 +1768,10 @@ trnaser_m0,tRNA(Ser)
 sertrna_m0,L-Seryl-tRNA(Ser)
 trnathr_c0,tRNA(Thr)
 thrtrna_c0,L-Threonyl-tRNA(Thr)
-thr_DASH_L_m0,L-Threonine
+thr-L_m0,L-Threonine
 trnathr_m0,tRNA(Thr)
 thrtrna_m0,L-Threonyl-tRNA(Thr)
-lys_DASH_L_m0,L-Lysine
+lys-L_m0,L-Lysine
 trnalys_m0,tRNA(Lys)
 lystrna_m0,L-Lysine-tRNA (Lys)
 trnalys_s0,tRNA(Lys)
@@ -1788,14 +1788,14 @@ trnaphe_c0,tRNA(Phe)
 phetrna_c0,L-Phenylalanyl-tRNA(Phe)
 trnaphe_s0,tRNA(Phe)
 phetrna_s0,L-Phenylalanyl-tRNA(Phe)
-phe_DASH_L_m0,L-Phenylalanine
+phe-L_m0,L-Phenylalanine
 trnaphe_m0,tRNA(Phe)
 phetrna_m0,L-Phenylalanyl-tRNA(Phe)
 trnaasn_c0,tRNA(Asn)
 asntrna_c0,L-Asparaginyl-tRNA(Asn)
 trnaasn_s0,tRNA(Asn)
 asntrna_s0,L-Asparaginyl-tRNA(Asn)
-asn_DASH_L_m0,L-Asparagine
+asn-L_m0,L-Asparagine
 trnaasn_m0,tRNA(Asn)
 asntrna_m0,L-Asparaginyl-tRNA(Asn)
 trnaile_c0,tRNA(Ile)
@@ -1818,14 +1818,14 @@ trnatyr_c0,tRNA(Tyr)
 tyrtrna_c0,L-Tyrosyl-tRNA(Tyr)
 trnatyr_s0,tRNA(Tyr)
 tyrtrna_s0,L-Tyrosyl-tRNA(Tyr)
-tyr_DASH_L_m0,L-Tyrosine
+tyr-L_m0,L-Tyrosine
 trnatyr_m0,tRNA(Tyr)
 tyrtrna_m0,L-Tyrosyl-tRNA(Tyr)
 trnatrp_c0,tRNA(Trp)
 trptrna_c0,L-Tryptophanyl-tRNA(Trp)
 trnatrp_s0,tRNA(Trp)
 trptrna_s0,L-Tryptophanyl-tRNA(Trp)
-trp_DASH_L_m0,L-Tryptophan
+trp-L_m0,L-Tryptophan
 trnatrp_m0,tRNA(Trp)
 trptrna_m0,L-Tryptophanyl-tRNA(Trp)
 trnapro_c0,tRNA(Pro)
@@ -1838,10 +1838,10 @@ trnahis_c0,tRNA(His)
 histrna_c0,L-Histidyl-tRNA(His)
 trnahis_s0,tRNA(His)
 histrna_s0,L-Histidyl-tRNA(His)
-his_DASH_L_m0,L-Histidine
+his-L_m0,L-Histidine
 trnahis_m0,tRNA(His)
 histrna_m0,L-Histidyl-tRNA(His)
-ala_DASH_B_DASH_bet_c0,N-methyl-beta-alanine
+ala-B-bet_c0,N-methyl-beta-alanine
 betaldh_s0,Betaine aldehyde hydrate
 betald_s0,Betaine aldehyde
 23ddhb_s0,"(2S,3S)-2,3-Dihydroxy-2,3-dihydroxybenzoate"
@@ -1870,11 +1870,11 @@ kdo2lipid4_m0,KDO(2)-lipid IV(A)
 uaccg_c0,UDP-N-acetyl-3-O-(1-carboxyvinyl)-D-glucosamine
 uamr_c0,UDP-N-acetylmuramate
 uama_c0,UDP-N-acetylmuramoyl-L-alanine
-glu_DASH_D_c0,D-Glutamate
+glu-D_c0,D-Glutamate
 uamag_c0,UDP-N-acetylmuramoyl-L-alanyl-D-glutamate
-26dap_DASH_M_c0,"meso-2,6-Diaminoheptanedioate"
+26dap-M_c0,"meso-2,6-Diaminoheptanedioate"
 ugmd_c0,"UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate"
-ala_DASH_D_c0,D-Alanine
+ala-D_c0,D-Alanine
 alaala_c0,D-Alanyl-D-alanine
 ugmda_c0,"UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine"
 udcpp_c0,Undecaprenyl phosphate
@@ -1884,8 +1884,8 @@ sclgn_c0,Secologanin
 stcsd_c0,Strictosidine
 pstrp_c0,Pseudotropine
 trpn_c0,Tropinone
-cnln_DASH_L_s0,L-canaline
-uhom_DASH_L_s0,O-ureidohomoserine
+cnln-L_s0,L-canaline
+uhom-L_s0,O-ureidohomoserine
 cavsucc_s0,Canavaninosuccinate
 cav_s0,L-canavanine
 urea_s0,Urea
@@ -1915,10 +1915,10 @@ pplibtn_c0,4-prenylphlorisobutyrophenone
 dpplibtn_c0,Deoxycohumulone
 chumu_c0,Cohumulone
 mthgxl_c0,Methylglyoxal
-lgt_DASH_S_c0,(R)-S-Lactoylglutathione
-lac_DASH_D_c0,D-Lactate
-hmglut_DASH_S_s0,S-(Hydroxymethyl)glutathione
-fglut_DASH_S_s0,S-Formylglutathione
+lgt-S_c0,(R)-S-Lactoylglutathione
+lac-D_c0,D-Lactate
+hmglut-S_s0,S-(Hydroxymethyl)glutathione
+fglut-S_s0,S-Formylglutathione
 suo2_s0,superoxide
 fdxrd_u0,Reduced ferredoxin
 fdxox_u0,Oxidized ferredoxin
@@ -1939,10 +1939,10 @@ selhcys_s0,Selenohomocysteine
 selt_c0,Selenite
 suchms_c0,O-Succinyl-L-homoserine
 trnasecys_c0,tRNA(SeCys)
-sertrna_LPAREN_sec_RPAREN__c0,L-Seryl-tRNA(Sec)
+sertrna(sec)_c0,L-Seryl-tRNA(Sec)
 selmet_c0,L-Selenomethionine
 trnasemet_c0,tRNA(Met)
-sertrna_LPAREN_met_RPAREN__c0,Selenomethionyl-tRNA(Met)
+sertrna(met)_c0,Selenomethionyl-tRNA(Met)
 semetselmet_c0,Se-Methylselenomethionine
 metsel_c0,Methaneselenol
 selnp_c0,selenophosphate
@@ -1950,15 +1950,15 @@ mcfer_c0,24-methylenecycloartanyl ferulate
 cyartfer_c0,Cycloartenyl ferulate
 campstfer_c0,campesteryl ferulate
 sitstfer_c0,sitosteryl ferulate
-1_DASH_kesttr_c0,1-kestotriose
-16_DASH_kesttt_c0,"1,6-kestotetraose"
-11_DASH_kesttt_c0,"1,1-kestotetraose"
-6_DASH_kesttr_c0,6-kestotriose
+1-kesttr_c0,1-kestotriose
+16-kesttt_c0,"1,6-kestotetraose"
+11-kesttt_c0,"1,1-kestotetraose"
+6-kesttr_c0,6-kestotriose
 gppppg_c0,bis(5'-guanosyl) tetraphosphate
-rhcys_DASH_L_c0,S-ribosyl-L-homocysteine
+rhcys-L_c0,S-ribosyl-L-homocysteine
 camp_c0,cyclic-AMP
 thbpt_c0,Tetrahydrobiopterin
-dopa_DASH_L_c0,"3,4-Dihydroxy-L-phenylalanine"
+dopa-L_c0,"3,4-Dihydroxy-L-phenylalanine"
 4hthbpt_c0,4a-Hydroxytetrahydrobiopterin
 dhbpt_c0,Dihydrobiopterin
 2dr5p_c0,2-Deoxy-D-ribose 5-phosphate
@@ -1974,8 +1974,8 @@ crpe_c0,beta-Caryophyllene
 huml_c0,alpha-Humulene
 elm_c0,beta-elemene
 ga98_c0,Gibberallin A 98
-arg_DASH_L_m0,L-Arginine
-citr_DASH_L_m0,L-Citrulline
+arg-L_m0,L-Arginine
+citr-L_m0,L-Citrulline
 gcoa_c0,Glutaryl-CoA
 4abz_c0,4-Aminobenzoate
 na1_m0,Sodium
@@ -1990,34 +1990,34 @@ pgp_os_c0,Phosphatidylglycerophosphate (oryza sativa specific)
 pc_os_c0,Phosphatidylcholine (oryza sativa specific)
 pc_os_m0,Phosphatidylcholine (oryza sativa specific)
 succoa_c0,Succinyl-CoA
-glyc_DASH_R_c0,(R)-Glycerate
+glyc-R_c0,(R)-Glycerate
 na1_s0,Sodium
-t_DASH_ztnr_c0,trans-Zeatin riboside
+t-ztnr_c0,trans-Zeatin riboside
 12oxophyt_c0,"(15Z)-12-Oxophyto-10,15-dienoate"
 pyr_v0,Pyruvate
 adp_x0,ADP
 b2coa_c0,Crotonoyl-CoA
-ala_DASH_L_c1,L-Alanine
-arg_DASH_L_c1,L-Arginine
-asp_DASH_L_c1,L-Aspartate
-cys_DASH_L_c1,L-Cysteine
-glu_DASH_L_c1,L-Glutamate
+ala-L_c1,L-Alanine
+arg-L_c1,L-Arginine
+asp-L_c1,L-Aspartate
+cys-L_c1,L-Cysteine
+glu-L_c1,L-Glutamate
 gly_c1,Glycine
-his_DASH_L_c1,L-Histidine
-ile_DASH_L_c1,L-Isoleucine
-leu_DASH_L_c1,L-Leucine
-lys_DASH_L_c1,L-Lysine
-met_DASH_L_c1,L-Methionine
-phe_DASH_L_c1,L-Phenylalanine
-pro_DASH_L_c1,L-Proline
-ser_DASH_L_c1,L-Serine
-thr_DASH_L_c1,L-Threonine
-trp_DASH_L_c1,L-Tryptophan
-tyr_DASH_L_c1,L-Tyrosine
-val_DASH_L_c1,L-Valine
-glc_DASH_A_c1,alpha-D-glucose
+his-L_c1,L-Histidine
+ile-L_c1,L-Isoleucine
+leu-L_c1,L-Leucine
+lys-L_c1,L-Lysine
+met-L_c1,L-Methionine
+phe-L_c1,L-Phenylalanine
+pro-L_c1,L-Proline
+ser-L_c1,L-Serine
+thr-L_c1,L-Threonine
+trp-L_c1,L-Tryptophan
+tyr-L_c1,L-Tyrosine
+val-L_c1,L-Valine
+glc-A_c1,alpha-D-glucose
 sucr_c1,Sucrose
-fru_DASH_B_c1,beta-D-fructose
+fru-B_c1,beta-D-fructose
 starch_s1,"Starch (n=4, 4 glucose units)"
 cellulose_c1,Cellulose
 udparab_c1,UDP-L-arabinose
@@ -2108,11 +2108,11 @@ hso3_c1,HSO3-
 hco3_c1,Bicarbonate
 h2s_c1,Hydrogen sulfide
 nh4_c1,Ammonium
-asn_DASH_L_c1,L-Asparagine
-gln_DASH_L_c1,L-Glutamine
+asn-L_c1,L-Asparagine
+gln-L_c1,L-Glutamine
 etoh_c1,Ethanol
 ac_c1,Acetate
-lac_DASH_L_c1,L-Lactate
+lac-L_c1,L-Lactate
 tsul_c1,Thiosulfate
 fe2_c1,Fe2+
 fe3_c1,Fe3+
@@ -2136,11 +2136,11 @@ h_v1,H+
 pi_v1,Phosphate
 pyr_s1,Pyruvate
 2ahethmpp_s1,2-(alpha-Hydroxyethyl)thiamine diphosphate
-alac_DASH_S_s1,(S)-2-Acetolactate
+alac-S_s1,(S)-2-Acetolactate
 thmpp_s1,Thiamine diphosphate
 pyr_m1,Pyruvate
 2ahethmpp_m1,2-(alpha-Hydroxyethyl)thiamine diphosphate
-alac_DASH_S_m1,(S)-2-Acetolactate
+alac-S_m1,(S)-2-Acetolactate
 thmpp_m1,Thiamine diphosphate
 h2o2_v1,Hydrogen peroxide
 o2_v1,O2
@@ -2150,15 +2150,15 @@ h2o2_x1,Hydrogen peroxide
 o2_x1,O2
 h2o2_m1,Hydrogen peroxide
 o2_m1,O2
-gln_DASH_L_m1,L-Glutamine
+gln-L_m1,L-Glutamine
 akg_m1,2-Oxoglutarate
 fdxrd_m1,Reduced ferredoxin
-glu_DASH_L_m1,L-Glutamate
+glu-L_m1,L-Glutamate
 fdxox_m1,Oxidized ferredoxin
-gln_DASH_L_s1,L-Glutamine
+gln-L_s1,L-Glutamine
 akg_s1,2-Oxoglutarate
 fdxrd_s1,Reduced ferredoxin
-glu_DASH_L_s1,L-Glutamate
+glu-L_s1,L-Glutamate
 fdxox_s1,Oxidized ferredoxin
 co2_s1,CO2
 rb15bp_s1,"D-Ribulose 1,5-bisphosphate"
@@ -2206,7 +2206,7 @@ gdp_s1,GDP
 56dura_c1,"5,6-dihydrouracil"
 ura_c1,Uracil
 cala_c1,N-Carbamoyl-beta-alanine
-ala_DASH_B_c1,beta-Alanine
+ala-B_c1,beta-Alanine
 dump_c1,dUMP
 mlthf_c1,"5,10-Methylenetetrahydrofolate"
 dhf_c1,"7,8-Dihydrofolate"
@@ -2253,12 +2253,12 @@ adn_c1,Adenosine
 ade_c1,Adenine
 ade_s1,Adenine
 ahcys_c1,S-Adenosyl-L-homocysteine
-hcys_DASH_L_c1,L-Homocysteine
+hcys-L_c1,L-Homocysteine
 pep_s1,Phosphoenolpyruvate
 pep_c1,Phosphoenolpyruvate
 pyr_c1,Pyruvate
-mal_DASH_L_c1,L-Malate
-mal_DASH_L_s1,L-Malate
+mal-L_c1,L-Malate
+mal-L_s1,L-Malate
 acald_m1,Acetaldehyde
 acald_s1,Acetaldehyde
 accoa_c1,Acetyl-CoA
@@ -2279,14 +2279,14 @@ glu5sa_m1,L-Glutamate 5-semialdehyde
 glu5sa_s1,L-Glutamate 5-semialdehyde
 nh4_s1,Ammonium
 glx_m1,Glyoxylate
-ala_DASH_L_m1,L-Alanine
+ala-L_m1,L-Alanine
 gly_m1,Glycine
 glx_x1,Glyoxylate
-ala_DASH_L_x1,L-Alanine
+ala-L_x1,L-Alanine
 gly_x1,Glycine
 pyr_x1,Pyruvate
 glx_s1,Glyoxylate
-ala_DASH_L_s1,L-Alanine
+ala-L_s1,L-Alanine
 gly_s1,Glycine
 akg_c1,2-Oxoglutarate
 acglu_c1,N-Acetyl-L-glutamate
@@ -2302,13 +2302,13 @@ nadh_c1,Nicotinamide adenine dinucleotide - reduced
 gal_c1,D-Galactose
 g1p_c1,D-Glucose 1-phosphate
 tre_c1,Trehalose
-glc_DASH_B_c1,beta-D-glucose
+glc-B_c1,beta-D-glucose
 tre6p_c1,"alpha,alpha'-Trehalose 6-phosphate"
-g6p_DASH_A_c1,alpha-D-glucose 6 phosphate
-b_DASH_glucan_c1,"1,3-beta-D-Glucan"
-b_DASH_glucan_v1,"1,3-beta-D-Glucan"
-glc_DASH_B_v1,beta-D-glucose
-glc_DASH_A_v1,alpha-D-glucose
+g6p-A_c1,alpha-D-glucose 6 phosphate
+b-glucan_c1,"1,3-beta-D-Glucan"
+b-glucan_v1,"1,3-beta-D-Glucan"
+glc-B_v1,beta-D-glucose
+glc-A_v1,alpha-D-glucose
 g1p_v1,D-Glucose 1-phosphate
 udpg_v1,UDPglucose
 mnt_c1,Manninotriose
@@ -2323,13 +2323,13 @@ dadp_c1,dADP
 dgdp_c1,dGDP
 oaa_c1,Oxaloacetate
 oaa_s1,Oxaloacetate
-mal_DASH_L_x1,L-Malate
+mal-L_x1,L-Malate
 nad_x1,Nicotinamide adenine dinucleotide
 oaa_x1,Oxaloacetate
 nadh_x1,Nicotinamide adenine dinucleotide - reduced
-mal_DASH_L_m1,L-Malate
+mal-L_m1,L-Malate
 oaa_m1,Oxaloacetate
-mal_DASH_L_v1,L-Malate
+mal-L_v1,L-Malate
 nad_v1,Nicotinamide adenine dinucleotide
 oaa_v1,Oxaloacetate
 nadh_v1,Nicotinamide adenine dinucleotide - reduced
@@ -2339,7 +2339,7 @@ accoa_m1,Acetyl-CoA
 cit_m1,Citrate
 coa_m1,Coenzyme A
 oxa_c1,Oxalate
-asp_DASH_L_s1,L-Aspartate
+asp-L_s1,L-Aspartate
 iasp_s1,Iminoaspartate
 quln_s1,Quinolinate
 nicrnt_s1,Nicotinate D-ribonucleotide
@@ -2350,8 +2350,8 @@ nac_c1,Nicotinate
 ncam_c1,Nicotinamide
 nmn_c1,NMN
 r5p_c1,alpha-D-Ribose 5-phosphate
-asp_DASH_L_m1,L-Aspartate
-glu_DASH_L_x1,L-Glutamate
+asp-L_m1,L-Aspartate
+glu-L_x1,L-Glutamate
 akg_x1,2-Oxoglutarate
 succ_m1,Succinate
 gtp_m1,GTP
@@ -2359,11 +2359,11 @@ succoa_m1,Succinyl-CoA
 gdp_m1,GDP
 ahdt_c1,"2-Amino-4-hydroxy-6-(erythro-1,2,3-trihydroxypropyl)dihydropteridinetriphosphate"
 for_c1,Formate
-lys_DASH_L_s1,L-Lysine
+lys-L_s1,L-Lysine
 cadaverine_s1,Cadaverine
 L2aadp_c1,L-2-Aminoadipate
 L2aadp6sa_c1,L-2-Aminoadipate 6-semialdehyde
-saccrp_DASH_L_c1,L-Saccharopine
+saccrp-L_c1,L-Saccharopine
 2oxoadp_c1,2-Oxoadipate
 lpam_m1,Lipoamide
 adhlam_m1,S-Acetyldihydrolipoamide
@@ -2376,7 +2376,7 @@ sdhlam_m1,S-Succinyldihydrolipoamide
 2oxoadp_m1,2-Oxoadipate
 gdhlam_m1,S-glutaryldihydrolipoyllysine
 gcoa_m1,Glutaryl-CoA
-26dap_DASH_M_s1,"meso-2,6-Diaminoheptanedioate"
+26dap-M_s1,"meso-2,6-Diaminoheptanedioate"
 glyclt_x1,Glycolate
 icit_x1,Isocitrate
 succ_x1,Succinate
@@ -2385,9 +2385,9 @@ mthgxl_x1,Methylglyoxal
 nh4_x1,Ammonium
 2aobut_x1,L-2-Amino-3-oxobutanoic acid
 co2_x1,CO2
-thr_DASH_L_x1,L-Threonine
+thr-L_x1,L-Threonine
 4pasp_s1,4-Phospho-L-aspartate
-asn_DASH_L_s1,L-Asparagine
+asn-L_s1,L-Asparagine
 for_m1,Formate
 hso3_x1,HSO3-
 so4_x1,Sulfate
@@ -2408,29 +2408,29 @@ gabutn_c1,4-Guanidinobutanoate
 cbmp_c1,N-Carbamoylputrescine
 agm_c1,Agmatine
 no_c1,Nitric oxide
-citr_DASH_L_c1,L-Citrulline
+citr-L_c1,L-Citrulline
 cbp_c1,Carbamoyl phosphate
-pser_DASH_L_s1,O-Phospho-L-serine
-ser_DASH_L_s1,L-Serine
-cyst_DASH_L_s1,L-Cystathionine
+pser-L_s1,O-Phospho-L-serine
+ser-L_s1,L-Serine
+cyst-L_s1,L-Cystathionine
 2obut_s1,2-Oxobutanoate
-cys_DASH_L_s1,L-Cysteine
-hcys_DASH_L_s1,L-Homocysteine
+cys-L_s1,L-Cysteine
+hcys-L_s1,L-Homocysteine
 acser_c1,O-Acetyl-L-serine
 acser_s1,O-Acetyl-L-serine
-ser_DASH_L_m1,L-Serine
+ser-L_m1,L-Serine
 acser_m1,O-Acetyl-L-serine
 hpyr_s1,Hydroxypyruvate
-ser_DASH_L_x1,L-Serine
+ser-L_x1,L-Serine
 hpyr_x1,Hydroxypyruvate
 mmet_c1,S-Methyl-L-methionine
 5mthglu_x1,5-Methyltetrahydropteroyltri-L-glutamate
-hcys_DASH_L_x1,L-Homocysteine
-met_DASH_L_x1,L-Methionine
+hcys-L_x1,L-Homocysteine
+met-L_x1,L-Methionine
 thglu_x1,Tetrahydropteroyl-tri-L-glutamate
 5mthglu_v1,5-Methyltetrahydropteroyltri-L-glutamate
-hcys_DASH_L_v1,L-Homocysteine
-met_DASH_L_v1,L-Methionine
+hcys-L_v1,L-Homocysteine
+met-L_v1,L-Methionine
 thglu_v1,Tetrahydropteroyl-tri-L-glutamate
 5mthglu_c1,5-Methyltetrahydropteroyltri-L-glutamate
 thglu_c1,Tetrahydropteroyl-tri-L-glutamate
@@ -2445,7 +2445,7 @@ achms_c1,O-Acetyl-L-homoserine
 sprm_c1,Spermine
 ametam_c1,S-Adenosylmethioninamine
 1acpc_c1,1-Aminocyclopropane-1-carboxylate
-ascb_DASH_L_c1,L-Ascorbate
+ascb-L_c1,L-Ascorbate
 dhdascb_c1,Dehydroascorbate
 cyan_c1,Hydrogen cyanide
 ethylene_c1,Ethylene
@@ -2467,13 +2467,13 @@ ind3acg_c1,Indole-3-acetyl-beta-1-D-glucoside
 iaainost_c1,indole-3-acetyl-myo-inositol
 iaainostgal_c1,5-O-(Indol-3-ylacetyl-myo-inositol) D-galactoside
 iaainostarab_c1,Indol-3-ylacetyl-myo-inositol L-arabinoside
-iaa_DASH_ala_c1,indole-3-acetyl-alanine
-iaa_DASH_leu_c1,indole-3-acetyl-leucine
-iaa_DASH_asp_c1,indole-3-acetyl-aspartate
-iaa_DASH_glu_c1,indole-3-acetyl-glutamate
-iaa_DASH_gln_c1,indole-3-acetyl-glutamine
+iaa-ala_c1,indole-3-acetyl-alanine
+iaa-leu_c1,indole-3-acetyl-leucine
+iaa-asp_c1,indole-3-acetyl-aspartate
+iaa-glu_c1,indole-3-acetyl-glutamate
+iaa-gln_c1,indole-3-acetyl-glutamine
 3ig3p_s1,C'-(3-Indolyl)-glycerol 3-phosphate
-trp_DASH_L_s1,L-Tryptophan
+trp-L_s1,L-Tryptophan
 g3p_s1,D-glyceraldehyde 3-phosphate
 indole_s1,Indole
 pphn_c1,Prephenate
@@ -2493,17 +2493,17 @@ hgentis_c1,Homogentisate
 34hpp_s1,4-Hydroxyphenylpyruvate
 hgentis_s1,Homogentisate
 4mlacac_c1,4-Maleylacetoacetate
-tyr_DASH_L_s1,L-Tyrosine
+tyr-L_s1,L-Tyrosine
 4fumacac_c1,4-Fumarylacetoacetate
 acac_c1,Acetoacetate
 fum_c1,Fumarate
 arogenate_s1,L-Arogenate
-phe_DASH_L_s1,L-Phenylalanine
+phe-L_s1,L-Phenylalanine
 chol_c1,Choline
 betald_c1,Betaine aldehyde
 glybet_c1,Glycine betaine
 glybet_s1,Glycine betaine
-met_DASH_L_s1,L-Methionine
+met-L_s1,L-Methionine
 dmetgly_s1,"N,N-dimethylglycine"
 fad_s1,Flavin adenine dinucleotide oxidized
 fadh2_s1,Flavin adenine dinucleotide reduced
@@ -2515,28 +2515,28 @@ dhlpro_m1,Dihydrolipolprotein
 thf_m1,"5,6,7,8-Tetrahydrofolate"
 mlthf_m1,"5,10-Methylenetetrahydrofolate"
 man6p_c1,D-Mannose 6-phosphate
-f6p_DASH_B_c1,beta-D-Fructose 6-phosphate
+f6p-B_c1,beta-D-Fructose 6-phosphate
 man1p_c1,D-mannose 1-phosphate
 man_c1,D-Mannose
 mhdascb_c1,Monodehydroascorbate
 mhdascb_s1,Monodehydroascorbate
-ascb_DASH_L_s1,L-Ascorbate
+ascb-L_s1,L-Ascorbate
 mhdascb_m1,Monodehydroascorbate
-ascb_DASH_L_m1,L-Ascorbate
+ascb-L_m1,L-Ascorbate
 dhdascb_s1,Dehydroascorbate
 gthrd_v1,Reduced glutathione
-glu_DASH_L_v1,L-Glutamate
+glu-L_v1,L-Glutamate
 cgly_v1,Cys-Gly
 gluala_c1,5-L-Glutamyl-L-alanine
 cgly_c1,cgly[c]
 5oxpro_c1,5-oxo-L-proline
-cys_DASH_L_v1,L-Cysteine
+cys-L_v1,L-Cysteine
 gly_v1,Glycine
 glucys_s1,gamma-L-Glutamyl-L-cysteine
-cys_DASH_L_m1,L-Cysteine
+cys-L_m1,L-Cysteine
 glucys_m1,gamma-L-Glutamyl-L-cysteine
 gallac_c1,"L-Galactono-1,4-lactone"
-gal_DASH_L_c1,L-Galactose
+gal-L_c1,L-Galactose
 gdpgal_c1,GDP-L-galactose
 gdpmann_c1,GDP-D-mannose
 gdpgul_c1,GDP-L-gulose
@@ -2546,24 +2546,24 @@ fuc1p_c1,L-Fucose 1-phosphate
 lald_c1,L-Lactaldehyde
 fc1p_c1,L-Fuculose 1-phosphate
 dhap_c1,Dihydroxyacetone phosphate
-fcl_DASH_L_c1,L-fuculose
-fuc_DASH_L_c1,L-Fucose
-fdp_DASH_B_c1,"beta-D-Fructose 1,6-bisphosphate"
-fdp_DASH_B_s1,"beta-D-Fructose 1,6-bisphosphate"
-f6p_DASH_B_s1,beta-D-Fructose 6-phosphate
+fcl-L_c1,L-fuculose
+fuc-L_c1,L-Fucose
+fdp-B_c1,"beta-D-Fructose 1,6-bisphosphate"
+fdp-B_s1,"beta-D-Fructose 1,6-bisphosphate"
+f6p-B_s1,beta-D-Fructose 6-phosphate
 suc6p_c1,sucrose-6-phosphate
-f6p_DASH_B_v1,beta-D-Fructose 6-phosphate
+f6p-B_v1,beta-D-Fructose 6-phosphate
 suc6p_v1,Sucrose 6-phosphate
-g6p_DASH_A_s1,alpha-D-glucose 6 phosphate
-g6p_DASH_B_c1,beta-D-glucose 6-phosphate
-g6p_DASH_B_s1,beta-D-glucose 6-phosphate
+g6p-A_s1,alpha-D-glucose 6 phosphate
+g6p-B_c1,beta-D-glucose 6-phosphate
+g6p-B_s1,beta-D-glucose 6-phosphate
 no2_s1,Nitrite
 no3_v1,Nitrate
 no2_v1,Nitrite
-fru_DASH_B_v1,beta-D-fructose
-g6p_DASH_B_v1,beta-D-glucose 6-phosphate
+fru-B_v1,beta-D-fructose
+g6p-B_v1,beta-D-glucose 6-phosphate
 sucr_v1,Sucrose
-mi3p_DASH_D_c1,1D-myo-Inositol 3-phosphate
+mi3p-D_c1,1D-myo-Inositol 3-phosphate
 hso3_s1,HSO3-
 h2s_s1,Hydrogen sulfide
 uacgam_c1,UDP-N-acetyl-D-glucosamine
@@ -2600,7 +2600,7 @@ dhf_m1,"7,8-Dihydrofolate"
 for_s1,Formate
 thf_s1,"5,6,7,8-Tetrahydrofolate"
 10fthf_s1,10-Formyltetrahydrofolate
-cala_DASH_L_c1,L-beta-Cyanoalanine
+cala-L_c1,L-beta-Cyanoalanine
 benzald_c1,Benzaldehyde
 manit_c1,Mandelonitrile
 prunasin_c1,(R)-Prunasin
@@ -2620,8 +2620,8 @@ chor_s1,chorismate
 anth_s1,Anthranilate
 g3p_c1,D-glyceraldehyde 3-phosphate
 r5p_s1,alpha-D-Ribose 5-phosphate
-rib_DASH_D_c1,D-Ribose
-rib_DASH_D_s1,D-Ribose
+rib-D_c1,D-Ribose
+rib-D_s1,D-Ribose
 5apru_s1,5-Amino-6-(5'-phosphoribosylamino)uracil
 5aprbu_s1,5-Amino-6-(5'-phosphoribitylamino)uracil
 dmlz_s1,"6,7-Dimethyl-8-(1-D-ribityl)lumazine"
@@ -2634,18 +2634,18 @@ fmn_m1,FMN
 fad_m1,Flavin adenine dinucleotide oxidized
 25dhpp_s1,"2,5-Diamino-6-hydroxy-4-(5'-phosphoribosylamino)-pyrimidine"
 db4p_s1,"3,4-dihydroxy-2-butanone 4-phosphate"
-ru5p_DASH_D_c1,D-Ribulose 5-phosphate
-ru5p_DASH_D_s1,D-Ribulose 5-phosphate
+ru5p-D_c1,D-Ribulose 5-phosphate
+ru5p-D_s1,D-Ribulose 5-phosphate
 3pg_c1,3-Phospho-D-glycerate
 13dpg_c1,3-Phospho-D-glyceroyl phosphate
 13dpg_s1,3-Phospho-D-glyceroyl phosphate
 f1p_c1,D-Fructose 1-phosphate
 fald_c1,Formaldehyde
-xu5p_DASH_D_c1,D-Xylulose 5-phosphate
+xu5p-D_c1,D-Xylulose 5-phosphate
 dha_c1,Dihydroxyacetone
-xu5p_DASH_D_s1,D-Xylulose 5-phosphate
+xu5p-D_s1,D-Xylulose 5-phosphate
 dha_s1,Dihydroxyacetone
-his_DASH_L_s1,L-Histidine
+his-L_s1,L-Histidine
 hista_s1,Histamine
 prbatp_s1,1-(5-Phosphoribosyl)-ATP
 pram_s1,5-Phospho-beta-D-ribosylamine
@@ -2655,9 +2655,9 @@ dcamp_c1,"N6-(1,2-Dicarboxyethyl)-AMP"
 dcamp_s1,"N6-(1,2-Dicarboxyethyl)-AMP"
 fum_s1,Fumarate
 argsuc_c1,N(omega)-(L-Arginino)succinate
-leu_DASH_L_s1,L-Leucine
+leu-L_s1,L-Leucine
 4mop_s1,4-Methyl-2-oxopentanoate
-leu_DASH_L_m1,L-Leucine
+leu-L_m1,L-Leucine
 4mop_m1,4-Methyl-2-oxopentanoate
 gsn_c1,Guanosine
 gua_c1,Guanine
@@ -2681,7 +2681,7 @@ mi34p_c1,"1D-myo-Inositol 3,4-bisphosphate"
 mi346p_c1,"D-myo-inositol (3,4,6)-trisphosphate"
 mi3456p_c1,"1D-myo-Inositol 3,4,5,6-tetrakisphosphate"
 mi14p_c1,"1D-myo-Inositol 1,4-bisphosphate"
-mi4p_DASH_D_c1,1D-myo-Inositol 4-phosphate
+mi4p-D_c1,1D-myo-Inositol 4-phosphate
 mi134p_c1,"1D-myo-Inositol 1,3,4-trisphosphate"
 mi13456p_c1,"1D-myo-Inositol 1,3,4,5,6-pentakisphosphate"
 mi1345p_c1,"1D-myo-Inositol 1,3,4,5-tetrakisphosphate"
@@ -2715,8 +2715,8 @@ ppcoa_m1,Propanoyl-CoA
 fadh2_m1,Flavin adenine dinucleotide reduced
 3hibutcoa_m1,(S)-3-Hydroxyisobutyryl-CoA
 23dhmb_m1,"(R)-2,3-Dihydroxy-3-methylbutanoate"
-val_DASH_L_s1,L-Valine
-val_DASH_L_m1,L-Valine
+val-L_s1,L-Valine
+val-L_m1,L-Valine
 methf_m1,"5,10-Methenyltetrahydrofolate"
 methf_s1,"5,10-Methenyltetrahydrofolate"
 methf_c1,"5,10-Methenyltetrahydrofolate"
@@ -2724,47 +2724,47 @@ methf_c1,"5,10-Methenyltetrahydrofolate"
 5fthf_m1,5-Formyltetrahydrofolate
 5fthf_s1,5-Formyltetrahydrofolate
 2dhp_m1,2-Dehydropantoate
-dad_DASH_2_c1,Deoxyadenosine
+dad-2_c1,Deoxyadenosine
 din_c1,Deoxyinosine
 2dr1p_c1,2-Deoxy-D-ribose 1-phosphate
 pppgpp_c1,"Guanosine 5'-triphosphate,3'-diphosphate"
 ppgpp_c1,"Guanosine 3',5'-bis(diphosphate)"
-pro_DASH_L_m1,L-Proline
+pro-L_m1,L-Proline
 1pyr5c_m1,1-Pyrroline-5-carboxylate
 1pyr5c_c1,1-Pyrroline-5-carboxylate
 1pyr5c_s1,1-Pyrroline-5-carboxylate
-pro_DASH_L_s1,L-Proline
+pro-L_s1,L-Proline
 gcald_c1,Glycolaldehyde
 glyclt_c1,Glycolate
 glyclt_s1,Glycolate
 glcur1p_c1,D-Glucuronate 1-phosphate
 xylan_c1,"1,4-beta-D-Xylan"
-xyl_DASH_D_c1,D-Xylose
+xyl-D_c1,D-Xylose
 udpgalur_c1,UDP-D-galacturonate
 udpddg_c1,UDP-4-dehydro-6-deoxy-D-glucose
 pect_c1,Pectate
 udpkrmn_c1,UDP-4-keto-rhamnose
 udprmn_c1,UDP-L-rhamnose
-glyc_DASH_R_s1,(R)-Glycerate
-glyc_DASH_R_x1,(R)-Glycerate
+glyc-R_s1,(R)-Glycerate
+glyc-R_x1,(R)-Glycerate
 nadph_x1,Nicotinamide adenine dinucleotide phosphate - reduced
 nadp_x1,Nicotinamide adenine dinucleotide phosphate
 cbasp_c1,N-Carbamoyl-L-aspartate
 phom_s1,O-Phospho-L-homoserine
-thr_DASH_L_s1,L-Threonine
-arab_DASH_L_c1,L-Arabinose
-B_DASH_ara1p_c1,beta-L-Arabinose 1-phosphate
+thr-L_s1,L-Threonine
+arab-L_c1,L-Arabinose
+B-ara1p_c1,beta-L-Arabinose 1-phosphate
 udparab_v1,UDP-L-arabinose
-arab_DASH_L_v1,L-Arabinose
+arab-L_v1,L-Arabinose
 3php_s1,3-Phosphohydroxypyruvate
 glcn_c1,D-Gluconate
 6pgc_c1,6-Phospho-D-gluconate
 glcn_s1,D-Gluconate
 6pgc_s1,6-Phospho-D-gluconate
-xylu_DASH_D_c1,D-Xylulose
+xylu-D_c1,D-Xylulose
 3hpp_c1,3-Hydroxypropanoate
 s7p_s1,Sedoheptulose 7-phosphate
-ala_DASH_B_m1,beta-Alanine
+ala-B_m1,beta-Alanine
 3c4mop_s1,(2S)-2-Isopropyl-3-oxosuccinate
 xan_c1,Xanthine
 3psme_s1,3-Phosphate-shikimate
@@ -2775,14 +2775,14 @@ alltn_c1,Allantoin
 5houdic_c1,"5-Hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate"
 5hiu_c1,5-Hydroxyisourate
 urate_c1,Urate
-hom_DASH_L_s1,L-Homoserine
+hom-L_s1,L-Homoserine
 achms_s1,O-Acetyl-L-homoserine
 succoa_s1,Succinyl-CoA
 suchms_s1,O-Succinyl-L-homoserine
 succ_s1,Succinate
 aspsa_s1,L-Aspartate 4-semialdehyde
-glc_DASH_A_s1,alpha-D-glucose
-glc_DASH_B_s1,beta-D-glucose
+glc-A_s1,alpha-D-glucose
+glc-B_s1,beta-D-glucose
 malt_s1,Maltose
 glucan_s1,alpha-glucan (Amylose)
 e4p_s1,D-Erythrose 4-phosphate
@@ -2791,20 +2791,20 @@ s17bp_s1,"Sedoheptulose 1,7-bisphosphate"
 cbp_s1,Carbamoyl phosphate
 cbasp_s1,N-Carbamoyl-L-aspartate
 orot_s1,Orotate
-acon_DASH_C_c1,cis-aconitate
-acon_DASH_C_m1,cis-aconitate
-citr_DASH_L_s1,L-Citrulline
+acon-C_c1,cis-aconitate
+acon-C_m1,cis-aconitate
+citr-L_s1,L-Citrulline
 argsuc_s1,N(omega)-(L-Arginino)succinate
-dhor_DASH_S_s1,(S)-Dihydroorotate
+dhor-S_s1,(S)-Dihydroorotate
 6pgl_c1,"6-phospho-D-glucono-1,5-lactone"
 6pgl_s1,"6-phospho-D-glucono-1,5-lactone"
 xtsn_c1,Xanthosine
 pqh2_u1,reduced plastoquinone
 pq_u1,oxidized plastoquinone
 3mop_s1,(S)-3-Methyl-2-oxopentanoate
-ile_DASH_L_s1,L-Isoleucine
+ile-L_s1,L-Isoleucine
 3mop_m1,(S)-3-Methyl-2-oxopentanoate
-ile_DASH_L_m1,L-Isoleucine
+ile-L_m1,L-Isoleucine
 dhpt_m1,Dihydropteroate
 acorn_s1,N2-Acetyl-L-ornithine
 orn_s1,L-Ornithine
@@ -2815,13 +2815,13 @@ acorn_c1,N2-Acetyl-L-ornithine
 skm_s1,Shikimate
 skm5p_s1,Shikimate 5-phosphate
 3dhsk_s1,3-Dehydroshikimate
-pant_DASH_R_m1,(R)-Pantoate
-pant_DASH_R_c1,(R)-Pantoate
-pnto_DASH_R_c1,(R)-Pantothenate
+pant-R_m1,(R)-Pantoate
+pant-R_c1,(R)-Pantoate
+pnto-R_c1,(R)-Pantothenate
 acg5p_c1,N-Acetyl-L-glutamyl 5-phosphate
 prpncoa_m1,Propenoyl-CoA
 3hpcoa_m1,3-Hydroxypropionyl-CoA
-26dap_DASH_LL_s1,"LL-2,6-Diaminoheptanedioate"
+26dap-LL_s1,"LL-2,6-Diaminoheptanedioate"
 cellb_c1,Cellobiose
 histd_s1,L-Histidinol
 histda_s1,L-Histidinal
@@ -2864,7 +2864,7 @@ iscssh_s1,IscS with bound sulfur
 iscs_s1,IscS sulfur acceptor protein
 amet_s1,S-Adenosyl-L-methionine
 4crsol_s1,p-Cresol
-dad_DASH_5_s1,5'-Deoxyadenosine
+dad-5_s1,5'-Deoxyadenosine
 thm_c1,Thiamin (Vitamin B1)
 thmpp_c1,Thiamine diphosphate
 fpram_s1,2-(Formamido)-N1-(5-phospho-D-ribosyl)acetamidine
@@ -2890,18 +2890,18 @@ pap_s1,"Adenosine 3',5'-bisphosphate"
 paps_c1,3'-Phosphoadenylyl sulfate
 pacald_c1,Phenylacetaldehyde
 2phetoh_c1,Phenylethyl alcohol
-g6p_DASH_A_v1,alpha-D-glucose 6 phosphate
+g6p-A_v1,alpha-D-glucose 6 phosphate
 2mhob_m1,2-Methyl-1-hydroxybutyl-ThPP
 2mbdhl_m1,S-(2-Methylbutanoyl)-dihydrolipoamide
 2mbcoa_m1,(S)-2-Methylbutanoyl-CoA
 2mb2coa_m1,trans-2-Methylbut-2-enoyl-CoA
 3hmbcoa_m1,(S)-3-Hydroxy-2-methylbutyryl-CoA
 2maacoa_m1,2-Methyl-3-acetoacetyl-CoA
-dhor_DASH_S_c1,(S)-Dihydroorotate
+dhor-S_c1,(S)-Dihydroorotate
 orot_c1,Orotate
 hco3_s1,Bicarbonate
 malcoa_s1,Malonyl-CoA
-t_DASH_cinn_c1,trans-Cinnamate
+t-cinn_c1,trans-Cinnamate
 coum_c1,4-Coumarate
 coumcoa_c1,4-Coumaroyl-CoA
 coumald_c1,p-Coumaraldehyde
@@ -2910,7 +2910,7 @@ fercoa_c1,Feruloyl-CoA
 caffqnt_c1,Caffeoyl quinate
 qnt_c1,Quinate
 conald_c1,Coniferyl aldehyde
-2_DASH_coum_c1,2-Coumarate
+2-coum_c1,2-Coumarate
 skm_c1,Shikimate
 coumskm_c1,4-Coumaroylshikimate
 sinald_c1,Sinapoyl aldehyde
@@ -3066,7 +3066,7 @@ npdp_s1,all-trans-Nonaprenyl diphosphate
 msbq_s1,"2-Methyl-6-solanyl-1,4-benzoquinol"
 plast_s1,Plastoquinone A
 yvite_s1,gamma-Tocopherol (Vitamin E)
-mev_DASH_R_c1,(R)-Mevalonate
+mev-R_c1,(R)-Mevalonate
 5pmev_c1,(R)-5-Phosphomevalonate
 5dpmev_c1,(R)-5-Diphosphomevalonate
 ipdp_c1,Isopentenyl diphosphate
@@ -3093,17 +3093,17 @@ moma_s1,Momilactone A
 stem_s1,Stemar-13-ene
 stem_c1,Stemar-13-ene
 stemol_c1,Stemar-13-enol
-ozln_DASH_S_c1,oryzalexin S
+ozln-S_c1,oryzalexin S
 ecdp_s1,ent-Copalyl diphosphate
 esand_s1,"ent-Sandaracopimara-8(14),15-diene"
 esand_c1,"ent-Sandaracopimara-8(14),15-diene"
 esandol_c1,ent-sandaracopimaradiene-3alpha-ol
-ozln_DASH_D_c1,oryzalexin D
-ozln_DASH_E_c1,oryzalexin E
-ozln_DASH_F_c1,oryzalexin F
-ozln_DASH_A_c1,oryzalexin A
-ozln_DASH_B_c1,oryzalexin B
-ozln_DASH_C_c1,oryzalexin C
+ozln-D_c1,oryzalexin D
+ozln-E_c1,oryzalexin E
+ozln-F_c1,oryzalexin F
+ozln-A_c1,oryzalexin A
+ozln-B_c1,oryzalexin B
+ozln-C_c1,oryzalexin C
 primardn_s1,"ent-Pimara-8(14),15-diene"
 eikaur_s1,ent-Isokaurene
 eikaur_c1,ent-Isokaurene
@@ -3113,19 +3113,19 @@ ecasd_c1,"ent-Cassa-12,15-diene"
 ecasdol_c1,"ent-cassa-12,15-diene-3alpha-ol"
 ecasdal_c1,"ent-cassa-12,15-diene-3alpha-al"
 ecasdate_c1,"ent-cassa-12,15-diene-3alpha-ol-11-keto"
-phtc_DASH_C_c1,phytocassane C
-phtc_DASH_E_c1,phytocassane E
-phtc_DASH_B_c1,phytocassane B
+phtc-C_c1,phytocassane C
+phtc-E_c1,phytocassane E
+phtc-B_c1,phytocassane B
 ecasd2ate_c1,"ent-cassa-12,15-diene-2,3alpha-ol-11-keto"
-phtc_DASH_D_c1,phytocassane D
-phtc_DASH_A_c1,phytocassane A
+phtc-D_c1,phytocassane D
+phtc-A_c1,phytocassane A
 ekaur_s1,ent-Kaurene
 ekaur_c1,ent-Kaurene
 ekaurol_c1,ent-Kaur-16-en-19-ol
 ekaural_c1,ent-Kaurenal
 ekaurate_c1,ent-Kaur-16-en-19-oate
 ehkaurate_c1,ent-7alpha-Hydroxykaur-16-en-19-oate
-ga12_DASH_ald_c1,Gibberellin A12 aldehyde
+ga12-ald_c1,Gibberellin A12 aldehyde
 ga12_c1,Gibberellin A12
 ga53_c1,Gibberellin A53
 ga15_c1,Gibberellin A15 open lactone
@@ -3152,23 +3152,23 @@ ga8cat_c1,Gibberellin A8-catabolite
 vlxan_s1,Violaxanthin
 anxan_s1,Antheraxanthin
 zxan_s1,Zeaxanthin
-a_DASH_carot_s1,alpha-Carotene
+a-carot_s1,alpha-Carotene
 znxan_s1,Zeinoxanthin
-a_DASH_cptxan_s1,alpha-Cryptoxanthin
+a-cptxan_s1,alpha-Cryptoxanthin
 lutein_s1,Lutein
 phyt_s1,all-trans-Phytoene
 phytfl_s1,Phytofluene
-z_DASH_carot_s1,all-trans-zeta-Carotene
-b_DASH_carot_s1,beta-Carotene
-b_DASH_cptxan_s1,beta-Cryptoxanthin
+z-carot_s1,all-trans-zeta-Carotene
+b-carot_s1,beta-Carotene
+b-cptxan_s1,beta-Cryptoxanthin
 nrsprn_s1,all-trans-Neurosporene
 lycop_s1,Lycopene
-b_DASH_zcarot_s1,beta-Zeacarotene
+b-zcarot_s1,beta-Zeacarotene
 dhbzcarot_s1,"7,8-Dihydro-beta-carotene"
 phdp_s1,Prephytoene diphosphate
 nxan_s1,Neoxanthin
-d_DASH_carot_s1,delta-Carotene
-g_DASH_carot_s1,gamma-Carotene
+d-carot_s1,delta-Carotene
+g-carot_s1,gamma-Carotene
 cnxan_s1,9-cis-Neoxanthin
 xanxn_s1,Xanthoxin
 absald_s1,Abscisic aldehyde
@@ -3176,9 +3176,9 @@ acrtnl_s1,C25-Allenic-apo-aldehyde
 abs_s1,Abscisate
 habs_s1,8-Hydroxyabscisate
 phas_s1,Phaseic acid
-ee_DASH_carotl_s1,epsilon-carotene-3-diol
+ee-carotl_s1,epsilon-carotene-3-diol
 lacxan_s1,Lactucaxanthin
-e_DASH_carot_s1,epsilon-Carotene
+e-carot_s1,epsilon-Carotene
 campst43l_c1,Campest-4-en-3beta-ol
 campst43e_c1,Campest-4-en-3-one
 dxcstn_c1,6-Deoxocathasterone
@@ -3215,15 +3215,15 @@ cyart_c1,Cycloartenol
 ipatp_s1,Isopentenyl-ATP
 ipadp_s1,Isopentenyl-ADP
 ipamp_s1,Isopentenyl-AMP
-t_DASH_ztnrtp_s1,trans-zeatin riboside triphosphate
-t_DASH_ztnrdp_s1,trans-zeatin riboside diphosphate
-t_DASH_ztnrp_s1,trans-Zeatin riboside monophosphate
+t-ztnrtp_s1,trans-zeatin riboside triphosphate
+t-ztnrdp_s1,trans-zeatin riboside diphosphate
+t-ztnrp_s1,trans-Zeatin riboside monophosphate
 ipadne_s1,N6-Dimethylallyladenine
 ipadn_s1,Isopentenyl adenosine
-t_DASH_ztn_s1,trans-Zeatin
-t_DASH_ztnr_s1,trans-Zeatin riboside
+t-ztn_s1,trans-Zeatin
+t-ztnr_s1,trans-Zeatin riboside
 dhz_s1,Dihydrozeatin
-t_DASH_ztn_c1,trans-Zeatin
+t-ztn_c1,trans-Zeatin
 ipadne_c1,N6-Dimethylallyladenine
 34hb_c1,3-methyl-4-trans-hydroxy-2-butenal
 ipadn_c1,Isopentenyl adenosine
@@ -3231,20 +3231,20 @@ ipadn_c1,Isopentenyl adenosine
 trna_c1,tRNA
 ptrna_c1,prenyl-tRNA
 ctrna_c1,cis-Prenyl-tRNA
-c_DASH_ztnrp_c1,cis-Zeatin riboside monophosphate
-c_DASH_ztnr_c1,cis-Zeatin riboside
-c_DASH_ztn_c1,cis-Zeatin
-c_DASH_ztn7g_c1,cis-zeatin-7-N-glucoside
-t_DASH_ztn7g_c1,trans-zeatin-7-N-glucoside
+c-ztnrp_c1,cis-Zeatin riboside monophosphate
+c-ztnr_c1,cis-Zeatin riboside
+c-ztn_c1,cis-Zeatin
+c-ztn7g_c1,cis-zeatin-7-N-glucoside
+t-ztn7g_c1,trans-zeatin-7-N-glucoside
 dhz_c1,Dihydrozeatin
 dhz7g_c1,dihydrozeatin-7-N-glucoside
 ipadne7g_c1,isopentenyladenine-7-N-glucoside
-c_DASH_ztn9g_c1,cis-zeatin-9-N-glucoside
-t_DASH_ztn9g_c1,trans-zeatin-9-N-glucoside
+c-ztn9g_c1,cis-zeatin-9-N-glucoside
+t-ztn9g_c1,trans-zeatin-9-N-glucoside
 dhz9g_c1,dihydrozeatin-9-N-glucoside
 ipadne9g_c1,isopentenyladenine-9-N-glucoside
-t_DASH_ztng_c1,trans-zeatin-O-glucoside
-c_DASH_ztng_c1,cis-Zeatin-O-glucoside
+t-ztng_c1,trans-zeatin-O-glucoside
+c-ztng_c1,cis-Zeatin-O-glucoside
 dhzg_c1,Dihydrozeatin-O-glucoside
 4mzym_int1_c1,"4alpha-carboxy-4beta-methyl-5alpha-cholesta-8,24-dien-3beta-ol"
 4mzym_int2_c1,"4alpha-methyl-5alpha-cholesta-8,24-dien-3-one"
@@ -3531,7 +3531,7 @@ cmp_m1,CMP
 pgp_os_m1,Phosphatidylglycerophosphate (oryza sativa specific)
 pg_os_m1,Phosphatidylglycerol (oryza sativa specific)
 clpn_os_m1,Cardiolipin (oryza sativa specific)
-ser_DASH_L_r1,L-Serine
+ser-L_r1,L-Serine
 ps_os_r1,Phosphatidylserine (oryza sativa specific)
 ps_os_m1,Phosphatidylserine (oryza sativa specific)
 pe_os_m1,phosphatidylethanolamine (oryza sativa specific)
@@ -3558,17 +3558,17 @@ dgdg_os_s1,Digalactosyl-diacylglycerol (oryza sativa specific)
 udpsq_s1,UDP-6-sulfoquinovose
 sq12dgr_os_s1,Sulfoquinovosyldiacylglycerol (oryza sativa specific)
 udpg_s1,UDP-glucose
-9_DASH_hpot_s1,"(9S,10E,12Z,15Z)-9-Hydroperoxy-10,12,15-octadecatrienoate"
-9_DASH_hpod_s1,"9(S)-hydroperoxy-10(E),12(Z)-octadecadienoic acid"
-13_DASH_hpot_s1,"(9Z,11E,15Z)-(13S)-Hydroperoxyoctadeca-9,11,15-trienoate"
-13_DASH_hpod_s1,"(9Z,11E)-(13S)-13-hydroperoxyoctadeca-9,11-dienoate"
-3_DASH_non_s1,(3Z)-nonenal
-9_DASH_nonan_s1,9-oxo-nonanoate
-3_DASH_nond_s1,"(3Z,6Z)-nonadienal"
+9-hpot_s1,"(9S,10E,12Z,15Z)-9-Hydroperoxy-10,12,15-octadecatrienoate"
+9-hpod_s1,"9(S)-hydroperoxy-10(E),12(Z)-octadecadienoic acid"
+13-hpot_s1,"(9Z,11E,15Z)-(13S)-Hydroperoxyoctadeca-9,11,15-trienoate"
+13-hpod_s1,"(9Z,11E)-(13S)-13-hydroperoxyoctadeca-9,11-dienoate"
+3-non_s1,(3Z)-nonenal
+9-nonan_s1,9-oxo-nonanoate
+3-nond_s1,"(3Z,6Z)-nonadienal"
 hxnl_s1,hexanal
 12o9dd_s1,12-oxo-c-9-dodecenoate
 hxndl_s1,cis-3-hexenal
-1213s_DASH_epoxlin_s1,"(9Z)-(13S)-12,13-Epoxyoctadeca-9,11,15-trienoate"
+1213s-epoxlin_s1,"(9Z)-(13S)-12,13-Epoxyoctadeca-9,11,15-trienoate"
 12oxophyt_s1,"(15Z)-12-Oxophyto-10,15-dienoate"
 12oxophyt_x1,"(15Z)-12-Oxophyto-10,15-dienoate"
 3o2c2poct_x1,"8-[(1R,2R)-3-Oxo-2-{(Z)-pent-2-enyl}cyclopentyl]octanoate"
@@ -3612,8 +3612,8 @@ gluside_c1,Glucosylceramide
 galgluside_c1,"beta-D-Galactosyl-1,4-beta-D-glucosylceramide"
 oclysLCP_m1,Protein N6-(octanoyl)lysine
 lipACP_m1,Lipoyl-[acyl carrier protein]
-met_DASH_L_m1,L-Methionine
-dad_DASH_5_m1,5'-Deoxyadenosine
+met-L_m1,L-Methionine
+dad-5_m1,5'-Deoxyadenosine
 lipro_m1,a non-lipoylated protein-lipoyl domain
 malACPme_c1,malonyl-ACP methyl ester
 akgACPme_c1,3-Ketoglutaryl-[acp] methyl ester
@@ -3631,8 +3631,8 @@ amob_c1,S-Adenosyl-4-methylthio-2-oxobutanoate
 dann_c1,"7,8-Diaminononanoate"
 dtbt_c1,Dethiobiotin
 btn_c1,Biotin
-dad_DASH_5_c1,5'-Deoxyadenosine
-cys_DASH_prot_c1,Protein-cysteine
+dad-5_c1,5'-Deoxyadenosine
+cys-prot_c1,Protein-cysteine
 frprot_c1,S-Farnesyl protein
 frcysprot_c1,Protein C-terminal S-farnesyl-L-cysteine
 frcysmpest_c1,Farnesylcysteine
@@ -3659,7 +3659,7 @@ dolpglc_c1,Dolichyl beta-D-glucosyl phosphate
 G10598_c1,(Glc)1 (GlcNAc)2 (Man)9 (PP-Dol)1
 G10599_c1,(Glc)2 (GlcNAc)2 (Man)9 (PP-Dol)1
 G00008_c1,(Glc)3 (GlcNAc)2 (Man)9 (PP-Dol)1
-Asn_DASH_X_DASH_Ser_DASH_FSLASH_DASH_Thr_c1,protein-linked asparagine residue (N-glycosylation site)
+Asn-X-Ser-FSLASH-Thr_c1,protein-linked asparagine residue (N-glycosylation site)
 G00009_c1,(Glc)3 (GlcNAc)2 (Man)9 (Asn)1
 G00171_c1,(Glc)2 (GlcNAc)2 (Man)9 (Asn)1
 G00010_c1,(Glc)1 (GlcNAc)2 (Man)9 (Asn)1
@@ -3696,7 +3696,7 @@ trnaala_m1,tRNA(Ala)
 alatrna_m1,L-Alanyl-tRNA(Ala)
 trnaarg_c1,tRNA(Arg)
 argtrna_c1,L-Arginyl-tRNA(Arg)
-arg_DASH_L_s1,L-Arginine
+arg-L_s1,L-Arginine
 trnaarg_s1,tRNA(Arg)
 argtrna_s1,L-Arginyl-tRNA(Arg)
 trnacys_c1,tRNA(Cys)
@@ -3725,10 +3725,10 @@ trnaser_m1,tRNA(Ser)
 sertrna_m1,L-Seryl-tRNA(Ser)
 trnathr_c1,tRNA(Thr)
 thrtrna_c1,L-Threonyl-tRNA(Thr)
-thr_DASH_L_m1,L-Threonine
+thr-L_m1,L-Threonine
 trnathr_m1,tRNA(Thr)
 thrtrna_m1,L-Threonyl-tRNA(Thr)
-lys_DASH_L_m1,L-Lysine
+lys-L_m1,L-Lysine
 trnalys_m1,tRNA(Lys)
 lystrna_m1,L-Lysine-tRNA (Lys)
 trnalys_s1,tRNA(Lys)
@@ -3745,14 +3745,14 @@ trnaphe_c1,tRNA(Phe)
 phetrna_c1,L-Phenylalanyl-tRNA(Phe)
 trnaphe_s1,tRNA(Phe)
 phetrna_s1,L-Phenylalanyl-tRNA(Phe)
-phe_DASH_L_m1,L-Phenylalanine
+phe-L_m1,L-Phenylalanine
 trnaphe_m1,tRNA(Phe)
 phetrna_m1,L-Phenylalanyl-tRNA(Phe)
 trnaasn_c1,tRNA(Asn)
 asntrna_c1,L-Asparaginyl-tRNA(Asn)
 trnaasn_s1,tRNA(Asn)
 asntrna_s1,L-Asparaginyl-tRNA(Asn)
-asn_DASH_L_m1,L-Asparagine
+asn-L_m1,L-Asparagine
 trnaasn_m1,tRNA(Asn)
 asntrna_m1,L-Asparaginyl-tRNA(Asn)
 trnaile_c1,tRNA(Ile)
@@ -3775,14 +3775,14 @@ trnatyr_c1,tRNA(Tyr)
 tyrtrna_c1,L-Tyrosyl-tRNA(Tyr)
 trnatyr_s1,tRNA(Tyr)
 tyrtrna_s1,L-Tyrosyl-tRNA(Tyr)
-tyr_DASH_L_m1,L-Tyrosine
+tyr-L_m1,L-Tyrosine
 trnatyr_m1,tRNA(Tyr)
 tyrtrna_m1,L-Tyrosyl-tRNA(Tyr)
 trnatrp_c1,tRNA(Trp)
 trptrna_c1,L-Tryptophanyl-tRNA(Trp)
 trnatrp_s1,tRNA(Trp)
 trptrna_s1,L-Tryptophanyl-tRNA(Trp)
-trp_DASH_L_m1,L-Tryptophan
+trp-L_m1,L-Tryptophan
 trnatrp_m1,tRNA(Trp)
 trptrna_m1,L-Tryptophanyl-tRNA(Trp)
 trnapro_c1,tRNA(Pro)
@@ -3795,10 +3795,10 @@ trnahis_c1,tRNA(His)
 histrna_c1,L-Histidyl-tRNA(His)
 trnahis_s1,tRNA(His)
 histrna_s1,L-Histidyl-tRNA(His)
-his_DASH_L_m1,L-Histidine
+his-L_m1,L-Histidine
 trnahis_m1,tRNA(His)
 histrna_m1,L-Histidyl-tRNA(His)
-ala_DASH_B_DASH_bet_c1,N-methyl-beta-alanine
+ala-B-bet_c1,N-methyl-beta-alanine
 betaldh_s1,Betaine aldehyde hydrate
 betald_s1,Betaine aldehyde
 23ddhb_s1,"(2S,3S)-2,3-Dihydroxy-2,3-dihydroxybenzoate"
@@ -3827,11 +3827,11 @@ kdo2lipid4_m1,KDO(2)-lipid IV(A)
 uaccg_c1,UDP-N-acetyl-3-O-(1-carboxyvinyl)-D-glucosamine
 uamr_c1,UDP-N-acetylmuramate
 uama_c1,UDP-N-acetylmuramoyl-L-alanine
-glu_DASH_D_c1,D-Glutamate
+glu-D_c1,D-Glutamate
 uamag_c1,UDP-N-acetylmuramoyl-L-alanyl-D-glutamate
-26dap_DASH_M_c1,"meso-2,6-Diaminoheptanedioate"
+26dap-M_c1,"meso-2,6-Diaminoheptanedioate"
 ugmd_c1,"UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate"
-ala_DASH_D_c1,D-Alanine
+ala-D_c1,D-Alanine
 alaala_c1,D-Alanyl-D-alanine
 ugmda_c1,"UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine"
 udcpp_c1,Undecaprenyl phosphate
@@ -3841,8 +3841,8 @@ sclgn_c1,Secologanin
 stcsd_c1,Strictosidine
 pstrp_c1,Pseudotropine
 trpn_c1,Tropinone
-cnln_DASH_L_s1,L-canaline
-uhom_DASH_L_s1,O-ureidohomoserine
+cnln-L_s1,L-canaline
+uhom-L_s1,O-ureidohomoserine
 cavsucc_s1,Canavaninosuccinate
 cav_s1,L-canavanine
 urea_s1,Urea
@@ -3872,10 +3872,10 @@ pplibtn_c1,4-prenylphlorisobutyrophenone
 dpplibtn_c1,Deoxycohumulone
 chumu_c1,Cohumulone
 mthgxl_c1,Methylglyoxal
-lgt_DASH_S_c1,(R)-S-Lactoylglutathione
-lac_DASH_D_c1,D-Lactate
-hmglut_DASH_S_s1,S-(Hydroxymethyl)glutathione
-fglut_DASH_S_s1,S-Formylglutathione
+lgt-S_c1,(R)-S-Lactoylglutathione
+lac-D_c1,D-Lactate
+hmglut-S_s1,S-(Hydroxymethyl)glutathione
+fglut-S_s1,S-Formylglutathione
 suo2_s1,superoxide
 fdxrd_u1,Reduced ferredoxin
 fdxox_u1,Oxidized ferredoxin
@@ -3896,10 +3896,10 @@ selhcys_s1,Selenohomocysteine
 selt_c1,Selenite
 suchms_c1,O-Succinyl-L-homoserine
 trnasecys_c1,tRNA(SeCys)
-sertrna_LPAREN_sec_RPAREN__c1,L-Seryl-tRNA(Sec)
+sertrna(sec)_c1,L-Seryl-tRNA(Sec)
 selmet_c1,L-Selenomethionine
 trnasemet_c1,tRNA(Met)
-sertrna_LPAREN_met_RPAREN__c1,Selenomethionyl-tRNA(Met)
+sertrna(met)_c1,Selenomethionyl-tRNA(Met)
 semetselmet_c1,Se-Methylselenomethionine
 metsel_c1,Methaneselenol
 selnp_c1,selenophosphate
@@ -3907,15 +3907,15 @@ mcfer_c1,24-methylenecycloartanyl ferulate
 cyartfer_c1,Cycloartenyl ferulate
 campstfer_c1,campesteryl ferulate
 sitstfer_c1,sitosteryl ferulate
-1_DASH_kesttr_c1,1-kestotriose
-16_DASH_kesttt_c1,"1,6-kestotetraose"
-11_DASH_kesttt_c1,"1,1-kestotetraose"
-6_DASH_kesttr_c1,6-kestotriose
+1-kesttr_c1,1-kestotriose
+16-kesttt_c1,"1,6-kestotetraose"
+11-kesttt_c1,"1,1-kestotetraose"
+6-kesttr_c1,6-kestotriose
 gppppg_c1,bis(5'-guanosyl) tetraphosphate
-rhcys_DASH_L_c1,S-ribosyl-L-homocysteine
+rhcys-L_c1,S-ribosyl-L-homocysteine
 camp_c1,cyclic-AMP
 thbpt_c1,Tetrahydrobiopterin
-dopa_DASH_L_c1,"3,4-Dihydroxy-L-phenylalanine"
+dopa-L_c1,"3,4-Dihydroxy-L-phenylalanine"
 4hthbpt_c1,4a-Hydroxytetrahydrobiopterin
 dhbpt_c1,Dihydrobiopterin
 2dr5p_c1,2-Deoxy-D-ribose 5-phosphate
@@ -3931,8 +3931,8 @@ crpe_c1,beta-Caryophyllene
 huml_c1,alpha-Humulene
 elm_c1,beta-elemene
 ga98_c1,Gibberallin A 98
-arg_DASH_L_m1,L-Arginine
-citr_DASH_L_m1,L-Citrulline
+arg-L_m1,L-Arginine
+citr-L_m1,L-Citrulline
 gcoa_c1,Glutaryl-CoA
 4abz_c1,4-Aminobenzoate
 na1_m1,Sodium
@@ -3947,9 +3947,9 @@ pgp_os_c1,Phosphatidylglycerophosphate (oryza sativa specific)
 pc_os_c1,Phosphatidylcholine (oryza sativa specific)
 pc_os_m1,Phosphatidylcholine (oryza sativa specific)
 succoa_c1,Succinyl-CoA
-glyc_DASH_R_c1,(R)-Glycerate
+glyc-R_c1,(R)-Glycerate
 na1_s1,Sodium
-t_DASH_ztnr_c1,trans-Zeatin riboside
+t-ztnr_c1,trans-Zeatin riboside
 12oxophyt_c1,"(15Z)-12-Oxophyto-10,15-dienoate"
 pyr_v1,Pyruvate
 adp_x1,ADP

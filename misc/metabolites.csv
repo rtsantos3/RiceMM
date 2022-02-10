@@ -3770,3 +3770,187 @@ asptrna_c1,L-Aspartyl-tRNA(Asp)
 trnaasp_s1,tRNA(Asp)
 asptrna_s1,L-Aspartyl-tRNA(Asp)
 trnaasp_m1,tRNA(Asp)
+asptrna_m1,L-Aspartyl-tRNA(Asp)
+trnatyr_c1,tRNA(Tyr)
+tyrtrna_c1,L-Tyrosyl-tRNA(Tyr)
+trnatyr_s1,tRNA(Tyr)
+tyrtrna_s1,L-Tyrosyl-tRNA(Tyr)
+tyr-L_m1,L-Tyrosine
+trnatyr_m1,tRNA(Tyr)
+tyrtrna_m1,L-Tyrosyl-tRNA(Tyr)
+trnatrp_c1,tRNA(Trp)
+trptrna_c1,L-Tryptophanyl-tRNA(Trp)
+trnatrp_s1,tRNA(Trp)
+trptrna_s1,L-Tryptophanyl-tRNA(Trp)
+trp-L_m1,L-Tryptophan
+trnatrp_m1,tRNA(Trp)
+trptrna_m1,L-Tryptophanyl-tRNA(Trp)
+trnapro_c1,tRNA(Pro)
+protrna_c1,L-Prolyl-tRNA(Pro)
+trnapro_s1,tRNA(Pro)
+protrna_s1,L-Prolyl-tRNA(Pro)
+trnapro_m1,tRNA(Pro)
+protrna_m1,L-Prolyl-tRNA(Pro)
+trnahis_c1,tRNA(His)
+histrna_c1,L-Histidyl-tRNA(His)
+trnahis_s1,tRNA(His)
+histrna_s1,L-Histidyl-tRNA(His)
+his-L_m1,L-Histidine
+trnahis_m1,tRNA(His)
+histrna_m1,L-Histidyl-tRNA(His)
+ala-B-bet_c1,N-methyl-beta-alanine
+betaldh_s1,Betaine aldehyde hydrate
+betald_s1,Betaine aldehyde
+23ddhb_s1,"(2S,3S)-2,3-Dihydroxy-2,3-dihydroxybenzoate"
+23dhb_s1,"2,3-Dihydroxybenzoate"
+entb_s1,enterobactin
+dtdpglu_c1,dTDPglucose
+dtdp4d6dg_c1,dTDP-4-dehydro-6-deoxy-D-glucose
+dtdp4d6dm_c1,dTDP-4-dehydro-6-deoxy-L-mannose
+dtdprmn_c1,dTDP-L-rhamnose
+ara5p_c1,D-Arabinose 5-phosphate
+kdo8p_c1,3-Deoxy-D-manno-octulosonate 8-phosphate
+kdo_c1,3-Deoxy-D-manno-2-octulosonate
+ckdo_c1,CMP-3-deoxy-D-manno-octulosonate
+uacgam_m1,UDP-N-acetyl-D-glucosamine
+u3aga_m1,UDP-3-O-(3-hydroxytetradecanoyl)-N-acetylglucosamine
+u3hga_m1,UDP-3-O-(3-hydroxytetradecanoyl)-D-glucosamine
+u23ga_m1,"UDP-2,3-bis(3-hydroxytetradecanoyl)glucosamine"
+lipidX_m1,"2,3-Bis(3-hydroxytetradecanoyl)-beta-D-glucosaminyl 1-phosphate"
+ump_m1,UMP
+lipidAds_m1,Lipid A Disaccharide
+udp_m1,UDP
+lipidA_m1,"2,3,2'3'-Tetrakis(beta-hydroxymyristoyl)-D-glucosaminyl-1,6-beta-D-glucosamine 1,4'-bisphosphate"
+ckdo_m1,CMP-3-deoxy-D-manno-octulosonate
+kdolipid4_m1,KDO-lipid IV(A)
+kdo2lipid4_m1,KDO(2)-lipid IV(A)
+uaccg_c1,UDP-N-acetyl-3-O-(1-carboxyvinyl)-D-glucosamine
+uamr_c1,UDP-N-acetylmuramate
+uama_c1,UDP-N-acetylmuramoyl-L-alanine
+glu-D_c1,D-Glutamate
+uamag_c1,UDP-N-acetylmuramoyl-L-alanyl-D-glutamate
+26dap-M_c1,"meso-2,6-Diaminoheptanedioate"
+ugmd_c1,"UDP-N-acetylmuramoyl-L-alanyl-D-gamma-glutamyl-meso-2,6-diaminopimelate"
+ala-D_c1,D-Alanine
+alaala_c1,D-Alanyl-D-alanine
+ugmda_c1,"UDP-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine"
+udcpp_c1,Undecaprenyl phosphate
+uagmda_c1,"Undecaprenyl-diphospho-N-acetylmuramoyl-L-alanyl-D-glutamyl-meso-2,6-diaminopimeloyl-D-alanyl-D-alanine"
+uaagmda_c1,"Undecaprenyl-diphospho-N-acetylmuramoyl-(N-acetylglucosamine)-L-ala-D-glu-meso-2,6-diaminopimeloyl-D-ala-D-ala"
+sclgn_c1,Secologanin
+stcsd_c1,Strictosidine
+pstrp_c1,Pseudotropine
+trpn_c1,Tropinone
+cnln-L_s1,L-canaline
+uhom-L_s1,O-ureidohomoserine
+cavsucc_s1,Canavaninosuccinate
+cav_s1,L-canavanine
+urea_s1,Urea
+caff_c1,Caffeate
+hfer_c1,5-Hydroxyferulic acid methyl ester
+sin_c1,Sinapate
+lcdpn_c1,Leucodelphinidin
+dlpdn_c1,Delphinidin
+dldpng_c1,Delphinidin 3-O-glucoside
+dldpndg_c1,"Delphinidin 3,5-diglucoside"
+dldpngcaff_c1,Delphinidin 3-glucoside 5-caffoyl-glucoside
+dlgcgg_c1,"Delphinidin 3,3'-diglucoside 5-(6-caffeoyl)glucoside"
+dldpntg_c1,"Delphinidin 3,5,3'-triglucoside"
+gentdp_c1,Gentiodelphin
+iorntn2gcoum_c1,Isoorientin-2-(6-coumaroyl)-O-glucoside
+iscprn2gcoum_c1,Isoscoparin-2-O-(6-coumaroyl)-glucoside
+iscprn2gfer_c1,Isoscoparin-2-O-(6-feruloyl)-glucoside
+ivtxn2gfer_c1,Isovitexin-2-O-(6-feruloyl)-glucoside
+plivlpn_m1,Phlorisovalerophenone
+plivlpn_c1,Phlorisovalerophenone
+pplivlpn_c1,4-prenylphlorisovalerophenone
+dpplivlpn_c1,Deoxyhumulone
+humu_c1,Humulone
+plibtn_m1,Phlorisobutyrophenone
+plibtn_c1,Phlorisobutyrophenone
+pplibtn_c1,4-prenylphlorisobutyrophenone
+dpplibtn_c1,Deoxycohumulone
+chumu_c1,Cohumulone
+mthgxl_c1,Methylglyoxal
+lgt-S_c1,(R)-S-Lactoylglutathione
+lac-D_c1,D-Lactate
+hmglut-S_s1,S-(Hydroxymethyl)glutathione
+fglut-S_s1,S-Formylglutathione
+suo2_s1,superoxide
+fdxrd_u1,Reduced ferredoxin
+fdxox_u1,Oxidized ferredoxin
+pccu2p_u1,Plastocyanin(Cu2+)
+pccu1p_u1,Plastocyanin(Cu+)
+h2o_u1,H2O
+o2_u1,o2[u]
+selcys_c1,Selenocysteine
+selcyst_c1,Selenocystathionine
+selcys_s1,Selenocysteine
+selcyst_s1,Selenocystathionine
+seln_c1,Selenide
+seln_s1,Selenide
+phom_c1,O-Phospho-L-homoserine
+seahcys_c1,Se-Adenosylselenohomocysteine
+selhcys_c1,Selenohomocysteine
+selhcys_s1,Selenohomocysteine
+selt_c1,Selenite
+suchms_c1,O-Succinyl-L-homoserine
+trnasecys_c1,tRNA(SeCys)
+sertrna(sec)_c1,L-Seryl-tRNA(Sec)
+selmet_c1,L-Selenomethionine
+trnasemet_c1,tRNA(Met)
+sertrna(met)_c1,Selenomethionyl-tRNA(Met)
+semetselmet_c1,Se-Methylselenomethionine
+metsel_c1,Methaneselenol
+selnp_c1,selenophosphate
+mcfer_c1,24-methylenecycloartanyl ferulate
+cyartfer_c1,Cycloartenyl ferulate
+campstfer_c1,campesteryl ferulate
+sitstfer_c1,sitosteryl ferulate
+1-kesttr_c1,1-kestotriose
+16-kesttt_c1,"1,6-kestotetraose"
+11-kesttt_c1,"1,1-kestotetraose"
+6-kesttr_c1,6-kestotriose
+gppppg_c1,bis(5'-guanosyl) tetraphosphate
+rhcys-L_c1,S-ribosyl-L-homocysteine
+camp_c1,cyclic-AMP
+thbpt_c1,Tetrahydrobiopterin
+dopa-L_c1,"3,4-Dihydroxy-L-phenylalanine"
+4hthbpt_c1,4a-Hydroxytetrahydrobiopterin
+dhbpt_c1,Dihydrobiopterin
+2dr5p_c1,2-Deoxy-D-ribose 5-phosphate
+udpgalfur_c1,"UDP-D-galacto-1,4-furanose"
+malttt_s1,maltotetraose
+maltt_s1,maltotriose
+sakur_c1,Sakuranetin
+ltlng_c1,luteolin 7-O-glucoside
+ltlnnp_c1,Luteolin 7-O-neohesperidoside
+apgng_c1,Apigenin 7-O-beta-D-glucoside
+apgnnp_c1,Apigenin 7-O-neohesperidoside
+crpe_c1,beta-Caryophyllene
+huml_c1,alpha-Humulene
+elm_c1,beta-elemene
+ga98_c1,Gibberallin A 98
+arg-L_m1,L-Arginine
+citr-L_m1,L-Citrulline
+gcoa_c1,Glutaryl-CoA
+4abz_c1,4-Aminobenzoate
+na1_m1,Sodium
+na1_c1,Sodium
+pheme_c1,Protoheme
+btcoa_c1,Butanoyl-CoA
+chor_c1,chorismate
+cdpdag_os_c1,CDP-diacylglycerol (oryza sativa specific)
+ptd1ino_os_m1,1-Phosphatidyl-D-myo-inositol (oryza sativa specific)
+ps_os_c1,Phosphatidylserine (oryza sativa specific)
+pgp_os_c1,Phosphatidylglycerophosphate (oryza sativa specific)
+pc_os_c1,Phosphatidylcholine (oryza sativa specific)
+pc_os_m1,Phosphatidylcholine (oryza sativa specific)
+succoa_c1,Succinyl-CoA
+glyc-R_c1,(R)-Glycerate
+na1_s1,Sodium
+t-ztnr_c1,trans-Zeatin riboside
+12oxophyt_c1,"(15Z)-12-Oxophyto-10,15-dienoate"
+pyr_v1,Pyruvate
+adp_x1,ADP
+b2coa_c1,Crotonoyl-CoA

@@ -32,7 +32,7 @@ def set_fix_flux_ratio(r_dict, model):
 		r1_flux = value_list[1]
 
 	#Adding ratio constraints to model
-		constraint = model.problem.Constraint(r0_flux * r1_obj.flux_expression - r1_flux * r0_obj.flux_expression, lb=0, ub=1000)
+		constraint = model.problem.Constraint(r0_flux * r1_obj.flux_expression - r1_flux * r0_obj.flux_expression, lb=0, ub=0)
 		#model.add_cons_vars(constraint)
 
 		#Return constraint

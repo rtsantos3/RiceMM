@@ -43628,7 +43628,7 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
-"objective_coefficient":0.5,
+"objective_coefficient":1.0,
 "notes":{
 "Confidence Level":"1",
 "SUBSYSTEM":"biomass"
@@ -44347,8 +44347,8 @@
 "photon490_u0":0.00457897551,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -44366,8 +44366,8 @@
 "photon690_u0":0.010829504,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -44394,8 +44394,8 @@
 "photon690_u0":0.003258373729,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":-1000,
+"upper_bound":1000,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -44413,8 +44413,8 @@
 "photon570_u0":0.0013448784,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -44442,8 +44442,8 @@
 "photon690_u0":0.06219,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -45851,7 +45851,7 @@
 "3pg_s0":2.0,
 "co2_s0":-1.0,
 "h2o_s0":-1.0,
-"h_s0":2.0,
+"h_s0":7.0,
 "rb15bp_s0":-1.0
 },
 "lower_bound":0.0,
@@ -90659,6 +90659,108 @@
 "gene_reaction_rule":"LOC_Os01g58020 and LOC_Os05g35330 and LOC_Os11g32770 and LOC_Os12g10580 and LOC_Os10g21280 and LOC_Os12g19394 and LOC_Os02g05830 and LOC_Os12g17600 and LOC_Os12g19381 and LOC_Os12g19470"
 },
 {
+"id":"EX_phloem",
+"name":"export reaction for phloem sap",
+"metabolites":{
+"ala-L_c0":-0.0183,
+"arg-L_c0":-0.0958,
+"asn-L_c0":-0.172,
+"asp-L_c0":-0.121,
+"gln-L_c0":-0.189,
+"glu-L_c0":-0.156,
+"his-L_c0":-0.00969,
+"ile-L_c0":-0.0204,
+"leu-L_c0":-0.0172,
+"lys-L_c0":-0.0516,
+"phe-L_c0":-0.0043,
+"pro-L_c0":-0.0129,
+"ser-L_c0":-0.116,
+"starch_s0":-2.07,
+"sucr_c0":-0.618,
+"thr-L_c0":-0.044,
+"tyr-L_c0":-0.00539,
+"val-L_c0":-0.0432
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_c_M",
+"name":"ATP NGAM for Cytosol",
+"metabolites":{
+"adp_c0":1.0,
+"atp_c0":-1.0,
+"pi_c0":1.0
+},
+"lower_bound":0.0427,
+"upper_bound":0.0427,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_s_M",
+"name":"ATP NGAM for Chloroplast (Plastid)",
+"metabolites":{
+"adp_s0":1.0,
+"atp_s0":-1.0,
+"pi_s0":1.0
+},
+"lower_bound":0.1527,
+"upper_bound":0.1527,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_x_M",
+"name":"ATP NGAM for Peroxisome",
+"metabolites":{
+"adp_x0":1.0,
+"atp_x0":-1.0,
+"pi_x0":1.0
+},
+"lower_bound":0.0076,
+"upper_bound":0.0076,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_m_M",
+"name":"ATP NGAM for Mitochondria",
+"metabolites":{
+"adp_m0":1.0,
+"atp_m0":-1.0,
+"pi_m0":1.0
+},
+"lower_bound":0.0091,
+"upper_bound":0.0091,
+"gene_reaction_rule":""
+},
+{
+"id":"DM_Phloem_M",
+"name":"export reaction for phloem sap",
+"metabolites":{
+"ala-L_c0":-0.0183,
+"arg-L_c0":-0.0958,
+"asn-L_c0":-0.172,
+"asp-L_c0":-0.121,
+"gln-L_c0":-0.189,
+"glu-L_c0":-0.156,
+"his-L_c0":-0.00969,
+"ile-L_c0":-0.0204,
+"leu-L_c0":-0.0172,
+"lys-L_c0":-0.0516,
+"phe-L_c0":-0.0043,
+"pro-L_c0":-0.0129,
+"ser-L_c0":-0.116,
+"starch_s0":-2.07,
+"sucr_c0":-0.618,
+"thr-L_c0":-0.044,
+"tyr-L_c0":-0.00539,
+"val-L_c0":-0.0432
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":""
+},
+{
 "id":"DM_o2(c)_M",
 "name":"Demand reaction for oxygen",
 "metabolites":{
@@ -90784,7 +90886,7 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"",
-"objective_coefficient":0.5,
+"objective_coefficient":1.0,
 "notes":{
 "Confidence Level":"1",
 "SUBSYSTEM":"biomass"
@@ -90915,8 +91017,8 @@
 "photon490_u1":0.00457897551,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -90934,8 +91036,8 @@
 "photon690_u1":0.010829504,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -90962,8 +91064,8 @@
 "photon690_u1":0.003258373729,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":-1000,
+"upper_bound":1000,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -90981,8 +91083,8 @@
 "photon570_u1":0.0013448784,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -91010,8 +91112,8 @@
 "photon690_u1":0.06219,
 "photonVis_e":-1.0
 },
-"lower_bound":0.0,
-"upper_bound":1000.0,
+"lower_bound":0,
+"upper_bound":0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -92419,7 +92521,7 @@
 "3pg_s1":2.0,
 "co2_s1":-1.0,
 "h2o_s1":-1.0,
-"h_s1":2.0,
+"h_s1":7.0,
 "rb15bp_s1":-1.0
 },
 "lower_bound":0.0,
@@ -137225,6 +137327,81 @@
 "lower_bound":0.0,
 "upper_bound":1000.0,
 "gene_reaction_rule":"LOC_Os01g58020 and LOC_Os05g35330 and LOC_Os11g32770 and LOC_Os12g10580 and LOC_Os10g21280 and LOC_Os12g19394 and LOC_Os02g05830 and LOC_Os12g17600 and LOC_Os12g19381 and LOC_Os12g19470"
+},
+{
+"id":"ngam_atp_c_BS",
+"name":"ATP NGAM for Cytosol",
+"metabolites":{
+"adp_c1":1.0,
+"atp_c1":-1.0,
+"pi_c1":1.0
+},
+"lower_bound":0.0427,
+"upper_bound":0.0427,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_s_BS",
+"name":"ATP NGAM for Chloroplast (Plastid)",
+"metabolites":{
+"adp_s1":1.0,
+"atp_s1":-1.0,
+"pi_s1":1.0
+},
+"lower_bound":0.1527,
+"upper_bound":0.1527,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_x_BS",
+"name":"ATP NGAM for Peroxisome",
+"metabolites":{
+"adp_x1":1.0,
+"atp_x1":-1.0,
+"pi_x1":1.0
+},
+"lower_bound":0.0076,
+"upper_bound":0.0076,
+"gene_reaction_rule":""
+},
+{
+"id":"ngam_atp_m_BS",
+"name":"ATP NGAM for Mitochondria",
+"metabolites":{
+"adp_m1":1.0,
+"atp_m1":-1.0,
+"pi_m1":1.0
+},
+"lower_bound":0.0091,
+"upper_bound":0.0091,
+"gene_reaction_rule":""
+},
+{
+"id":"DM_Phloem_BS",
+"name":"export reaction for phloem sap",
+"metabolites":{
+"ala-L_c1":-0.0183,
+"arg-L_c1":-0.0958,
+"asn-L_c1":-0.172,
+"asp-L_c1":-0.121,
+"gln-L_c1":-0.189,
+"glu-L_c1":-0.156,
+"his-L_c1":-0.00969,
+"ile-L_c1":-0.0204,
+"leu-L_c1":-0.0172,
+"lys-L_c1":-0.0516,
+"phe-L_c1":-0.0043,
+"pro-L_c1":-0.0129,
+"ser-L_c1":-0.116,
+"starch_s1":-2.07,
+"sucr_c1":-0.618,
+"thr-L_c1":-0.044,
+"tyr-L_c1":-0.00539,
+"val-L_c1":-0.0432
+},
+"lower_bound":0.0,
+"upper_bound":1000.0,
+"gene_reaction_rule":""
 },
 {
 "id":"DM_o2(c)_BS",

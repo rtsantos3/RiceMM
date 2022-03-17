@@ -44394,8 +44394,8 @@
 "photon690_u0":0.003258373729,
 "photonVis_e":-1.0
 },
-"lower_bound":-1000,
-"upper_bound":1000,
+"lower_bound":-1000000000.0,
+"upper_bound":1000000000.0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -45851,7 +45851,7 @@
 "3pg_s0":2.0,
 "co2_s0":-1.0,
 "h2o_s0":-1.0,
-"h_s0":7.0,
+"h_s0":8.0,
 "rb15bp_s0":-1.0
 },
 "lower_bound":0.0,
@@ -91064,8 +91064,8 @@
 "photon690_u1":0.003258373729,
 "photonVis_e":-1.0
 },
-"lower_bound":-1000,
-"upper_bound":1000,
+"lower_bound":-1000000000.0,
+"upper_bound":1000000000.0,
 "gene_reaction_rule":"",
 "notes":{
 "Confidence Level":"1",
@@ -92521,7 +92521,7 @@
 "3pg_s1":2.0,
 "co2_s1":-1.0,
 "h2o_s1":-1.0,
-"h_s1":7.0,
+"h_s1":8.0,
 "rb15bp_s1":-1.0
 },
 "lower_bound":0.0,

@@ -4,6 +4,7 @@
 
 import os
 import pandas as pd
+import cobra
 
 
 #Can be used to set fixed bounds or two bounds
@@ -54,10 +55,39 @@ def read_medium_csv(path, model):
 	else:
 		print("Path doesn't exist")
 
-
-
-
-def read_enzyme_rates(path):
-	if os.path.exists(path):
-		read= pd.read_csv(path)
 	
+def get_rxn(model, reaction_name):
+	if model:
+		if model.reactions.get_by_id(reaction_name.id):
+			return model.reactions.get_by_id(reaction_name.id)
+		else:
+			print("No reaction exists")
+
+	else:
+		print("Model doesn't exist!")
+
+
+
+
+def get_flux_exp(model, reaction_name):
+
+	if model:
+		if model.reactions.get_by_id(reaction_name.id):
+			reaction_flux = model.reactions.get_by_id(reaction_name.id).flux_expression
+
+			return reaction_flux
+		else:
+			print("No reaction exists")
+
+	else:
+		print("Model doesn't exist!")
+
+def set_flux_to_1e6(model):
+	if  model:
+		for rxns in model.reactions:
+		    if rxns.bounds != (0,0): #If reactions not 0,0
+		        if rxns.upper_bound != 1e6 and rxns.upper_bound !=  0:
+		            rxns.upper_bound =  1e6
+		        if rxns.lower_bound != -1e6 and rxns.lower_bound != 0:
+		            rxns.lower_bound =  -1e6
+		

@@ -47,7 +47,7 @@ def set_fix_flux_ratio(r_dict, model):
 def read_medium_csv(path, model):
 	
 	if os.path.exists(path):
-		read = pd.read_csv(path)
+		read = pd.read_csv(path, encoding='latin-1')
 		medium_dict = dict(read.values)
 		model.medium = medium_dict
 		return model.medium
@@ -58,8 +58,8 @@ def read_medium_csv(path, model):
 	
 def get_rxn(model, reaction_name):
 	if model:
-		if model.reactions.get_by_id(reaction_name.id):
-			return model.reactions.get_by_id(reaction_name.id)
+		if model.reactions.get_by_id(reaction_name):
+			return model.reactions.get_by_id(reaction_name)
 		else:
 			print("No reaction exists")
 
@@ -90,4 +90,15 @@ def set_flux_to_1e6(model):
 		            rxns.upper_bound =  1e6
 		        if rxns.lower_bound != -1e6 and rxns.lower_bound != 0:
 		            rxns.lower_bound =  -1e6
+
+
+def get_mets(model, met_id):
+	if model:
+		if model.metabolites.get_by_id(met_id):
+			return model.reactions.get_by_id(met_id)
+		else:
+			print("met doesn't exist")
+	else:
+		print("Model doesn't exist!")
 		
+				

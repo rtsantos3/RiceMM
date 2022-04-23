@@ -1,9 +1,7 @@
-Reactions inactivated in leaf
 Coleoptile_Biomass
 PRISM_blue_LED
 PRISM_red_LED
 PRISM_green_LED
-RBPCs/RBPC2s
 GDHym
 GDHm
 AGATx
@@ -12,8 +10,6 @@ ICDHc
 GTHPs
 GLCNGBc
 GLCNGAc
-MDHs
-MDHc
 ASPTAm
 PDHam1m
 PDHam2m
@@ -52,8 +48,6 @@ PTOXs
 PFKc
 PFKs
 AAs
-HCO3Es
-HCO3Em
 CHLASEs
 ALTNDAc
 NADOR2u

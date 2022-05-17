@@ -5,6 +5,8 @@
 import os
 import pandas as pd
 import cobra
+from datetime import datetime
+
 
 
 #Can be used to set fixed bounds or two bounds
@@ -101,4 +103,22 @@ def get_mets(model, met_id):
 	else:
 		print("Model doesn't exist!")
 		
-				
+def save_fba_matrix(filename, flux_matrix, path):		
+	now = datetime.now()
+	date_string = now.strftime("%Y%m%d-%H:%M")
+
+
+	filename = '{}-{}'.format(filename, date_string)
+
+	directory = os.path.dirname(path)
+
+	if not os.path.exists(directory):
+		os.makedirs(directory)
+		print(str(directory))
+
+	filepath = str(str(path) + str(filename) + '.tsv')
+	file = open(filepath, 'w')
+	flux_matrix.to_csv(file, sep='\t')
+	file.close()
+	print("Successfully saved {} to {}".format(filename, filepath))
+			

@@ -269,28 +269,29 @@ def add_ngam_cons(model, ppfd):
     ngam_cons.name = 'NGAM_ATP_constraint'
     model.add_cons_vars(ngam_cons)
     
-#This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes values above
+#This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes_df values above
 
 def print_summary(sample_fluxes_df):
-    print('rbcl M cell: ', sample_fluxes['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes['RBPCs_BS'])
-    print('rbcl M cell (photorespiration)', sample_fluxes['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes['RBPOs_BS'])
-    print('vc/vo M:', sample_fluxes['RBPCs_M']/sample_fluxes['RBPOs_M'], 'vc/vo BS:', sample_fluxes['RBPCs_BS']/sample_fluxes['RBPOs_BS'])
-    print('RBPC2s_M', sample_fluxes['RBPC2s_M'], 'RBPC2s_BS', sample_fluxes['RBPC2s_BS'])
-    print('PEPC M', sample_fluxes['PPCc_M'], 'PEPC BS', sample_fluxes['PPCc_BS'])
-    print('Carbonic Anhydrase (Cytosolic) M', sample_fluxes['HCO3Ec_M'], 'Carbonic Anhydrase (Cytosolic) BS', sample_fluxes['HCO3Ec_BS'])
-    print('NADP-ME M', sample_fluxes['MDHys_M'], 'NADP-ME BS', sample_fluxes['MDHys_BS'])
-    print('Biomass M: ', sample_fluxes['Straw_Biomass_M'], 'Biomass BS', sample_fluxes['Straw_Biomass_BS'])
-    print('Phloem M: ', sample_fluxes['DM_Phloem_M'], 'Phloem BS', sample_fluxes['DM_Phloem_BS'])
-    print('co2 consumption M', sample_fluxes['CO2tex_M'], 'co2 consumption BS', sample_fluxes['CO2tex_BS'])
-    print('o2 consumption M', sample_fluxes['O2tex_M'], 'o2 consumption BS', sample_fluxes['O2tex_BS'])
-    print('Photosystem II M', sample_fluxes['PSIINC_M'], 'PSII BS', sample_fluxes['PSIINC_BS'])
-    print('PSI M', sample_fluxes['PSIMR_M'], 'PSI BS', sample_fluxes['PSIMR_BS'])
-    print('PPFD M: ', sample_fluxes['PRISM_white_LED_M'], 'PPFD BS: ', sample_fluxes['PRISM_white_LED_BS'])
-    print('ATP synthesis (stromal) M', sample_fluxes['ATPSs_M'], 'ATP synthase (mit) M', sample_fluxes['ATPSm_M'])
+    print('Summary of Relevant fluxes: ')
+    print('rbcl M cell: ', sample_fluxes_df['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes_df['RBPCs_BS'])
+    print('rbcl M cell (photorespiration)', sample_fluxes_df['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes_df['RBPOs_BS'])
+    print('vc/vo M:', sample_fluxes_df['RBPCs_M']/sample_fluxes_df['RBPOs_M'], 'vc/vo BS:', sample_fluxes_df['RBPCs_BS']/sample_fluxes_df['RBPOs_BS'])
+    print('RBPC2s_M', sample_fluxes_df['RBPC2s_M'], 'RBPC2s_BS', sample_fluxes_df['RBPC2s_BS'])
+    print('PEPC M', sample_fluxes_df['PPCc_M'], 'PEPC BS', sample_fluxes_df['PPCc_BS'])
+    print('Carbonic Anhydrase (Cytosolic) M', sample_fluxes_df['HCO3Ec_M'], 'Carbonic Anhydrase (Cytosolic) BS', sample_fluxes_df['HCO3Ec_BS'])
+    print('NADP-ME M', sample_fluxes_df['MDHys_M'], 'NADP-ME BS', sample_fluxes_df['MDHys_BS'])
+    print('Biomass M: ', sample_fluxes_df['Straw_Biomass_M'], 'Biomass BS', sample_fluxes_df['Straw_Biomass_BS'])
+    print('Phloem M: ', sample_fluxes_df['DM_Phloem_M'], 'Phloem BS', sample_fluxes_df['DM_Phloem_BS'])
+    print('co2 consumption M', sample_fluxes_df['CO2tex_M'], 'co2 consumption BS', sample_fluxes_df['CO2tex_BS'])
+    print('o2 consumption M', sample_fluxes_df['O2tex_M'], 'o2 consumption BS', sample_fluxes_df['O2tex_BS'])
+    print('Photosystem II M', sample_fluxes_df['PSIINC_M'], 'PSII BS', sample_fluxes_df['PSIINC_BS'])
+    print('PSI M', sample_fluxes_df['PSIMR_M'], 'PSI BS', sample_fluxes_df['PSIMR_BS'])
+    print('PPFD M: ', sample_fluxes_df['PRISM_white_LED_M'], 'PPFD BS: ', sample_fluxes_df['PRISM_white_LED_BS'])
+    print('ATP synthesis (stromal) M', sample_fluxes_df['ATPSs_M'], 'ATP synthase (mit) M', sample_fluxes_df['ATPSm_M'])
     pd_rxn = [x for x in model.reactions if "pd" in x.id and "h2o" not in x.id]
     pd_abs_flux = 0
     for pds in pd_rxn:
-        pd_abs_flux += abs(sample_fluxes[pds.id])
+        pd_abs_flux += abs(sample_fluxes_df[pds.id])
     
     print('pd_abs_flux: ', pd_abs_flux)
     

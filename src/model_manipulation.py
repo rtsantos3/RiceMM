@@ -6,6 +6,8 @@ import os
 import pandas as pd
 import cobra
 from datetime import datetime
+import xlsxwriter
+
 
 
 
@@ -121,4 +123,24 @@ def save_fba_matrix(filename, flux_matrix, path):
 	flux_matrix.to_csv(file, sep='\t')
 	file.close()
 	print("Successfully saved {} to {}".format(filename, filepath))
+
+
+def create_xlsx(filename, path):		
+	now = datetime.now()
+	date_string = now.strftime("%Y%m%d-%H:%M")
+
+
+	filename = '{}-{}'.format(filename, date_string)
+
+	directory = os.path.dirname(path)
+
+	if not os.path.exists(directory):
+		os.makedirs(directory)
+		print(str(directory))
+
+	filepath = str(str(path) + str(filename) + '.xlsx')
+	workbook = pd.ExcelWriter(filepath, engine='xlsxwriter')
+
+	print("Successfully generated {} in {}".format(filename, filepath))
+	return workbook
 			

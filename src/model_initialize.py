@@ -1,5 +1,6 @@
 
-#This codeblock is to define some functions that will be used for modelling.
+#This codeblock is to define some functions that will be used for modelling. These include constraints such as Non-growth associated Maintainance (NGAM), tissue-specific constraints, etc.
+
 import sys
 sys.path.append("../src/") 
 import os
@@ -16,6 +17,11 @@ import csv
 import numpy as np
 import seaborn as sns
 from cobra import Reaction
+import xlsxwriter
+
+#Estimate infinity using a large value (1x10^6)
+inf = 1e6
+
 
 
 #Define linear relationship between PPFD and Cellular maintainance costs

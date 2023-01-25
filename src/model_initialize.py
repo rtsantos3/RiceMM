@@ -277,7 +277,7 @@ def add_ngam_cons(model, ppfd):
     
 #This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes_df values above
 
-def print_summary(sample_fluxes_df):
+def print_summary(sample_fluxes_df, model):
     print('Summary of Relevant fluxes: ')
     print('rbcl M cell: ', sample_fluxes_df['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes_df['RBPCs_BS'])
     print('rbcl M cell (photorespiration)', sample_fluxes_df['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes_df['RBPOs_BS'])

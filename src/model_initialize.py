@@ -1,6 +1,5 @@
 
-#This codeblock is to define some functions that will be used for modelling. These include constraints such as Non-growth associated Maintainance (NGAM), tissue-specific constraints, etc.
-
+#This codeblock is to define some functions that will be used for modelling.
 import sys
 sys.path.append("../src/") 
 import os
@@ -17,11 +16,6 @@ import csv
 import numpy as np
 import seaborn as sns
 from cobra import Reaction
-import xlsxwriter
-
-#Estimate infinity using a large value (1x10^6)
-inf = 1e6
-
 
 
 #Define linear relationship between PPFD and Cellular maintainance costs
@@ -277,7 +271,7 @@ def add_ngam_cons(model, ppfd):
     
 #This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes_df values above
 
-def print_summary(sample_fluxes_df, model):
+def print_summary(sample_fluxes_df):
     print('Summary of Relevant fluxes: ')
     print('rbcl M cell: ', sample_fluxes_df['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes_df['RBPCs_BS'])
     print('rbcl M cell (photorespiration)', sample_fluxes_df['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes_df['RBPOs_BS'])

@@ -17,6 +17,7 @@ import numpy as np
 import seaborn as sns
 from cobra import Reaction
 
+inf = 1e6
 
 #Define linear relationship between PPFD and Cellular maintainance costs
 #This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light

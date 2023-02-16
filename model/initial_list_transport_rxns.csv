@@ -1,25 +1,25 @@
 id,name
-ala_DASH_L_c,L-Alanine
-arg_DASH_L_c,L-Arginine
-asp_DASH_L_c,L-Aspartate
-cys_DASH_L_c,L-Cysteine
-glu_DASH_L_c,L-Glutamate
+ala-L_c,L-Alanine
+arg-L_c,L-Arginine
+asp-L_c,L-Aspartate
+cys-L_c,L-Cysteine
+glu-L_c,L-Glutamate
 gly_c,Glycine
-his_DASH_L_c,L-Histidine
-ile_DASH_L_c,L-Isoleucine
-leu_DASH_L_c,L-Leucine
-lys_DASH_L_c,L-Lysine
-met_DASH_L_c,L-Methionine
-phe_DASH_L_c,L-Phenylalanine
-pro_DASH_L_c,L-Proline
-ser_DASH_L_c,L-Serine
-thr_DASH_L_c,L-Threonine
-trp_DASH_L_c,L-Tryptophan
-tyr_DASH_L_c,L-Tyrosine
-val_DASH_L_c,L-Valine
-glc_DASH_A_c,alpha-D-glucose
+his-L_c,L-Histidine
+ile-L_c,L-Isoleucine
+leu-L_c,L-Leucine
+lys-L_c,L-Lysine
+met-L_c,L-Methionine
+phe-L_c,L-Phenylalanine
+pro-L_c,L-Proline
+ser-L_c,L-Serine
+thr-L_c,L-Threonine
+trp-L_c,L-Tryptophan
+tyr-L_c,L-Tyrosine
+val-L_c,L-Valine
+glc-A_c,alpha-D-glucose
 sucr_c,Sucrose
-fru_DASH_B_c,beta-D-fructose
+fru-B_c,beta-D-fructose
 udparab_c,UDP-L-arabinose
 udpxyl_c,UDP-D-xylose
 udpgal_c,UDP-galactose
@@ -31,10 +31,10 @@ o2_c,O2
 gal_c,D-Galactose
 g1p_c,D-Glucose 1-phosphate
 tre_c,Trehalose
-glc_DASH_B_c,beta-D-glucose
+glc-B_c,beta-D-glucose
 tre6p_c,"alpha,alpha'-Trehalose 6-phosphate"
-g6p_DASH_A_c,alpha-D-glucose 6 phosphate
-b_DASH_glucan_c,"1,3-beta-D-Glucan"
+g6p-A_c,alpha-D-glucose 6 phosphate
+b-glucan_c,"1,3-beta-D-Glucan"
 mnt_c,Manninotriose
 melib_c,Melibiose
 stc_c,Stachyose
@@ -46,10 +46,10 @@ oxa_c,Oxalate
 gal_c,D-Galactose
 g1p_c,D-Glucose 1-phosphate
 tre_c,Trehalose
-glc_DASH_B_c,beta-D-glucose
+glc-B_c,beta-D-glucose
 tre6p_c,"alpha,alpha'-Trehalose 6-phosphate"
-g6p_DASH_A_c,alpha-D-glucose 6 phosphate
-b_DASH_glucan_c,"1,3-beta-D-Glucan"
+g6p-A_c,alpha-D-glucose 6 phosphate
+b-glucan_c,"1,3-beta-D-Glucan"
 mnt_c,Manninotriose
 melib_c,Melibiose
 stc_c,Stachyose
@@ -58,13 +58,13 @@ raffin_c,Raffinose
 inost_c,myo-Inositol
 pep_c,Phosphoenolpyruvate
 pyr_c,Pyruvate
-mal_DASH_L_c,L-Malate
+mal-L_c,L-Malate
 accoa_c,Acetyl-CoA
 glu5p_c,L-Glutamate 5-phosphate
 akg_c,2-Oxoglutarate
 succ_c,Succinate
 icit_c,Isocitrate
-acon_DASH_C_c,cis-aconitate
+acon-C_c,cis-aconitate
 cit_c,Citrate
 akg_c,2-Oxoglutarate
 2pg_c,D-Glycerate 2-phosphate

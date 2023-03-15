@@ -2120,11 +2120,9 @@ mg2_c1,Magnesium
 ppi_c1,Diphosphate
 h2o_s1,H2O
 ppi_s1,Diphosphate
-h_s1,H+
 pi_s1,Phosphate
 h2o_m1,H2O
 ppi_m1,Diphosphate
-h_m1,H+
 pi_m1,Phosphate
 h2o_x1,H2O
 ppi_x1,Diphosphate
@@ -2153,11 +2151,13 @@ o2_m1,O2
 gln-L_m1,L-Glutamine
 akg_m1,2-Oxoglutarate
 fdxrd_m1,Reduced ferredoxin
+h_m1,H+
 glu-L_m1,L-Glutamate
 fdxox_m1,Oxidized ferredoxin
 gln-L_s1,L-Glutamine
 akg_s1,2-Oxoglutarate
 fdxrd_s1,Reduced ferredoxin
+h_s1,H+
 glu-L_s1,L-Glutamate
 fdxox_s1,Oxidized ferredoxin
 co2_s1,CO2
@@ -2407,8 +2407,8 @@ gabut_c1,4-Guanidinobutanamide
 gabutn_c1,4-Guanidinobutanoate
 cbmp_c1,N-Carbamoylputrescine
 agm_c1,Agmatine
-no_c1,Nitric oxide
 citr-L_c1,L-Citrulline
+no_c1,Nitric oxide
 cbp_c1,Carbamoyl phosphate
 pser-L_s1,O-Phospho-L-serine
 ser-L_s1,L-Serine
@@ -3319,6 +3319,7 @@ stcoa_r1,Stearoyl-CoA (n-C18:0CoA)
 h2o_r1,H2O
 araccoa_r1,arachidoyl-CoA (n-C20:0CoA)
 arac_r1,arachidate (n-C20:0)
+h_r1,H+
 behcoa_r1,behenoyl CoA (n-C22:0CoA)
 beh_r1,behenate (n-C22:0)
 lgnccoa_r1,lignoceroyl-CoA (n-C24:0CoA)
@@ -3340,7 +3341,6 @@ mlsol_r1,melissyl alcohol
 aracpalm_r1,arachidyl palmitate
 behpalm_r1,Behenyl palmitate
 o2_r1,O2
-h_r1,H+
 hydro16_r1,16-Hydroxypalmitate
 dhydro1016_r1,"10,16-dihydroxypalmitate"
 16opalm_r1,16-oxo-palmitate

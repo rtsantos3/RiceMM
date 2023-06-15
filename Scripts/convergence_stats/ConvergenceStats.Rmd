@@ -7,12 +7,6 @@ This notebook is to generate a report for each of the generated OPTGP samples. W
 
 
 ```{r}
-
-
-```
-
-
-```{r}
 library(coda)
 library(dplyr)
 library(openxlsx)
@@ -51,9 +45,12 @@ check_convergence <- function(df, threshold = 1.28) {
   converged_chains <- character()
   unconverged_chains <- character()
   total_valid <- 0
+  
   # Check absolute values against the threshold and store the names of converged chains
   for (i in seq_along(geweke_results)) {
     z_score <- abs(geweke_results[i])
+    
+    
     if (!is.na(z_score)) {
       total_valid <- total_valid + 1
       if (z_score > threshold) {
@@ -62,6 +59,9 @@ check_convergence <- function(df, threshold = 1.28) {
       else{
         unconverged_chains <- c(unconverged_chains, names(df)[i])
       }
+    }
+    else{
+      invisible() #Passes if value is NA
     }
   }
   
@@ -198,6 +198,56 @@ print(diag_df)
 write.csv(diag_df, './converge_stats/diagnostic_stats_filtered.csv')
 
 ```
+
+JUNE 15, 2023
+
+I want to test if my filtered samples have better convergence stats.
+
+```{r}
+
+wt_250_filt <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250filtered_75000T')
+wt_750_filt <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750filtered_75000T')
+ 
+  
+samples_list = list(wt_250_filt, wt_750_filt)
+
+sample_names = c('wt_250_filt','wt_750_filt')
+
+
+diag_df <- data_frame()
+
+
+  
+for(i in 1:length(samples_list)){
+  #Retrieve sample name and df name
+  sample <- sample_names[i]
+  df <- as.data.frame(mget(sample))
+  print(dim(df))
+
+ 
+  
+  #Raftery diag statistics
+  resmatrix <- calculate_raftery_stat(df)$resmatrix 
+  resmatrix <- cbind('reaction'=rownames(resmatrix), resmatrix)
+  Nfails <- as_data_frame(resmatrix) %>% subset(., subset=N>5000) #N sample fail 
+  Ifails <- as_data_frame(resmatrix) %>% subset(., subset=I>5) #Stickiness fail
+  
+  #Geweke convergence stats
+  gw <- check_convergence(df)
+  
+  #Append to the dataframe
+  
+  diag_cols <- data_frame(sample, 'resmatrix size'=dim(resmatrix)[1], 'Nfails'=dim(Nfails)[1], 'I_fails'=dim(Ifails)[1],'Geweke_fails'=gw$list_fails, 'percent converged (geweke)'=gw$percent_converged)
+  
+  diag_df <- rbind(diag_df, diag_cols)
+  
+  
+
+}
+
+print(diag_df)
+write.csv(diag_df, './converge_stats/diagnostic_stats_filtered_3rd_run.csv')
+
 
 
 

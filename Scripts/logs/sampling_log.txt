@@ -1,0 +1,118 @@
+Generating parametrized models for flux sampling
+start time for parametrize_model():  2023-05-21 02:30:44.216579
+Read LP format model from file /tmp/tmpjohn2qj3.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'numeric'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+1148 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3792
+end time for parametrize_model():  2023-05-21 02:31:56.288094
+start time for parametrize_model():  2023-05-21 02:31:56.288338
+Read LP format model from file /tmp/tmp24e5tt_3.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+1204 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3736
+end time for parametrize_model():  2023-05-21 02:33:12.830860
+start time for parametrize_model():  2023-05-21 02:33:12.831116
+Read LP format model from file /tmp/tmpwxrquy61.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+1061 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3879
+end time for parametrize_model():  2023-05-21 02:35:03.169938
+start time for parametrize_model():  2023-05-21 02:35:03.170224
+Read LP format model from file /tmp/tmpqo1ywkr3.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+1173 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3775
+end time for parametrize_model():  2023-05-21 02:36:36.273595
+start time for parametrize_model():  2023-05-21 02:36:36.273887
+Read LP format model from file /tmp/tmprzpjzvtq.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+1177 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3771
+end time for parametrize_model():  2023-05-21 02:38:19.548812
+start time for parametrize_model():  2023-05-21 02:38:19.549098
+Read LP format model from file /tmp/tmptctjimz5.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+1070 <class 'list'>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+3878
+end time for parametrize_model():  2023-05-21 02:40:17.505720
+generating flux samples for parametrized models
+start time for sampler generation:  2023-05-21 02:40:17.506214
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_250
+generating sampler for model
+Read LP format model from file /tmp/tmp6uwauwtw.lp
+Reading time = 0.02 seconds
+: 3970 rows, 7590 columns, 32362 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_250
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-21 05:10:10.379159
+start time for sampler generation:  2023-05-21 05:10:10.379266
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750
+generating sampler for model
+Read LP format model from file /tmp/tmpp5_r5nhd.lp
+Reading time = 0.01 seconds
+: 3970 rows, 7478 columns, 31838 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_750
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-21 07:38:41.881647
+start time for sampler generation:  2023-05-21 07:38:41.881748
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500
+generating sampler for model
+Read LP format model from file /tmp/tmpqhf8srbg.lp
+Reading time = 0.01 seconds
+: 3970 rows, 7764 columns, 33054 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_1500
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-21 12:44:01.780240
+start time for sampler generation:  2023-05-21 12:44:01.780371
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250
+generating sampler for model
+Read LP format model from file /tmp/tmp7933yl83.lp
+Reading time = 0.01 seconds
+: 3975 rows, 7561 columns, 32237 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_250
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-21 20:30:04.791069
+start time for sampler generation:  2023-05-21 20:30:04.791178
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750
+generating sampler for model
+Read LP format model from file /tmp/tmp73vqlmlb.lp
+Reading time = 0.02 seconds
+: 3975 rows, 7553 columns, 32231 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_750
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-21 23:05:40.302767
+start time for sampler generation:  2023-05-21 23:05:40.302882
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500
+generating sampler for model
+Read LP format model from file /tmp/tmpq38mh1mp.lp
+Reading time = 0.01 seconds
+: 3975 rows, 7767 columns, 33101 nonzeros
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_1500
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-05-22 02:24:17.425322

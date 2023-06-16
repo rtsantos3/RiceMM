@@ -250,7 +250,14 @@ write.csv(diag_df, './converge_stats/diagnostic_stats_filtered_3rd_run.csv')
 
 
 
-
+#Apparently filtering out my dataset doesn't work and actuallly reduces convergence
 
 ```
 
+```{r}
+
+wt_250_35k <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250.csv', tol=1e-7)
+
+gw <- check_convergence(wt_250_35k)
+gw
+```

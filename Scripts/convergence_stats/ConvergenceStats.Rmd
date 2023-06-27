@@ -23,7 +23,7 @@ load_csv_and_cleanup <- function(filename, tol = 0, remove_rows = 0) {
   df <- df[, !(names(df) %in% columns_to_remove)]
 
   # Remove a set number of rows from the top of the table
-  df <- df[(remove_rows + 1):nrow(df), ]
+  df <- df[(nrow(df) - remove_rows):nrow(df), ]
 
   # Fix the indices
   rownames(df) <- NULL

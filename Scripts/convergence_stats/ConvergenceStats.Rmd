@@ -23,7 +23,7 @@ load_csv_and_cleanup <- function(filename, tol = 0, remove_rows = 0) {
   df <- df[, !(names(df) %in% columns_to_remove)]
 
   # Remove a set number of rows from the top of the table
-  df <- df[(remove_rows + 1):nrow(df), ]
+  df <- df[(nrow(df) - remove_rows):nrow(df), ]
 
   # Fix the indices
   rownames(df) <- NULL
@@ -36,11 +36,12 @@ load_csv_and_cleanup <- function(filename, tol = 0, remove_rows = 0) {
 thin = 25000
 
 
-check_convergence <- function(df, threshold = 1.28) {
+check_convergence <- function(df, trim=1, threshold = 1.28) {
+  df_mcmc <- as.mcmc(df, start=trim)
+  
   #This function uses the Geweke Diagnostic to check which reactions have converged or not. 
   # Run Geweke diagnostic
-  mcmc_chain <- as.mcmc(df)
-  geweke_results <- geweke.diag(mcmc_chain, frac1 = 0.1, frac2 = 0.5)$z
+  geweke_results <- geweke.diag(df_mcmc, frac1 = 0.1, frac2 = 0.5)$z
 # 
   converged_chains <- character()
   unconverged_chains <- character()
@@ -53,7 +54,7 @@ check_convergence <- function(df, threshold = 1.28) {
     
     if (!is.na(z_score)) {
       total_valid <- total_valid + 1
-      if (z_score > threshold) {
+      if (z_score < threshold) {
         converged_chains <- c(converged_chains, names(df)[i])
       }
       else{
@@ -80,8 +81,7 @@ check_convergence <- function(df, threshold = 1.28) {
 
 
 calculate_raftery_stat<- function(df, q=0.025, r=0.005, s=0.95, eps=0.001){
-  df_mcmc <- as.mcmc(df)
-  rstat_mcmc <- raftery.diag(df_mcmc, q=q, r=r, s=s, converge.eps = eps)
+  rstat_mcmc <- raftery.diag(df, q=q, r=r, s=s, converge.eps = eps)
   resmatrix <- rstat_mcmc
   return(resmatrix)
 }
@@ -89,16 +89,19 @@ calculate_raftery_stat<- function(df, q=0.025, r=0.005, s=0.95, eps=0.001){
 
 ```
 
+
+
+
 ```{r}
+#THis script is for the final iteration of the flux sampling attempt
 
 
-
-wt_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250.csv')
-wt_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750.csv')
-wt_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_1500.csv')
-tr_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_250.csv')
-tr_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_750.csv')
-tr_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_1500.csv')
+wt_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250_Relaxed_loopless_FVA_100kT.csv')
+wt_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv')
+wt_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv')
+tr_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv')
+tr_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv')
+tr_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv')
 
 samples_list = list(wt_250, wt_750, wt_1500, tr_250, tr_750, tr_1500)
 
@@ -111,7 +114,7 @@ for(i in 1:6){
   #Retrieve sample name and df name
   sample <- sample_names[i]
   df <- as.data.frame(mget(sample))
-
+  # df <- as.mcmc(df, thin=1e5, start=5000)
   
   
   #Raftery diag statistics
@@ -136,20 +139,20 @@ for(i in 1:6){
 }
 
 print(diag_df)
-write.csv(diag_df, './converge_stats/diagnostic_stats_unfiltered.csv')
+write.csv(diag_df, './converge_stats/diagnostic_stats_run_with_LLFVA.csv')
 
 ```
 
 ```{r}
 
-#This codeblock is to assess both filtered samples
+#This codeblock is to check if trimming improves sample convergence
 
-wt_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250.csv', tol=1e-7)
-wt_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750.csv', tol=1e-7)
-wt_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_1500.csv', tol=1e-7)
-tr_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_250.csv', tol=1e-7)
-tr_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_750.csv', tol=1e-7)
-tr_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_1500.csv', tol=1e-7)
+wt_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250_Relaxed_loopless_FVA_100kT.csv', tol=1e-7)
+wt_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv', tol=1e-7)
+wt_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv', tol=1e-7)
+tr_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv', tol=1e-7)
+tr_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv', tol=1e-7)
+tr_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv',tol=1e-7)
 
 samples_list = list(wt_250, wt_750, wt_1500, tr_250, tr_750, tr_1500)
 
@@ -159,10 +162,11 @@ sample_names = c('wt_250','wt_750','wt_1500','tr_250','tr_750','tr_1500')
 diag_df <- data_frame()
 
 
-
-wb <- createWorkbook()
+# 
+# wb <- createWorkbook()
   
 for(i in 1:6){
+  for(i in )
   #Retrieve sample name and df name
   sample <- sample_names[i]
   df <- as.data.frame(mget(sample))
@@ -177,7 +181,7 @@ for(i in 1:6){
   Ifails <- as_data_frame(resmatrix) %>% subset(., subset=I>5) #Stickiness fail
   
   #Geweke convergence stats
-  gw <- check_convergence(df)
+  gw <- check_convergence(df, trim=6000)
   
   #Append to the dataframe
   
@@ -185,17 +189,16 @@ for(i in 1:6){
   
   diag_df <- do.call(rbind, list(diag_df, diag_cols))
   
-  wsheet <- addWorksheet(wb, sheetName = sample)
-  #Write resmatrix to workhbook
-  writeData(wb, wsheet, resmatrix)
-  
+  # wsheet <- addWorksheet(wb, sheetName = sample)
+  # #Write resmatrix to workhbook
+  # writeData(wb, wsheet, resmatrix)
 
 }
-workbook_file <- paste('./converge_stats/resmatrix_filtered.xlsx')
-saveWorkbook(wb, workbook_file, overwrite=TRUE)
+# workbook_file <- paste('./converge_stats/resmatrix_4th_final_run.xlsx')
+# saveWorkbook(wb, workbook_file, overwrite=TRUE)
 
 print(diag_df)
-write.csv(diag_df, './converge_stats/diagnostic_stats_filtered.csv')
+write.csv(diag_df, './converge_stats/diagnostic_stats_for_preprocessed_LLFVA_filtered_trimmed6000.csv')
 
 ```
 
@@ -203,28 +206,44 @@ JUNE 15, 2023
 
 I want to test if my filtered samples have better convergence stats.
 
+I want to also test if I can prune my samples to the last 5000 ones and check if convergence stats will improve.
+
+Not much improvement if I filter my samples to only above 1e-7.
+SEE FULL I
+Let's check the ff:
+- Prune samples by 1000
+- Prune samples by 2000 
+- Prune samples by 3000 //
+- Prune samples by 4000 //
+- Prune samples by 5000 
+= 6000 -- 
 ```{r}
-
-wt_250_filt <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250filtered_75000T')
-wt_750_filt <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750filtered_75000T')
- 
-  
-samples_list = list(wt_250_filt, wt_750_filt)
-
-sample_names = c('wt_250_filt','wt_750_filt')
+#START WITH PRUNING 5000 SAMPLES
 
 
-diag_df <- data_frame()
+#THis script is for the final iteration of the flux sampling attempt
+# 
+# 
+# wt_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250_Relaxed_loopless_FVA_100kT.csv')
+# wt_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv')
+# wt_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv')
+# tr_250 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv')
+# tr_750 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv')
+# tr_1500 = load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv')
+# 
+# samples_list = list(wt_250, wt_750, wt_1500, tr_250, tr_750, tr_1500)
+# 
+# sample_names = c('wt_250','wt_750','wt_1500','tr_250','tr_750','tr_1500')
 
+diag_df <- data_frame('name'=character(),'total_chains' =numeric(),'ESS_fails'=numeric(), 'stickiness_fails'=numeric(), 'list_geweke_fails'=numeric(), 'percent_converged'=numeric())
+# 
 
-  
-for(i in 1:length(samples_list)){
+for(i in 1:6){
   #Retrieve sample name and df name
   sample <- sample_names[i]
-  df <- as.data.frame(mget(sample))
-  print(dim(df))
-
- 
+  df <- as.data.frame(mget(sample)) %>% subset
+  df <- as.mcmc(df, thin=1e5)
+  
   
   #Raftery diag statistics
   resmatrix <- calculate_raftery_stat(df)$resmatrix 
@@ -232,32 +251,22 @@ for(i in 1:length(samples_list)){
   Nfails <- as_data_frame(resmatrix) %>% subset(., subset=N>5000) #N sample fail 
   Ifails <- as_data_frame(resmatrix) %>% subset(., subset=I>5) #Stickiness fail
   
+  
   #Geweke convergence stats
-  gw <- check_convergence(df)
+  gw <- check_convergence(df, 1.24)
+  
+  #Heidelberger test
   
   #Append to the dataframe
   
-  diag_cols <- data_frame(sample, 'resmatrix size'=dim(resmatrix)[1], 'Nfails'=dim(Nfails)[1], 'I_fails'=dim(Ifails)[1],'Geweke_fails'=gw$list_fails, 'percent converged (geweke)'=gw$percent_converged)
+  diag_cols <- data_frame(sample, dim(resmatrix)[1], dim(Nfails)[1], dim(Ifails)[1], gw$list_fails, gw$percent_converged)
   
-  diag_df <- rbind(diag_df, diag_cols)
-  
+  diag_df <- do.call(rbind, list(diag_df, diag_cols))
   
 
 }
 
 print(diag_df)
-write.csv(diag_df, './converge_stats/diagnostic_stats_filtered_3rd_run.csv')
+write.csv(diag_df, './converge_stats/diagnostic_stats_pruned_to_5000+filtered.csv')
 
-
-
-#Apparently filtering out my dataset doesn't work and actuallly reduces convergence
-
-```
-
-```{r}
-
-wt_250_35k <- load_csv_and_cleanup('../../flux_results/flux_sampling/flux_sample_WT_250.csv', tol=1e-7)
-
-gw <- check_convergence(wt_250_35k)
-gw
 ```

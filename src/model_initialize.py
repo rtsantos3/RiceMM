@@ -1,10 +1,6 @@
 
-#This codeblock is to define some functions that will be used for modelling.
 import sys
-sys.path.append("../src/") 
 import os
-
-import model_manipulation as mm
 import cobra
 import cplex 
 import libsbml
@@ -17,7 +13,14 @@ import numpy as np
 import seaborn as sns
 from cobra import Reaction
 
-inf = 1e6
+
+
+#Define inf as 1e6
+inf=1e6
+
+#Define linear relationship between PPFD and Cellular maintainance costs
+#This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light
+#This codeblock is to define some of the functions used for modelling
 
 #Define linear relationship between PPFD and Cellular maintainance costs
 #This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light
@@ -28,7 +31,7 @@ def compute_ngam_atp(ppfd):
 
 #This function is used to set the inputs to the model used. 
 def define_model_medium(model, co2, o2, ppfd, 
-                        medium_dir='../misc/photo_medium.csv', no3=inf, h2o=inf, h=inf, 
+                        medium_dir='./misc/photo_medium.csv', no3=inf, h2o=inf, h=inf, 
                         nh4=inf, pi=inf):
     model_photo_media = mm.read_medium_csv(medium_dir, model)
     model_photo_media['EX_no3(e)'] = no3
@@ -44,7 +47,7 @@ def define_model_medium(model, co2, o2, ppfd,
     return model_photo_media
 
     
-def turn_off_cofac_cycles(model, inact_dir='../misc/leaf_inactivated.tsv'):
+def turn_off_cofac_cycles(model, inact_dir='./misc/leaf_inactivated.tsv'):
     file = csv.reader(open(inact_dir), delimiter='\t')
     leaf_inactive_rxns = list()
     for rows in file:
@@ -67,6 +70,8 @@ def turn_off_cofac_cycles(model, inact_dir='../misc/leaf_inactivated.tsv'):
 # #BS photon flux must be the same/less than M flux (Adapted from B&B, 2019)
 # photon_import = model.reactions.get_by_id("EX_photonVis(e)")
 def add_tissue_constraints(model):
+    #For input fluxes for light, we will set the flux ratio to 10:1 to reflect the anatomical proportions of our model ()
+    
     BS_photon_import = model.reactions.PRISM_white_LED_BS
     M_photon_import = model.reactions.PRISM_white_LED_M
 
@@ -74,67 +79,63 @@ def add_tissue_constraints(model):
     photon_flux = mm.set_fix_flux_ratio({M_photon_import.id:10, BS_photon_import.id:1},model)
     model.add_cons_vars(photon_flux)
 
-    co2tex_m = model.reactions.CO2tex_M
-    co2tex_bs = model.reactions.CO2tex_BS
-
-    #CO2 Uptake must be constrained to A (Net assimilation rate) which is around 29 +- 1.2 umol CO2 m-2 s-1 for wild type rice
-    #CO2 BS intake must be limited owing to its position in the leaf tissue
-
-    # # #CO2 intake needs to be mostly in the M cells. Not sure of the exact value:
-    # # Values from Von Caemmerer (2000) in intermediate C3-C4 photosynthetic plants is 1 mmol CO2 m-2 s-1 per 20 CO2 m-2 s-1, which puts it at 20:1 ratio
-    # # #try checking Danila et al. (2016) on ratio of surface area of M cell to BS cell
-    # # #I'll assume that the ratio is at 20:1 in the meantime, meaning that there is minimal gas exchange into the BS cell that would equate to around ~1 umol CO2 m-2s-1
-    co2_ratio_cons = mm.set_fix_flux_ratio({co2tex_m.id:10, co2tex_bs.id:1},model)
-    co2_ratio_cons.name = 'co2_ratio_cons'
-    model.add_cons_vars(co2_ratio_cons)
-
-    #o2 ratio constraint
-    o2tex_bs = model.reactions.O2tex_BS
-    o2tex_m = model.reactions.O2tex_M
-
-    o2_ratio_cons = mm.set_fix_flux_ratio({o2tex_m.id:10, o2tex_bs.id:1},model)
-    o2_ratio_cons.name = 'o2_ratio_cons'
-    model.add_cons_vars(o2_ratio_cons)
-
-    #no tissue-specific constraints will be set for Nitrates, h2o and other inorganic cofactors as 
-    #they are transported via the apoplastic pathway rather than the symplast
+    
+    #UPDATE: Change CO2 intake to the M Cell instead rather than set a ratio, which is a better assumption overall. Assume na lang that external gasses are assimilated
+    #Via the M cell.
+    #From Morrison et al 2005 -- Lateral diffusion of Gases is unlikely to support photosynthesis due to the
+    #assimilation of diffused CO2 in tissues prior to BS//
+    model.reactions.CO2tex_BS.bounds = (0,0)
+    model.reactions.O2tex_BS.bounds = (0,0)
+    
+    #UPDATE: This assumption does not hold considering that recent transcriptomic analysis confirms that 
+    #the bundle sheath is involved in the assimilation of inorganic nutrients, including nitrogen (nitrates/ammonia), and 
+    #Sulfates. In turn, this will be implemented by simply setting the exchanges to the M cell to 0. (Hua et al, 2021)
+    model.reactions.SO3tex_M.bounds = (0,0)
+    model.reactions.SO4tex_M.bounds = (0,0)
+    model.reactions.NH4tex_M.bounds = (0,0)
+    model.reactions.NO3tex_M.bounds = (0,0)
+    
+    #Model will also constraint H2O input to BS cell only as it is also assumed that BS tissue in rice is specialized for H2O transport (Hua et al. 2021)
+    #The model also will allow one-way flux of H2O out of the M cell in the form of evaporation (shown by -inf lower bound for the reaction)
+    model.reactions.H2Otex_M.bounds = (-inf, 0)
+    
+    #need to turn off HCO import as the model incorrectly transfers fixed HCO to the BS cell via the common pool compartment
+    model.reactions.HCO3tex_M.bounds = (0,0)
+    model.reactions.HCO3tex_BS.bounds = (0,0)
+    
+    #No constraints will be implemented for H+ availability allowing the model to use protons on-demand.
 
     # #This code block contains constraints specific for enzyme rate constraints
     #This approach is derived from Bogart & Myers (2016) where they constrained the enzyme rate 
     #fluxes in each of the 2-cell segments to a specific upper bound while keeping the lower bound
     #At 0. For reversible reactions the lower bounds are set to the same value
-
+    
 def add_enzyme_constraints(model, 
                            wt_pepc = 0, 
                            wt_mdh = 11.18, 
                            wt_nadp_me = 0.14, 
                            wt_ppdk=0.31,
                           wt_CA=7.5):
-    #Maximum values for constraints
-#     wt_pepc = 0 #umol m-2 s-1 #Note: Need to constrain it to 0 pala since no PEPC was detected in either cell type
-#     wt_mdh = 11.18 #umol m-2 s-1
-#     wt_nadp_me = 0.14 #umol m-2 s-1
-#     wt_ppdk = 0.31 #umol m-2 s-1
-#     wt_CA = 7.5 #umol m-2  s-1 bar-1 (Constrained to CO2 amounting to 400-500 mbar) (1 bar = 15.74 umol m-2 s-1 CA activity)
-
+    
     #PEPC constraint (Reaction id: PPCc)
     #Need to constrain it to 0 since reaction is only detected in Vascular tissue
     pepc_BS = model.reactions.PPCc_BS
     pepc_M = model.reactions.PPCc_M
-
-    wt_pepc_cons = model.problem.Constraint(pepc_BS.flux_expression 
-                                            + pepc_M.flux_expression, 
-                                            lb = 0, ub = wt_pepc)
-    wt_pepc_cons.name = 'wt_pepc_cons'
-    model.add_cons_vars(wt_pepc_cons)
+    
+    pepc_BS.bounds = (0,0)
+    pepc_M.bounds = (0,0)
 
     #PPDK constraints (Reaction id: PPDKs) (note that this is found in the chloroplast?) 
     #Not detected via immunolocalization but enzyme activity is detected
 
     ppdks_BS = model.reactions.PPDKs_BS
     ppdks_M = model.reactions.PPDKs_M
+    ppdkc_BS = model.reactions.PPDKc_BS
+    ppdkc_M = model.reactions.PPDKc_M
     wt_ppdks_cons = model.problem.Constraint(ppdks_BS.flux_expression 
-                                             + ppdks_M.flux_expression, 
+                                             + ppdks_M.flux_expression
+                                             + ppdkc_BS.flux_expression
+                                             + ppdkc_M.flux_expression, 
                                              lb = 0, ub = wt_ppdk)
     wt_ppdks_cons.name = 'wt_ppdks_cons'
     model.add_cons_vars(wt_ppdks_cons)
@@ -206,14 +207,14 @@ def add_enzyme_constraints(model,
     #This allows the system to be set at a specific Vc/Vo rate while still allowing local variation 
     #wherein Rubisco may act in an uncoupled fashion and may have favorable internal vc/vo rates.
 # #This code block is to set a constraint such that M-to-BS cell NGAM ratio is 10-to-1 
-# #Similar to what Moreno-Villena (2021) (preprint) had done 
+# #Similar to what Moreno-Villena et al (2022) had done 
 
 #This function takes two arguments: the model and the maximal  ppfd input to the system
 def add_ngam_cons(model, ppfd): 
     ngam_atp_m = mm.get_rxn(model, 'ngam_atp_c_M')
     ngam_atp_bs = mm.get_rxn(model, 'ngam_atp_c_BS')
-    ngam_atp_m.bounds = (0,1000)
-    ngam_atp_bs.bounds = (0,1000)
+    ngam_atp_m.bounds = (0,inf)
+    ngam_atp_bs.bounds = (0,inf)
     ngam_ratio = mm.set_fix_flux_ratio({ngam_atp_m.id:10, ngam_atp_bs.id:1}, model)
     ngam_ratio.name = 'ngam_BS/M_ratio'
     model.add_cons_vars(ngam_ratio)
@@ -270,29 +271,28 @@ def add_ngam_cons(model, ppfd):
     ngam_cons.name = 'NGAM_ATP_constraint'
     model.add_cons_vars(ngam_cons)
     
-#This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes_df values above
+#This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes values above
 
 def print_summary(sample_fluxes_df):
-    print('Summary of Relevant fluxes: ')
-    print('rbcl M cell: ', sample_fluxes_df['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes_df['RBPCs_BS'])
-    print('rbcl M cell (photorespiration)', sample_fluxes_df['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes_df['RBPOs_BS'])
-    print('vc/vo M:', sample_fluxes_df['RBPCs_M']/sample_fluxes_df['RBPOs_M'], 'vc/vo BS:', sample_fluxes_df['RBPCs_BS']/sample_fluxes_df['RBPOs_BS'])
-    print('RBPC2s_M', sample_fluxes_df['RBPC2s_M'], 'RBPC2s_BS', sample_fluxes_df['RBPC2s_BS'])
-    print('PEPC M', sample_fluxes_df['PPCc_M'], 'PEPC BS', sample_fluxes_df['PPCc_BS'])
-    print('Carbonic Anhydrase (Cytosolic) M', sample_fluxes_df['HCO3Ec_M'], 'Carbonic Anhydrase (Cytosolic) BS', sample_fluxes_df['HCO3Ec_BS'])
-    print('NADP-ME M', sample_fluxes_df['MDHys_M'], 'NADP-ME BS', sample_fluxes_df['MDHys_BS'])
-    print('Biomass M: ', sample_fluxes_df['Straw_Biomass_M'], 'Biomass BS', sample_fluxes_df['Straw_Biomass_BS'])
-    print('Phloem M: ', sample_fluxes_df['DM_Phloem_M'], 'Phloem BS', sample_fluxes_df['DM_Phloem_BS'])
-    print('co2 consumption M', sample_fluxes_df['CO2tex_M'], 'co2 consumption BS', sample_fluxes_df['CO2tex_BS'])
-    print('o2 consumption M', sample_fluxes_df['O2tex_M'], 'o2 consumption BS', sample_fluxes_df['O2tex_BS'])
-    print('Photosystem II M', sample_fluxes_df['PSIINC_M'], 'PSII BS', sample_fluxes_df['PSIINC_BS'])
-    print('PSI M', sample_fluxes_df['PSIMR_M'], 'PSI BS', sample_fluxes_df['PSIMR_BS'])
-    print('PPFD M: ', sample_fluxes_df['PRISM_white_LED_M'], 'PPFD BS: ', sample_fluxes_df['PRISM_white_LED_BS'])
-    print('ATP synthesis (stromal) M', sample_fluxes_df['ATPSs_M'], 'ATP synthase (mit) M', sample_fluxes_df['ATPSm_M'])
+    print('rbcl M cell: ', sample_fluxes['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes['RBPCs_BS'])
+    print('rbcl M cell (photorespiration)', sample_fluxes['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes['RBPOs_BS'])
+    print('vc/vo M:', sample_fluxes['RBPCs_M']/sample_fluxes['RBPOs_M'], 'vc/vo BS:', sample_fluxes['RBPCs_BS']/sample_fluxes['RBPOs_BS'])
+    print('RBPC2s_M', sample_fluxes['RBPC2s_M'], 'RBPC2s_BS', sample_fluxes['RBPC2s_BS'])
+    print('PEPC M', sample_fluxes['PPCc_M'], 'PEPC BS', sample_fluxes['PPCc_BS'])
+    print('Carbonic Anhydrase (Cytosolic) M', sample_fluxes['HCO3Ec_M'], 'Carbonic Anhydrase (Cytosolic) BS', sample_fluxes['HCO3Ec_BS'])
+    print('NADP-ME M', sample_fluxes['MDHys_M'], 'NADP-ME BS', sample_fluxes['MDHys_BS'])
+    print('Biomass M: ', sample_fluxes['Straw_Biomass_M'], 'Biomass BS', sample_fluxes['Straw_Biomass_BS'])
+    print('Phloem M: ', sample_fluxes['DM_Phloem_M'], 'Phloem BS', sample_fluxes['DM_Phloem_BS'])
+    print('co2 consumption M', sample_fluxes['CO2tex_M'], 'co2 consumption BS', sample_fluxes['CO2tex_BS'])
+    print('o2 consumption M', sample_fluxes['O2tex_M'], 'o2 consumption BS', sample_fluxes['O2tex_BS'])
+    print('Photosystem II M', sample_fluxes['PSIINC_M'], 'PSII BS', sample_fluxes['PSIINC_BS'])
+    print('PSI M', sample_fluxes['PSIMR_M'], 'PSI BS', sample_fluxes['PSIMR_BS'])
+    print('PPFD M: ', sample_fluxes['PRISM_white_LED_M'], 'PPFD BS: ', sample_fluxes['PRISM_white_LED_BS'])
+    print('ATP synthesis (stromal) M', sample_fluxes['ATPSs_M'], 'ATP synthase (mit) M', sample_fluxes['ATPSm_M'])
     pd_rxn = [x for x in model.reactions if "pd" in x.id and "h2o" not in x.id]
     pd_abs_flux = 0
     for pds in pd_rxn:
-        pd_abs_flux += abs(sample_fluxes_df[pds.id])
+        pd_abs_flux += abs(sample_fluxes[pds.id])
     
     print('pd_abs_flux: ', pd_abs_flux)
     
@@ -308,20 +308,19 @@ def add_trans_reactions(model):
     #PEPC = Chloroplastic in M & V (rxn id: PPCc)
     trans_ppcs = Reaction('trans_PPCs_M')
     trans_ppcs.name = "Phosphoenolpyruvate carboxylase, plastidic (Transgenic)"
-
-    co2_s0 = model.metabolites.co2_s0
-    h_s0 = model.metabolites.h_s0
+    
     pep_s0 = model.metabolites.pep_s0
-    h2o_s0 = model.metabolites.h2o_s0
+    hco3_s0 = model.metabolites.hco3_s0
     oaa_s0 = model.metabolites.oaa_s0
     pi_s0 = model.metabolites.pi_s0
 
 
     #Add metabolites, bounds, and subsystem
-    trans_ppcs.add_metabolites({co2_s0:-1, h_s0:-1, pep_s0:-1, h2o_s0:1, oaa_s0:1, pi_s0:1})
+    trans_ppcs.add_metabolites({hco3_s0:-1, pep_s0:-1, oaa_s0:1, pi_s0:1})
     trans_ppcs.bounds= model.reactions.PPCc_M.bounds
     trans_ppcs.subsystem = model.reactions.PPCc_M.subsystem
-
+    
+    trans_ppcs.notes['SUBSYSTEM']=model.reactions.PPCc_M.notes['SUBSYSTEM']
     trans_list.append(trans_ppcs)
 
 
@@ -336,11 +335,11 @@ def add_trans_reactions(model):
     trans_ppdks_bs.add_metabolites(model.reactions.PPDKs_BS.metabolites)
     trans_ppdks_bs.bounds = model.reactions.PPDKs_BS.bounds
     trans_ppdks_bs.name = "Pyruvate phosphate dikinase, plastidic (Transgenic)"
-
+    trans_ppdks_bs.notes['SUBSYSTEM']=model.reactions.PPDKs_BS.notes['SUBSYSTEM']
     trans_list.append(trans_ppdks_m)
     trans_list.append(trans_ppdks_bs)
-
-
+    
+ 
     #Transgenic NADP-ME
     #NADP-ME = Mitochondrial in M
     trans_nadp_me = Reaction('trans_MDHym_M')
@@ -350,14 +349,17 @@ def add_trans_reactions(model):
     nadp_m0 = model.metabolites.nadp_m0
     h_m0 = model.metabolites.h_m0
     nadph_m0 = model.metabolites.nadph_m0
-    oaa_m0 = model.metabolites.oaa_m0
+    co2_m0 = model.metabolites.co2_m0
+    pyr_m0 = model.metabolites.pyr_m0
 
     #Add to rxn
-    trans_nadp_me.add_metabolites({mal_m0:-1, nadp_m0:-1, h_m0:1, nadph_m0:1, oaa_m0:1})
+    trans_nadp_me.add_metabolites({mal_m0:-1, nadp_m0:-1, co2_m0:1, nadph_m0:1, pyr_m0:1})
     #Add bounds
-    trans_nadp_me.bounds=(-inf, inf)
-
+    trans_nadp_me.bounds=(0, inf)
+    
+    trans_nadp_me.notes['SUBSYSTEM']=model.reactions.MDHys_M.notes['SUBSYSTEM']
     trans_list.append(trans_nadp_me)
+
 
 
     #Malate Dehydrogenase, mitochondrial (M cell)
@@ -365,7 +367,8 @@ def add_trans_reactions(model):
     trans_MDHm_M.name = 'Malate Dehydrogenase, Mitochondrial'
     trans_MDHm_M.add_metabolites(model.reactions.MDHm_M.metabolites)
     trans_MDHm_M.subsystem = model.reactions.MDHm_M.subsystem
-
+    
+    trans_MDHm_M.notes['SUBSYSTEM']=model.reactions.MDHm_M.notes['SUBSYSTEM']
     trans_list.append(trans_MDHm_M)
 
     #Malate dehydrogenase, plastidic (M cell)
@@ -374,6 +377,7 @@ def add_trans_reactions(model):
     trans_MDHs_M.add_metabolites(model.reactions.MDHs_M.metabolites)
     trans_MDHs_M.subsystem = model.reactions.MDHs_M.subsystem
 
+    trans_MDHs_M.notes['SUBSYSTEM']=model.reactions.MDHs_M.notes['SUBSYSTEM']
     trans_list.append(trans_MDHs_M)
 
     #Malate dehydrogenase, plastidic(BS Cell)
@@ -382,6 +386,7 @@ def add_trans_reactions(model):
     trans_MDHs_BS.add_metabolites(model.reactions.MDHs_BS.metabolites)
     trans_MDHs_BS.subsystem = model.reactions.MDHs_BS.subsystem
 
+    trans_MDHs_BS.notes['SUBSYSTEM']=model.reactions.MDHs_BS.notes['SUBSYSTEM']
     trans_list.append(trans_MDHs_BS)
 
 
@@ -393,6 +398,7 @@ def add_trans_reactions(model):
     trans_hco3ec_M.bounds = model.reactions.HCO3Ec_M.bounds
 
     trans_hco3ec_M.subsystem = model.reactions.HCO3Ec_M.subsystem
+    trans_hco3ec_M.notes['SUBSYSTEM']=model.reactions.HCO3Ec_M.notes['SUBSYSTEM']
     trans_list.append(trans_hco3ec_M)
 
 
@@ -400,7 +406,7 @@ def add_trans_reactions(model):
     model.add_reactions(trans_list)
     
     model.repair()
-
+####ADDING TRANS CONSTRAINTS
 
 def add_trans_constraints(model,
                          trans_pepc_rates = 7.01,
@@ -414,20 +420,6 @@ def add_trans_constraints(model,
     each of the transgenic enzyme's tissue-specific localizations. 
     '''
     
-    #The following code block is done to
-    #Define rates
-#     trans_pepc_rates = 7.01 #umol m-2 s-1
-#     trans_ppdks_rates = 3.66 #umol m-2 s-1
-#     trans_mdh_rates = 152.87 #umol m-2 s-1
-#     trans_nadp_me_rates = 0.60 #umol m-2 s-1
-#     trans_CA_rates = 8 #umol m-2  s-1 bar-1 (Constrained to CO2 amounting to 400-500 mbar) (1 bar = 15.74 umol m-2 s-1 CA activity)
-
-
-    #Generate constraints on top of WT constraints
-
-    #Retrieve trans reactions
-   
-
     #PEPC constraint
     wt_PPCc_M = mm.get_rxn(model, 'PPCc_M')
     wt_PPCc_BS = mm.get_rxn(model, 'PPCc_BS')

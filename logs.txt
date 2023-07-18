@@ -154,6 +154,211 @@ Producing solution for:  FA161CoAr_BS ...
 Producing solution for:  FA180CoAr_BS ...
 Producing solution for:  FA181CoAr_BS ...
 Producing solution for:  FA183CoAr_BS ...
+
+
+#Flux sampling run 06-24/06-26 -- Rerun for WT750 and WT1500
+
+
+Generating parametrized models for flux sampling
+start time for parametrize_model():  2023-06-24 03:41:29.772944
+Read LP format model from file /tmp/tmp7xnx17r8.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+Checking done. Length of reactions that cause infeasibility issues:  0
+printing model objective:
+<Solution 0.332 at 0x7f39dedf33d0>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction FACOAL160c_M, setting it to NaN. This is usually due to numerical instability.
+Could not get flux for reaction FACOAL140x_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction FACOAL140x_BS, setting it to NaN. This is usually due to numerical instability.
+Could not get flux for reaction FAOS182x_BS, setting it to NaN. This is usually due to numerical instability.
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  2774
+final model objective (Final feasibility check):
+<Solution 0.332 at 0x7f39e09ac910>
+end time for parametrize_model():  2023-06-24 03:42:55.881300
+start time for parametrize_model():  2023-06-24 03:42:55.881417
+Read LP format model from file /tmp/tmp_qcfu4w_.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+Checking done. Length of reactions that cause infeasibility issues:  0
+printing model objective:
+<Solution 0.465 at 0x7f39db945000>
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  2779
+final model objective (Final feasibility check):
+<Solution 0.465 at 0x7f39de1bce80>
+end time for parametrize_model():  2023-06-24 03:44:20.725465
+start time for parametrize_model():  2023-06-24 03:44:20.725579
+Read LP format model from file /tmp/tmpx5qit634.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_430(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_550(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  3
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.115 at 0x7f39e7222f50>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1239
+final model objective (Final feasibility check):
+<Solution 0.115 at 0x7f39ea8febf0>
+end time for parametrize_model():  2023-06-24 03:47:22.529830
+start time for parametrize_model():  2023-06-24 03:47:22.530255
+Read LP format model from file /tmp/tmpjkkti4fm.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+ATGDs_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  1
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.317 at 0x7f39d831b310>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1182
+final model objective (Final feasibility check):
+<Solution 0.317 at 0x7f39d568dc90>
+end time for parametrize_model():  2023-06-24 03:50:07.970224
+start time for parametrize_model():  2023-06-24 03:50:07.970420
+Read LP format model from file /tmp/tmpfswppkz8.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_M causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_570(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_630(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ADK1s_BS causes infeasible status!
+ATGDs_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ASNNc_BS causes infeasible status!
+RPDPKs_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+DVCHLOR430s_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+DM_Phloem_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  10
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.320 at 0x7f39d4da2c80>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1306
+final model objective (Final feasibility check):
+<Solution 0.320 at 0x7f39d4403c70>
+end time for parametrize_model():  2023-06-24 03:53:08.091836
+generating flux samples for parametrized models
+start time for sampler generation:  2023-06-24 03:53:08.135543
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpb3a1rep1.lp
+Reading time = 0.01 seconds
+: 3970 rows, 5554 columns, 23854 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-24 14:44:53.309892
+start time for sampler generation:  2023-06-24 14:44:53.310004
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp3gqcc9cb.lp
+Reading time = 0.02 seconds
+: 3970 rows, 5564 columns, 23908 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 02:08:16.767567
+start time for sampler generation:  2023-06-25 02:08:16.769354
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp8rih7glk.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2489 columns, 10287 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 10:00:45.460292
+start time for sampler generation:  2023-06-25 10:00:45.460400
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpl8puda25.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2375 columns, 9805 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 17:39:11.311713
+start time for sampler generation:  2023-06-25 17:39:11.311822
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmphac9t6wx.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2623 columns, 10917 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-26 02:17:08.374505
+
 Here are a list of reactions that allow Phloem to be produced without co-factor cycling: 
 FDHNc_M
 FDHNc_BS

@@ -330,6 +330,7 @@ def add_trans_reactions(model):
     trans_ppdks_m.add_metabolites(model.reactions.PPDKs_M.metabolites)
     trans_ppdks_m.bounds = model.reactions.PPDKs_M.bounds
     trans_ppdks_m.name = "Pyruvate phosphate dikinase, plastidic (Transgenic)"
+    trans_ppdks_m.notes['SUBSYSTEM']=model.reactions.PPDKs_M.notes['SUBSYSTEM']
 
     trans_ppdks_bs = Reaction('trans_PPDKs_BS')
     trans_ppdks_bs.add_metabolites(model.reactions.PPDKs_BS.metabolites)

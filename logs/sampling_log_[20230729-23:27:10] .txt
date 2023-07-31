@@ -1,0 +1,151 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp_3750rd2.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 23:27:21.297077
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+MTHFCs_M causes infeasible status/0 objective!
+FPGFTs_M causes infeasible status/0 objective!
+DVCHLOR570s_M causes infeasible status/0 objective!
+ASNNc_BS causes infeasible status/0 objective!
+objective bounds:0.29915579775008810.3323953308334326
+ngam_atp_c_BS causes infeasible status/0 objective!
+ngam_atp_s_BS causes infeasible status/0 objective!
+ngam_atp_x_BS causes infeasible status/0 objective!
+ngam_atp_m_BS causes infeasible status/0 objective!
+ngam_nadphox_c_BS causes infeasible status/0 objective!
+ngam_nadphox_s_BS causes infeasible status/0 objective!
+ngam_nadphox_m_BS causes infeasible status/0 objective!
+RBPOs_BS causes infeasible status/0 objective!
+DM_o2(c)_BS causes infeasible status/0 objective!
+DM_h(c)_BS causes infeasible status/0 objective!
+DM_h(s)_BS causes infeasible status/0 objective!
+DM_h(x)_BS causes infeasible status/0 objective!
+DM_h(m)_BS causes infeasible status/0 objective!
+DM_h(u)_BS causes infeasible status/0 objective!
+DM_h(v)_BS causes infeasible status/0 objective!
+DM_h(r)_BS causes infeasible status/0 objective!
+DM_h2o(c)_BS causes infeasible status/0 objective!
+ala-L_pd causes infeasible status/0 objective!
+arg-L_pd causes infeasible status/0 objective!
+asp-L_pd causes infeasible status/0 objective!
+cys-L_pd causes infeasible status/0 objective!
+glu-L_pd causes infeasible status/0 objective!
+gly_pd causes infeasible status/0 objective!
+his-L_pd causes infeasible status/0 objective!
+ile-L_pd causes infeasible status/0 objective!
+leu-L_pd causes infeasible status/0 objective!
+lys-L_pd causes infeasible status/0 objective!
+met-L_pd causes infeasible status/0 objective!
+phe-L_pd causes infeasible status/0 objective!
+pro-L_pd causes infeasible status/0 objective!
+ser-L_pd causes infeasible status/0 objective!
+thr-L_pd causes infeasible status/0 objective!
+trp-L_pd causes infeasible status/0 objective!
+tyr-L_pd causes infeasible status/0 objective!
+val-L_pd causes infeasible status/0 objective!
+glc-A_pd causes infeasible status/0 objective!
+sucr_pd causes infeasible status/0 objective!
+fru-B_pd causes infeasible status/0 objective!
+udparab_pd causes infeasible status/0 objective!
+udpxyl_pd causes infeasible status/0 objective!
+udpgal_pd causes infeasible status/0 objective!
+udpg_pd causes infeasible status/0 objective!
+udpglcur_pd causes infeasible status/0 objective!
+co2_pd causes infeasible status/0 objective!
+h2o_pd causes infeasible status/0 objective!
+o2_pd causes infeasible status/0 objective!
+pep_pd causes infeasible status/0 objective!
+pyr_pd causes infeasible status/0 objective!
+mal-L_pd causes infeasible status/0 objective!
+accoa_pd causes infeasible status/0 objective!
+glu5p_pd causes infeasible status/0 objective!
+akg_pd causes infeasible status/0 objective!
+icit_pd causes infeasible status/0 objective!
+gal_pd causes infeasible status/0 objective!
+g1p_pd causes infeasible status/0 objective!
+tre_pd causes infeasible status/0 objective!
+glc-B_pd causes infeasible status/0 objective!
+tre6p_pd causes infeasible status/0 objective!
+g6p-A_pd causes infeasible status/0 objective!
+b-glucan_pd causes infeasible status/0 objective!
+mnt_pd causes infeasible status/0 objective!
+melib_pd causes infeasible status/0 objective!
+stc_pd causes infeasible status/0 objective!
+raffin_pd causes infeasible status/0 objective!
+1Dgali_pd causes infeasible status/0 objective!
+inost_pd causes infeasible status/0 objective!
+cit_pd causes infeasible status/0 objective!
+oxa_pd causes infeasible status/0 objective!
+2pg_pd causes infeasible status/0 objective!
+dhap_pd causes infeasible status/0 objective!
+g3p_pd causes infeasible status/0 objective!
+3pg_pd causes infeasible status/0 objective!
+glyclt_pd causes infeasible status/0 objective!
+acon-C_pd causes infeasible status/0 objective!
+succ_pd causes infeasible status/0 objective!
+trans_PPCs_M causes infeasible status/0 objective!
+trans_PPDKs_M causes infeasible status/0 objective!
+trans_PPDKs_BS causes infeasible status/0 objective!
+trans_MDH2m_M causes infeasible status/0 objective!
+trans_hco3ec_M causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  84
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_750_debugging_[20230729-23:27:14] _before_pruning.csv
+recomputing list_infeasibles
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmps1r_rkrj.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 00:32:44.944536
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_750_debugging_[20230730-00:32:38] _before_pruning.csv
+printing model objective:
+<Solution infeasible at 0x7fe54411e530>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2053
+final model objective (Final feasibility check):
+<Solution infeasible at 0x7fe54412c520>
+end time for parametrize_model():  2023-07-30 01:00:15.380815
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_750_before_sampling.csv
+Read LP format model from file /tmp/tmp5oum4k_z.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 01:00:22.480880
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_1500_debugging_[20230730-01:00:15] _before_pruning.csv
+printing model objective:
+<Solution infeasible at 0x7fe518dadb10>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2032
+final model objective (Final feasibility check):
+<Solution infeasible at 0x7fe51c37ae60>
+end time for parametrize_model():  2023-07-30 01:26:11.038561
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_1500_before_sampling.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_250_updated_model_cons.csv
+bounds file saved to flux_sample_WT_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_updated_model_cons.csv
+bounds file saved to flux_sample_WT_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons.csv
+bounds file saved to flux_sample_WT_1500_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons.csv
+bounds file saved to flux_sample_TR_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons.csv
+bounds file saved to flux_sample_TR_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons.csv
+bounds file saved to flux_sample_TR_1500_updated_model_cons.csv
+generating flux samples for parametrized models
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp7g0ke8hc.lp
+Reading time = 0.01 seconds
+: 3970 rows, 4158 columns, 17226 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_250_updated_model_cons.csv
+Generating batch 1/2

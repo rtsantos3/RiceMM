@@ -1,0 +1,8 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpitbpkpsc.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpub54r3mj.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros

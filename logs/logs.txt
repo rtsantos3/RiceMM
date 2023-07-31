@@ -1,0 +1,1110 @@
+Producing solution for:  Coleoptile_Biomass_M ...
+Producing solution for:  PRISM_blue_LED_M ...
+Producing solution for:  PRISM_red_LED_M ...
+Producing solution for:  PRISM_green_LED_M ...
+Producing solution for:  GDHym_M ...
+Producing solution for:  GDHm_M ...
+Producing solution for:  AGATx_M ...
+Producing solution for:  AGATs_M ...
+Producing solution for:  ICDHc_M ...
+Producing solution for:  GTHPs_M ...
+Producing solution for:  GLCNGBc_M ...
+Producing solution for:  GLCNGAc_M ...
+Producing solution for:  ASPTAm_M ...
+Producing solution for:  PDHam1m_M ...
+Producing solution for:  PDHam2m_M ...
+Producing solution for:  PDHe2m_M ...
+Producing solution for:  PDHe3m_M ...
+Producing solution for:  THR3DHx_M ...
+Producing solution for:  FDHNc_M ...
+Producing solution for:  SULOm_M ...
+Producing solution for:  ASNS1c_M ...
+Producing solution for:  GLYCORc_M ...
+Producing solution for:  TYRTAs_M ...
+Producing solution for:  ARGOAT1s_M ...
+Producing solution for:  PGI2c_M ...
+Producing solution for:  PGI2s_M ...
+Producing solution for:  GAMPTc_M ...
+Producing solution for:  FTHFLc_M ...
+Producing solution for:  CALANc_M ...
+Producing solution for:  FORAc_M ...
+Producing solution for:  SHMTs_M ...
+Producing solution for:  MLTHFRs_M ...
+Producing solution for:  METSc_M ...
+Producing solution for:  GAPDHys_M ...
+Producing solution for:  GAPDH2s_M ...
+Producing solution for:  MTHFDm_M ...
+Producing solution for:  MTHFDc_M ...
+Producing solution for:  FTHFCLc_M ...
+Producing solution for:  MTHFDym_M ...
+Producing solution for:  MTHFDys_M ...
+Producing solution for:  GLYK2s_M ...
+Producing solution for:  UREASEc_M ...
+Producing solution for:  ATSc_M ...
+Producing solution for:  SHSL1s_M ...
+Producing solution for:  SPPAs_M ...
+Producing solution for:  PFPc_M ...
+Producing solution for:  PTOXs_M ...
+Producing solution for:  PFKc_M ...
+Producing solution for:  PFKs_M ...
+Producing solution for:  AAs_M ...
+Producing solution for:  CHLASEs_M ...
+Producing solution for:  ALTNDAc_M ...
+Producing solution for:  NADOR2u_M ...
+Producing solution for:  AKGCITtm_M ...
+Producing solution for:  AKGICITtm_M ...
+Producing solution for:  MALICITtm_M ...
+Producing solution for:  MALOAAtm_M ...
+Producing solution for:  OAAAKGtm_M ...
+Producing solution for:  OAACITtm_M ...
+Producing solution for:  OAAICITtm_M ...
+Producing solution for:  5FTHFtm_M ...
+Producing solution for:  MLTHFtm_M ...
+Producing solution for:  NA1Htm_M ...
+Producing solution for:  5FTHFts_M ...
+Producing solution for:  5MTHFts_M ...
+Producing solution for:  G3P(pi)tsr_M ...
+Producing solution for:  G6PA(pi)ts_M ...
+Producing solution for:  G6PB(pi)ts_M ...
+Producing solution for:  PEPPIts_M ...
+Producing solution for:  PINA1ts_M ...
+Producing solution for:  IPADNEts_M ...
+Producing solution for:  TZTNts_M ...
+Producing solution for:  FA140CoAr_M ...
+Producing solution for:  FA160CoAr_M ...
+Producing solution for:  FA161CoAr_M ...
+Producing solution for:  FA180CoAr_M ...
+Producing solution for:  FA181CoAr_M ...
+Producing solution for:  FA183CoAr_M ...
+Producing solution for:  Coleoptile_Biomass_BS ...
+Producing solution for:  PRISM_blue_LED_BS ...
+Producing solution for:  PRISM_red_LED_BS ...
+Producing solution for:  PRISM_green_LED_BS ...
+Producing solution for:  GDHym_BS ...
+Producing solution for:  GDHm_BS ...
+Producing solution for:  AGATx_BS ...
+Producing solution for:  AGATs_BS ...
+Producing solution for:  ICDHc_BS ...
+Producing solution for:  GTHPs_BS ...
+Producing solution for:  GLCNGBc_BS ...
+Producing solution for:  GLCNGAc_BS ...
+Producing solution for:  ASPTAm_BS ...
+Producing solution for:  PDHam1m_BS ...
+Producing solution for:  PDHam2m_BS ...
+Producing solution for:  PDHe2m_BS ...
+Producing solution for:  PDHe3m_BS ...
+Producing solution for:  THR3DHx_BS ...
+Producing solution for:  FDHNc_BS ...
+Producing solution for:  SULOm_BS ...
+Producing solution for:  ASNS1c_BS ...
+Producing solution for:  GLYCORc_BS ...
+Producing solution for:  TYRTAs_BS ...
+Producing solution for:  ARGOAT1s_BS ...
+Producing solution for:  PGI2c_BS ...
+Producing solution for:  PGI2s_BS ...
+Producing solution for:  GAMPTc_BS ...
+Producing solution for:  FTHFLc_BS ...
+Producing solution for:  CALANc_BS ...
+Producing solution for:  FORAc_BS ...
+Producing solution for:  SHMTs_BS ...
+Producing solution for:  MLTHFRs_BS ...
+Producing solution for:  METSc_BS ...
+Producing solution for:  GAPDHys_BS ...
+Producing solution for:  GAPDH2s_BS ...
+Producing solution for:  MTHFDm_BS ...
+Producing solution for:  MTHFDc_BS ...
+Producing solution for:  FTHFCLc_BS ...
+Producing solution for:  MTHFDym_BS ...
+Producing solution for:  MTHFDys_BS ...
+Producing solution for:  GLYK2s_BS ...
+Producing solution for:  UREASEc_BS ...
+Producing solution for:  ATSc_BS ...
+Producing solution for:  SHSL1s_BS ...
+Producing solution for:  SPPAs_BS ...
+Producing solution for:  PFPc_BS ...
+Producing solution for:  PTOXs_BS ...
+Producing solution for:  PFKc_BS ...
+Producing solution for:  PFKs_BS ...
+Producing solution for:  AAs_BS ...
+Producing solution for:  CHLASEs_BS ...
+Producing solution for:  ALTNDAc_BS ...
+Producing solution for:  NADOR2u_BS ...
+Producing solution for:  AKGCITtm_BS ...
+Producing solution for:  AKGICITtm_BS ...
+Producing solution for:  MALICITtm_BS ...
+Producing solution for:  MALOAAtm_BS ...
+Producing solution for:  OAAAKGtm_BS ...
+Producing solution for:  OAACITtm_BS ...
+Producing solution for:  OAAICITtm_BS ...
+Producing solution for:  5FTHFtm_BS ...
+Producing solution for:  MLTHFtm_BS ...
+Producing solution for:  NA1Htm_BS ...
+Producing solution for:  5FTHFts_BS ...
+Producing solution for:  5MTHFts_BS ...
+Producing solution for:  G3P(pi)tsr_BS ...
+Producing solution for:  G6PA(pi)ts_BS ...
+Producing solution for:  G6PB(pi)ts_BS ...
+Producing solution for:  PEPPIts_BS ...
+Producing solution for:  PINA1ts_BS ...
+Producing solution for:  IPADNEts_BS ...
+Producing solution for:  TZTNts_BS ...
+Producing solution for:  FA140CoAr_BS ...
+Producing solution for:  FA160CoAr_BS ...
+Producing solution for:  FA161CoAr_BS ...
+Producing solution for:  FA180CoAr_BS ...
+Producing solution for:  FA181CoAr_BS ...
+Producing solution for:  FA183CoAr_BS ...
+
+
+#Flux sampling run 06-24/06-26 -- Rerun for WT750 and WT1500
+
+
+Generating parametrized models for flux sampling
+start time for parametrize_model():  2023-06-24 03:41:29.772944
+Read LP format model from file /tmp/tmp7xnx17r8.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+Checking done. Length of reactions that cause infeasibility issues:  0
+printing model objective:
+<Solution 0.332 at 0x7f39dedf33d0>
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction FACOAL160c_M, setting it to NaN. This is usually due to numerical instability.
+Could not get flux for reaction FACOAL140x_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction FACOAL140x_BS, setting it to NaN. This is usually due to numerical instability.
+Could not get flux for reaction FAOS182x_BS, setting it to NaN. This is usually due to numerical instability.
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  2774
+final model objective (Final feasibility check):
+<Solution 0.332 at 0x7f39e09ac910>
+end time for parametrize_model():  2023-06-24 03:42:55.881300
+start time for parametrize_model():  2023-06-24 03:42:55.881417
+Read LP format model from file /tmp/tmp_qcfu4w_.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+Checking done. Length of reactions that cause infeasibility issues:  0
+printing model objective:
+<Solution 0.465 at 0x7f39db945000>
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  2779
+final model objective (Final feasibility check):
+<Solution 0.465 at 0x7f39de1bce80>
+end time for parametrize_model():  2023-06-24 03:44:20.725465
+start time for parametrize_model():  2023-06-24 03:44:20.725579
+Read LP format model from file /tmp/tmpx5qit634.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_430(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_550(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  3
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.115 at 0x7f39e7222f50>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1239
+final model objective (Final feasibility check):
+<Solution 0.115 at 0x7f39ea8febf0>
+end time for parametrize_model():  2023-06-24 03:47:22.529830
+start time for parametrize_model():  2023-06-24 03:47:22.530255
+Read LP format model from file /tmp/tmpjkkti4fm.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+ATGDs_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  1
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.317 at 0x7f39d831b310>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1182
+final model objective (Final feasibility check):
+<Solution 0.317 at 0x7f39d568dc90>
+end time for parametrize_model():  2023-06-24 03:50:07.970224
+start time for parametrize_model():  2023-06-24 03:50:07.970420
+Read LP format model from file /tmp/tmpfswppkz8.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+reading previous FVA bounds
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_M causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_570(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_630(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ADK1s_BS causes infeasible status!
+ATGDs_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ASNNc_BS causes infeasible status!
+RPDPKs_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+DVCHLOR430s_BS causes infeasible status!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+DM_Phloem_BS causes infeasible status!
+Checking done. Length of reactions that cause infeasibility issues:  10
+recomputing list_infeasibles
+printing model objective:
+<Solution 0.320 at 0x7f39d4da2c80>
+reactions number (before pruning):  4948
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1306
+final model objective (Final feasibility check):
+<Solution 0.320 at 0x7f39d4403c70>
+end time for parametrize_model():  2023-06-24 03:53:08.091836
+generating flux samples for parametrized models
+start time for sampler generation:  2023-06-24 03:53:08.135543
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpb3a1rep1.lp
+Reading time = 0.01 seconds
+: 3970 rows, 5554 columns, 23854 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_750_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-24 14:44:53.309892
+start time for sampler generation:  2023-06-24 14:44:53.310004
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp3gqcc9cb.lp
+Reading time = 0.02 seconds
+: 3970 rows, 5564 columns, 23908 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_1500_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 02:08:16.767567
+start time for sampler generation:  2023-06-25 02:08:16.769354
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp8rih7glk.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2489 columns, 10287 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_250_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 10:00:45.460292
+start time for sampler generation:  2023-06-25 10:00:45.460400
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpl8puda25.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2375 columns, 9805 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_750_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-25 17:39:11.311713
+start time for sampler generation:  2023-06-25 17:39:11.311822
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmphac9t6wx.lp
+Reading time = 0.01 seconds
+: 3975 rows, 2623 columns, 10917 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_1500_Relaxed_loopless_FVA_100kT.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-06-26 02:17:08.374505
+
+Here are a list of reactions that allow Phloem to be produced without co-factor cycling: 
+FDHNc_M
+FDHNc_BS
+
+
+
+07/28/2023
+Resampling due to errors in enzyme constraint parametrization
+
+
+
+Generating parametrized models for flux sampling
+start time for parametrize_model():  2023-07-28 08:22:19.798126
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction HPDHs_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction ENOc_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/wt_250_revised_enzyme_cons.csv
+printing model objective:
+<Solution 0.111 at 0x7f6844bc9ea0>
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1256
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f67fd3d0d60>
+end time for parametrize_model():  2023-07-28 08:58:38.165593
+start time for parametrize_model():  2023-07-28 08:58:43.754445
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSI_670(u)_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+MTHFCs_M causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  2
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/wt_750_revised_enzyme_cons.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSI_670(u)_BS. Bounds: 9.648570095454547 | 10.313988722727272
+setting bounds for rerun reaction MTHFCs_M. Bounds: 0.0028987410805962456 | 0.0031905677621669164
+printing model objective:
+<Solution 0.329 at 0x7f68027d7ee0>
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1385
+final model objective (Final feasibility check):
+<Solution 0.329 at 0x7f683489d780>
+end time for parametrize_model():  2023-07-28 09:32:29.405825
+start time for parametrize_model():  2023-07-28 09:32:33.127150
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction FA161COAabcx_BS, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPDPKs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ATGDs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ADK1s_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  3
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/wt_1500_revised_enzyme_cons.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPDPKs_BS. Bounds: 0.004072735927660218 | 0.004510158435508108
+setting bounds for rerun reaction ATGDs_BS. Bounds: 0.004072735927660218 | 0.004510158435508104
+setting bounds for rerun reaction ADK1s_BS. Bounds: 0.008145471855321676 | 4.663546303474343
+printing model objective:
+<Solution 0.465 at 0x7f67fdc6e770>
+reactions number (before pruning):  4940
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1320
+final model objective (Final feasibility check):
+<Solution 0.465 at 0x7f682124c880>
+end time for parametrize_model():  2023-07-28 10:03:35.057848
+start time for parametrize_model():  2023-07-28 10:03:38.581068
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction ASCPO2s_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSII_690(u)_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/tr_250_revised_enzyme_cons.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSII_690(u)_BS. Bounds: 0.0 | 0.016466082526654796
+printing model objective:
+<Solution 0.111 at 0x7f6820300700>
+reactions number (before pruning):  4945
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1358
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f681f5411e0>
+end time for parametrize_model():  2023-07-28 10:35:33.190021
+start time for parametrize_model():  2023-07-28 10:35:37.203320
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+Could not get flux for reaction URIKGc_M, setting it to NaN. This is usually due to numerical instability.
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+GTPCYTDPTs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+UPRTs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+UPHs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+ATCYs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+AUPTs_BS causes infeasible status/0 objective!
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+PPMs_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  6
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/tr_750_revised_enzyme_cons.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction GTPCYTDPTs_BS. Bounds: -0.0031912846529360286 | -0.002898819680198368
+setting bounds for rerun reaction UPRTs_BS. Bounds: 0.0028988196801993382 | 0.0031912846529360286
+setting bounds for rerun reaction UPHs_BS. Bounds: -0.0031912846529360286 | -0.0028988196801993382
+setting bounds for rerun reaction ATCYs_BS. Bounds: 0.002898819680198368 | 0.0031912846529360286
+setting bounds for rerun reaction AUPTs_BS. Bounds: 0.0028988196801993382 | 0.0031912846529360286
+setting bounds for rerun reaction PPMs_BS. Bounds: 0.0028988196801993382 | 0.0031912846529360286
+printing model objective:
+<Solution 0.329 at 0x7f67fe3c0f10>
+reactions number (before pruning):  4945
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1245
+final model objective (Final feasibility check):
+<Solution 0.329 at 0x7f68145105b0>
+end time for parametrize_model():  2023-07-28 11:07:39.138548
+start time for parametrize_model():  2023-07-28 11:07:43.056430
+computing Loopless FVA to model
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+setting FVA constraints to model and checking for feasibility
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py:554: UserWarning: Solver status is 'infeasible'.
+  warn(f"Solver status is '{status}'.", UserWarning)
+RPSI_610(u)_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/tr_1500_revised_enzyme_cons.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSI_610(u)_BS. Bounds: 0.06529411764702839 | 0.12169702823613637
+printing model objective:
+<Solution 0.356 at 0x7f68149060e0>
+reactions number (before pruning):  4945
+/home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/core/group.py:147: UserWarning: need to pass in a list
+  warn("need to pass in a list")
+reactions number (after pruning):  1304
+final model objective (Final feasibility check):
+<Solution 0.356 at 0x7f67fccd5c90>
+end time for parametrize_model():  2023-07-28 11:38:42.018866
+generating flux samples for parametrized models
+start time for sampler generation:  2023-07-28 11:38:45.878245
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_wt_model_updated_model_cons.csv
+Starting OPTGP sampler:
+num_samples:  10000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp9hijz5dd.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9911 columns, 42914 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_wt_model_updated_model_cons.csv
+Generating batch 1/1
+
+Notes: nproj was set to 0 so it threw a zero division error. Should be set to None
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-05-09
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmph5cyjeq_.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpzfqvq9ft.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:46:30.599703
+reading previous FVA bounds
+Reactions to remove: 2872
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+printing model objective:
+<Solution 0.111 at 0x7f733aebd060>
+reactions number (before pruning):  2068
+reactions number (after pruning):  1256
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f733b02c8e0>
+end time for parametrize_model():  2023-07-29 02:47:16.754475
+Read LP format model from file /tmp/tmph5r9_ccr.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:47:23.681853
+reading previous FVA bounds
+Reactions to remove: 2877
+setting FVA constraints to model
+reaction RPSI_670(u)_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+reaction MTHFCs_M is unbounded/nan. Adding to rerun list. -1000000.01000000.0
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  2
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSI_670(u)_BS. Bounds: 9.648570095454547 | 10.313988722727272
+setting bounds for rerun reaction MTHFCs_M. Bounds: 0.002898741080596245 | 0.003190567762166915
+printing model objective:
+<Solution 0.329 at 0x7f737d07b130>
+reactions number (before pruning):  2063
+reactions number (after pruning):  1385
+final model objective (Final feasibility check):
+<Solution 0.329 at 0x7f737cfeafe0>
+end time for parametrize_model():  2023-07-29 02:48:13.704028
+Read LP format model from file /tmp/tmph37mqdlc.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:48:20.157342
+reading previous FVA bounds
+Reactions to remove: 2873
+setting FVA constraints to model
+reaction RPDPKs_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+reaction ATGDs_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+reaction ADK1s_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  3
+recomputing list_infeasibles
+setting bounds for rerun reaction RPDPKs_BS. Bounds: 0.004072735927660043 | 0.004510158435508104
+setting bounds for rerun reaction ATGDs_BS. Bounds: 0.004072735927660217 | 0.004510158435508142
+setting bounds for rerun reaction ADK1s_BS. Bounds: 0.008145471855320264 | 4.1608391539168945
+printing model objective:
+<Solution 0.465 at 0x7f737d0a18d0>
+reactions number (before pruning):  2067
+reactions number (after pruning):  1320
+final model objective (Final feasibility check):
+<Solution 0.465 at 0x7f735f6d16c0>
+end time for parametrize_model():  2023-07-29 02:49:13.579192
+Read LP format model from file /tmp/tmpze0n8s55.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:49:20.628768
+reading previous FVA bounds
+Reactions to remove: 2869
+setting FVA constraints to model
+reaction RPSII_690(u)_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSII_690(u)_BS. Bounds: 0.0 | 0.016466082526654893
+printing model objective:
+<Solution 0.111 at 0x7f732aff6290>
+reactions number (before pruning):  2076
+reactions number (after pruning):  1358
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f732b0535b0>
+end time for parametrize_model():  2023-07-29 02:50:11.731603
+Read LP format model from file /tmp/tmpw2yyw4pe.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:50:18.547741
+reading previous FVA bounds
+Reactions to remove: 2873
+setting FVA constraints to model
+reaction GTPCYTDPTs_BS is unbounded/nan. Adding to rerun list. -1000000.01000000.0
+reaction UPRTs_BS is unbounded/nan. Adding to rerun list. -1000000.01000000.0
+reaction UPHs_BS is unbounded/nan. Adding to rerun list. -1000000.01000000.0
+reaction ATCYs_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+reaction AUPTs_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+reaction PPMs_BS is unbounded/nan. Adding to rerun list. -1000000.01000000.0
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  6
+recomputing list_infeasibles
+setting bounds for rerun reaction GTPCYTDPTs_BS. Bounds: -0.003191284652936023 | -0.002898819680198367
+setting bounds for rerun reaction UPRTs_BS. Bounds: 0.0028988196801966737 | 0.003191284652936023
+setting bounds for rerun reaction UPHs_BS. Bounds: -0.003191284652936023 | -0.0028988196801966737
+setting bounds for rerun reaction ATCYs_BS. Bounds: 0.002898819680198367 | 0.003191284652936023
+setting bounds for rerun reaction AUPTs_BS. Bounds: 0.0028988196801966737 | 0.003191284652936023
+setting bounds for rerun reaction PPMs_BS. Bounds: 0.0028988196801966737 | 0.003191284652936023
+printing model objective:
+<Solution 0.329 at 0x7f7327375ae0>
+reactions number (before pruning):  2072
+reactions number (after pruning):  1245
+final model objective (Final feasibility check):
+<Solution 0.329 at 0x7f73280633a0>
+end time for parametrize_model():  2023-07-29 02:51:09.342284
+Read LP format model from file /tmp/tmp1r3j5t8a.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 02:51:22.560352
+reading previous FVA bounds
+Reactions to remove: 2906
+setting FVA constraints to model
+reaction RPSI_610(u)_BS is unbounded/nan. Adding to rerun list. 0.01000000.0
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSI_610(u)_BS. Bounds: 0.06529411764702842 | 0.12169702823613635
+printing model objective:
+<Solution 0.356 at 0x7f7327e3cd30>
+reactions number (before pruning):  2039
+reactions number (after pruning):  1304
+final model objective (Final feasibility check):
+<Solution 0.356 at 0x7f7325023610>
+end time for parametrize_model():  2023-07-29 02:52:44.569455
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_250_updated_model_cons.csv
+bounds file saved to flux_sample_WT_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_updated_model_cons.csv
+bounds file saved to flux_sample_WT_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons.csv
+bounds file saved to flux_sample_WT_1500_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons.csv
+bounds file saved to flux_sample_TR_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons.csv
+bounds file saved to flux_sample_TR_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons.csv
+bounds file saved to flux_sample_TR_1500_updated_model_cons.csv
+generating flux samples for parametrized models
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp0l4tzogm.lp
+Reading time = 0.01 seconds
+: 3970 rows, 2518 columns, 10366 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_250_updated_model_cons.csv
+Generating batch 1/2
+
+
+Set parameter Username
+Academic license - for non-commercial use only - expires 2024-05-09
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpbz0vqiot.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpk59mw_0i.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpy8eszuzn.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 03:16:31.271650
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+RPSII_430(u)_M causes infeasible status/0 objective!
+RPSII_690(u)_BS causes infeasible status/0 objective!
+ASNNc_BS causes infeasible status/0 objective!
+DVCHLOR430s_BS causes infeasible status/0 objective!
+objective bounds:0.100401587983833210.11155731998203626
+ngam_atp_c_BS causes infeasible status/0 objective!
+ngam_atp_s_BS causes infeasible status/0 objective!
+ngam_atp_x_BS causes infeasible status/0 objective!
+ngam_atp_m_BS causes infeasible status/0 objective!
+ngam_nadphox_c_BS causes infeasible status/0 objective!
+ngam_nadphox_s_BS causes infeasible status/0 objective!
+ngam_nadphox_m_BS causes infeasible status/0 objective!
+RBPOs_BS causes infeasible status/0 objective!
+DM_o2(c)_BS causes infeasible status/0 objective!
+DM_h(c)_BS causes infeasible status/0 objective!
+DM_h(s)_BS causes infeasible status/0 objective!
+DM_h(x)_BS causes infeasible status/0 objective!
+DM_h(m)_BS causes infeasible status/0 objective!
+DM_h(u)_BS causes infeasible status/0 objective!
+DM_h(v)_BS causes infeasible status/0 objective!
+DM_h(r)_BS causes infeasible status/0 objective!
+DM_h2o(c)_BS causes infeasible status/0 objective!
+ala-L_pd causes infeasible status/0 objective!
+arg-L_pd causes infeasible status/0 objective!
+asp-L_pd causes infeasible status/0 objective!
+cys-L_pd causes infeasible status/0 objective!
+glu-L_pd causes infeasible status/0 objective!
+gly_pd causes infeasible status/0 objective!
+his-L_pd causes infeasible status/0 objective!
+ile-L_pd causes infeasible status/0 objective!
+leu-L_pd causes infeasible status/0 objective!
+lys-L_pd causes infeasible status/0 objective!
+met-L_pd causes infeasible status/0 objective!
+phe-L_pd causes infeasible status/0 objective!
+pro-L_pd causes infeasible status/0 objective!
+ser-L_pd causes infeasible status/0 objective!
+thr-L_pd causes infeasible status/0 objective!
+trp-L_pd causes infeasible status/0 objective!
+tyr-L_pd causes infeasible status/0 objective!
+val-L_pd causes infeasible status/0 objective!
+glc-A_pd causes infeasible status/0 objective!
+sucr_pd causes infeasible status/0 objective!
+fru-B_pd causes infeasible status/0 objective!
+udparab_pd causes infeasible status/0 objective!
+udpxyl_pd causes infeasible status/0 objective!
+udpgal_pd causes infeasible status/0 objective!
+udpg_pd causes infeasible status/0 objective!
+udpglcur_pd causes infeasible status/0 objective!
+co2_pd causes infeasible status/0 objective!
+h2o_pd causes infeasible status/0 objective!
+o2_pd causes infeasible status/0 objective!
+pep_pd causes infeasible status/0 objective!
+pyr_pd causes infeasible status/0 objective!
+mal-L_pd causes infeasible status/0 objective!
+accoa_pd causes infeasible status/0 objective!
+glu5p_pd causes infeasible status/0 objective!
+akg_pd causes infeasible status/0 objective!
+icit_pd causes infeasible status/0 objective!
+gal_pd causes infeasible status/0 objective!
+g1p_pd causes infeasible status/0 objective!
+tre_pd causes infeasible status/0 objective!
+glc-B_pd causes infeasible status/0 objective!
+tre6p_pd causes infeasible status/0 objective!
+g6p-A_pd causes infeasible status/0 objective!
+b-glucan_pd causes infeasible status/0 objective!
+mnt_pd causes infeasible status/0 objective!
+melib_pd causes infeasible status/0 objective!
+stc_pd causes infeasible status/0 objective!
+raffin_pd causes infeasible status/0 objective!
+1Dgali_pd causes infeasible status/0 objective!
+inost_pd causes infeasible status/0 objective!
+cit_pd causes infeasible status/0 objective!
+oxa_pd causes infeasible status/0 objective!
+2pg_pd causes infeasible status/0 objective!
+dhap_pd causes infeasible status/0 objective!
+g3p_pd causes infeasible status/0 objective!
+3pg_pd causes infeasible status/0 objective!
+glyclt_pd causes infeasible status/0 objective!
+acon-C_pd causes infeasible status/0 objective!
+succ_pd causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  79
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/WT_250_debugging.csv
+recomputing list_infeasibles
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp5j2xpiud.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmp2g6bky9y.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 06:28:25.674176
+computing Loopless FVA to model from scratch

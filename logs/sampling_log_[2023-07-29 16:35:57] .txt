@@ -1,0 +1,18 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpar4qm_8t.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpavcn3rd1.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 16:36:10.549051
+computing Loopless FVA to model from scratch
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpkqsv1quu.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmp2vv8s7sz.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 16:36:32.383959
+computing Loopless FVA to model from scratch

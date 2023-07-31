@@ -1,0 +1,90 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpwzsdr8xu.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 20:58:43.453974
+reading previous FVA bounds
+Reactions to remove: 2864
+Solution checking before sammpling:  0.11071158003605427
+Read LP format model from file /tmp/tmp33ox7mjv.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 20:59:09.545783
+reading previous FVA bounds
+Reactions to remove: 2876
+Solution checking before sammpling:  0.29926300643635245
+Read LP format model from file /tmp/tmpxjqfhoqb.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 20:59:35.073346
+reading previous FVA bounds
+Reactions to remove: 2899
+Solution checking before sammpling:  0.4654446269874203
+Read LP format model from file /tmp/tmp25rh9wa_.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 21:00:00.390919
+reading previous FVA bounds
+Reactions to remove: 3733
+Solution checking before sammpling:  0.11805312277849907
+Read LP format model from file /tmp/tmp0d240go5.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 21:00:29.413851
+reading previous FVA bounds
+Reactions to remove: 3383
+Solution checking before sammpling:  0.3036413197695658
+Read LP format model from file /tmp/tmppf9lrq4g.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 21:00:57.290936
+reading previous FVA bounds
+Reactions to remove: 3612
+Solution checking before sammpling:  0.3563058868662323
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_250_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_WT_250_updated_model_cons_07302023.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_WT_750_updated_model_cons_07302023.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_WT_1500_updated_model_cons_07302023.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_TR_250_updated_model_cons_07302023.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_TR_750_updated_model_cons_07302023.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons_07302023.csv
+bounds file saved to flux_sample_TR_1500_updated_model_cons_07302023.csv
+generating flux samples for parametrized models
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp2yzhzyxu.lp
+Reading time = 0.01 seconds
+: 3970 rows, 4158 columns, 17226 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_250_updated_model_cons_07302023.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-07-31 08:15:25.623259
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpymop18gq.lp
+Reading time = 0.01 seconds
+: 3970 rows, 4134 columns, 17088 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_750_updated_model_cons_07302023.csv
+Generating batch 1/2
+Generating batch 2/2
+end time:  2023-07-31 21:12:39.972264
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmpwna03yim.lp
+Reading time = 0.01 seconds
+: 3970 rows, 4088 columns, 16916 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_1500_updated_model_cons_07302023.csv
+Generating batch 1/2

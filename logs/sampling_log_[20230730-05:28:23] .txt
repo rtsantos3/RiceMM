@@ -1,0 +1,12 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpfud2_qou.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 05:28:33.528844
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp_6l9t3os.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 05:31:36.423555
+reading previous FVA bounds
+Reactions to remove: 2912

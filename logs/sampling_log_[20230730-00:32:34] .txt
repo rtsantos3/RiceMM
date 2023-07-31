@@ -1,0 +1,56 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmps1r_rkrj.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 00:32:44.944536
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_750_debugging_[20230730-00:32:38] _before_pruning.csv
+printing model objective:
+<Solution infeasible at 0x7fe54411e530>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2053
+final model objective (Final feasibility check):
+<Solution infeasible at 0x7fe54412c520>
+end time for parametrize_model():  2023-07-30 01:00:15.380815
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_750_before_sampling.csv
+Read LP format model from file /tmp/tmp5oum4k_z.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 01:00:22.480880
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_1500_debugging_[20230730-01:00:15] _before_pruning.csv
+printing model objective:
+<Solution infeasible at 0x7fe518dadb10>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2032
+final model objective (Final feasibility check):
+<Solution infeasible at 0x7fe51c37ae60>
+end time for parametrize_model():  2023-07-30 01:26:11.038561
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_1500_before_sampling.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_250_updated_model_cons.csv
+bounds file saved to flux_sample_WT_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_750_updated_model_cons.csv
+bounds file saved to flux_sample_WT_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons.csv
+bounds file saved to flux_sample_WT_1500_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons.csv
+bounds file saved to flux_sample_TR_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons.csv
+bounds file saved to flux_sample_TR_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons.csv
+bounds file saved to flux_sample_TR_1500_updated_model_cons.csv
+generating flux samples for parametrized models
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp7g0ke8hc.lp
+Reading time = 0.01 seconds
+: 3970 rows, 4158 columns, 17226 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_WT_250_updated_model_cons.csv
+Generating batch 1/2

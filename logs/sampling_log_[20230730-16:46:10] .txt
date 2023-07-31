@@ -1,0 +1,6 @@
+[20230730-16:46:10] |Generating parametrized models for flux sampling[20230730-16:46:10] |
+[20230730-16:46:14] |Read LP format model from file /tmp/tmpnv19ijlz.lp
+[20230730-16:46:14] |Reading time = 0.01 seconds
+[20230730-16:46:14] |: 3956 rows, 9880 columns, 42914 nonzeros
+[20230730-16:46:20] |start time for parametrize_model(): [20230730-16:46:20] | [20230730-16:46:20] |2023-07-30 16:46:20.582660[20230730-16:46:20] |
+[20230730-16:46:20] |computing Loopless FVA to model from scratch[20230730-16:46:20] |

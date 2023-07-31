@@ -1,0 +1,17 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp81az1vg0.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 17:12:21.227262
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/WT_250_debugging_[20230729-17:12:14] _before_pruning.csv
+printing model objective:
+<Solution infeasible at 0x7f83bf64bee0>
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp78h6bsbu.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 17:51:53.804944
+computing Loopless FVA to model from scratch

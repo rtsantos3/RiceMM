@@ -1,0 +1,23 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpjelteaqe.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpunrm9gr_.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 09:19:34.400648
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+reaction PYRtv_M is has nan bounds. Adding to rerun list. nannan
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/WT_250_debugging_before_pruning.csv
+recomputing list_infeasibles
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmp9noon1tm.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpfcwkd44n.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 09:46:35.968051
+computing Loopless FVA to model from scratch

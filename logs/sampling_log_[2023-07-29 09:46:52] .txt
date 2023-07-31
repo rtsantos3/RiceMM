@@ -1,0 +1,210 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpsee9swo6.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpy7ih7wjn.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 09:47:05.824260
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+RPSII_610(u)_M causes infeasible status/0 objective!
+reaction PYRtv_M is unbounded/nan. Adding to rerun list. nannan
+RPSII_610(u)_BS causes infeasible status/0 objective!
+RPSII_670(u)_BS causes infeasible status/0 objective!
+ACOA100ORx_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  5
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/WT_250_debugging_before_pruning.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSII_610(u)_M. Bounds: 0.0 | 0.019333935782240408
+setting bounds for rerun reaction PYRtv_M. Bounds: 0.0 | 0.0
+setting bounds for rerun reaction RPSII_610(u)_BS. Bounds: 0.007064147798953896 | 0.021945365747499997
+setting bounds for rerun reaction RPSII_670(u)_BS. Bounds: 3.3624239940934273 | 3.65980245
+setting bounds for rerun reaction ACOA100ORx_BS. Bounds: 0.0 | 0.0
+printing model objective:
+<Solution 0.111 at 0x7f9489d13cd0>
+reactions number (before pruning):  4940
+reactions number (after pruning):  1240
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f948dd87790>
+end time for parametrize_model():  2023-07-29 10:14:30.665309
+Read LP format model from file /tmp/tmpl804arv6.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 10:14:36.774359
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+ADK1s_BS causes infeasible status/0 objective!
+ATGDs_BS causes infeasible status/0 objective!
+RPDPKs_BS causes infeasible status/0 objective!
+DHDPSs_BS causes infeasible status/0 objective!
+DAPATs_BS causes infeasible status/0 objective!
+DVCHLOR590s_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  6
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/WT_750_debugging_before_pruning.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction ADK1s_BS. Bounds: 0.33550446982492854 | 0.3416145258709835
+setting bounds for rerun reaction ATGDs_BS. Bounds: 0.0028987410805987905 | 0.002899858532368237
+setting bounds for rerun reaction RPDPKs_BS. Bounds: 0.002898741080599887 | 0.00289985853236823
+setting bounds for rerun reaction DHDPSs_BS. Bounds: 0.0 | 0.0010635251031310446
+setting bounds for rerun reaction DAPATs_BS. Bounds: 0.0 | 0.0010635251031310446
+setting bounds for rerun reaction DVCHLOR590s_BS. Bounds: 0.11956302134599238 | 0.11960716828863042
+printing model objective:
+<Solution 0.299 at 0x7f94b201b2b0>
+reactions number (before pruning):  4940
+reactions number (after pruning):  1239
+final model objective (Final feasibility check):
+<Solution 0.299 at 0x7f948e5ca9e0>
+end time for parametrize_model():  2023-07-29 10:41:46.683090
+Read LP format model from file /tmp/tmp9iugpa5r.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 10:41:53.668225
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+RPSII_610(u)_M causes infeasible status/0 objective!
+ATGDs_BS causes infeasible status/0 objective!
+RPDPKs_BS causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  3
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/WT_1500_debugging_before_pruning.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction RPSII_610(u)_M. Bounds: 0.0 | 0.0
+setting bounds for rerun reaction ATGDs_BS. Bounds: 0.004072735927660214 | 0.004510158435508108
+setting bounds for rerun reaction RPDPKs_BS. Bounds: 0.004072735927662663 | 0.004510158435508109
+printing model objective:
+<Solution 0.465 at 0x7f947b3456c0>
+reactions number (before pruning):  4940
+reactions number (after pruning):  1381
+final model objective (Final feasibility check):
+<Solution 0.465 at 0x7f94b1793550>
+end time for parametrize_model():  2023-07-29 11:08:36.556365
+Read LP format model from file /tmp/tmp5v11_nb2.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 11:08:42.894110
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+FA183s_M causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  1
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_250_debugging_before_pruning.csv
+recomputing list_infeasibles
+setting bounds for rerun reaction FA183s_M. Bounds: 0.0 | 0.0
+printing model objective:
+<Solution 0.111 at 0x7f9477a937c0>
+reactions number (before pruning):  4945
+reactions number (after pruning):  1358
+final model objective (Final feasibility check):
+<Solution 0.111 at 0x7f947b0ce380>
+end time for parametrize_model():  2023-07-29 11:36:21.786686
+Read LP format model from file /tmp/tmprp7kkzab.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 11:36:28.204458
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+MTHFCs_M causes infeasible status/0 objective!
+FPGFTs_M causes infeasible status/0 objective!
+DVCHLOR570s_M causes infeasible status/0 objective!
+ASNNc_BS causes infeasible status/0 objective!
+objective bounds:0.29915579775008810.3323953308334326
+ngam_atp_c_BS causes infeasible status/0 objective!
+ngam_atp_s_BS causes infeasible status/0 objective!
+ngam_atp_x_BS causes infeasible status/0 objective!
+ngam_atp_m_BS causes infeasible status/0 objective!
+ngam_nadphox_c_BS causes infeasible status/0 objective!
+ngam_nadphox_s_BS causes infeasible status/0 objective!
+ngam_nadphox_m_BS causes infeasible status/0 objective!
+RBPOs_BS causes infeasible status/0 objective!
+DM_o2(c)_BS causes infeasible status/0 objective!
+DM_h(c)_BS causes infeasible status/0 objective!
+DM_h(s)_BS causes infeasible status/0 objective!
+DM_h(x)_BS causes infeasible status/0 objective!
+DM_h(m)_BS causes infeasible status/0 objective!
+DM_h(u)_BS causes infeasible status/0 objective!
+DM_h(v)_BS causes infeasible status/0 objective!
+DM_h(r)_BS causes infeasible status/0 objective!
+DM_h2o(c)_BS causes infeasible status/0 objective!
+ala-L_pd causes infeasible status/0 objective!
+arg-L_pd causes infeasible status/0 objective!
+asp-L_pd causes infeasible status/0 objective!
+cys-L_pd causes infeasible status/0 objective!
+glu-L_pd causes infeasible status/0 objective!
+gly_pd causes infeasible status/0 objective!
+his-L_pd causes infeasible status/0 objective!
+ile-L_pd causes infeasible status/0 objective!
+leu-L_pd causes infeasible status/0 objective!
+lys-L_pd causes infeasible status/0 objective!
+met-L_pd causes infeasible status/0 objective!
+phe-L_pd causes infeasible status/0 objective!
+pro-L_pd causes infeasible status/0 objective!
+ser-L_pd causes infeasible status/0 objective!
+thr-L_pd causes infeasible status/0 objective!
+trp-L_pd causes infeasible status/0 objective!
+tyr-L_pd causes infeasible status/0 objective!
+val-L_pd causes infeasible status/0 objective!
+glc-A_pd causes infeasible status/0 objective!
+sucr_pd causes infeasible status/0 objective!
+fru-B_pd causes infeasible status/0 objective!
+udparab_pd causes infeasible status/0 objective!
+udpxyl_pd causes infeasible status/0 objective!
+udpgal_pd causes infeasible status/0 objective!
+udpg_pd causes infeasible status/0 objective!
+udpglcur_pd causes infeasible status/0 objective!
+co2_pd causes infeasible status/0 objective!
+h2o_pd causes infeasible status/0 objective!
+o2_pd causes infeasible status/0 objective!
+pep_pd causes infeasible status/0 objective!
+pyr_pd causes infeasible status/0 objective!
+mal-L_pd causes infeasible status/0 objective!
+accoa_pd causes infeasible status/0 objective!
+glu5p_pd causes infeasible status/0 objective!
+akg_pd causes infeasible status/0 objective!
+icit_pd causes infeasible status/0 objective!
+gal_pd causes infeasible status/0 objective!
+g1p_pd causes infeasible status/0 objective!
+tre_pd causes infeasible status/0 objective!
+glc-B_pd causes infeasible status/0 objective!
+tre6p_pd causes infeasible status/0 objective!
+g6p-A_pd causes infeasible status/0 objective!
+b-glucan_pd causes infeasible status/0 objective!
+mnt_pd causes infeasible status/0 objective!
+melib_pd causes infeasible status/0 objective!
+stc_pd causes infeasible status/0 objective!
+raffin_pd causes infeasible status/0 objective!
+1Dgali_pd causes infeasible status/0 objective!
+inost_pd causes infeasible status/0 objective!
+cit_pd causes infeasible status/0 objective!
+oxa_pd causes infeasible status/0 objective!
+2pg_pd causes infeasible status/0 objective!
+dhap_pd causes infeasible status/0 objective!
+g3p_pd causes infeasible status/0 objective!
+3pg_pd causes infeasible status/0 objective!
+glyclt_pd causes infeasible status/0 objective!
+acon-C_pd causes infeasible status/0 objective!
+succ_pd causes infeasible status/0 objective!
+trans_PPCs_M causes infeasible status/0 objective!
+trans_PPDKs_M causes infeasible status/0 objective!
+trans_PPDKs_BS causes infeasible status/0 objective!
+trans_MDH2m_M causes infeasible status/0 objective!
+trans_hco3ec_M causes infeasible status/0 objective!
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  84
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_750_debugging_before_pruning.csv
+recomputing list_infeasibles
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpar4qm_8t.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmpavcn3rd1.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 16:36:10.549051
+computing Loopless FVA to model from scratch
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpkqsv1quu.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Read LP format model from file /tmp/tmp2vv8s7sz.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-29 16:36:32.383959
+computing Loopless FVA to model from scratch

@@ -1,0 +1,73 @@
+Generating parametrized models for flux sampling
+Set parameter OutputFlag to value 1
+Read LP format model from file /tmp/tmpyrvs2eax.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Set parameter OutputFlag to value 1
+Set parameter FeasibilityTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Set parameter IntFeasTol to value 1e-09
+start time for parametrize_model():  2023-07-30 06:36:04.163193
+computing Loopless FVA to model from scratch
+Discarded solution information
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3970 rows, 9886 columns and 43002 nonzeros
+Model fingerprint: 0xc01c67e9
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [4e+00, 1e+01]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   2.862626e+01   2.350004e+06      0s
+    6741    1.2503131e-01   0.000000e+00   0.000000e+00      1s
+
+Solved in 6741 iterations and 0.58 seconds (0.75 work units)
+Optimal objective  1.250313078e-01
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3971 rows, 9887 columns and 43009 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [4e+00, 1e+01]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.2503131e-01   3.125783e-03   4.290739e+07      0s
+     122    1.2503131e-01   0.000000e+00   0.000000e+00      0s
+
+Solved in 122 iterations and 0.01 seconds (0.01 work units)
+Optimal objective  1.250313078e-01
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3972 rows, 9887 columns and 43015 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [4e+00, 1e+01]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.9531265e+03   0.000000e+00   5.338974e+04      0s
+     785    1.4278671e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 785 iterations and 0.03 seconds (0.04 work units)
+Optimal objective  1.427867073e+03
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmphr9yqqd7.lp
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 06:36:26.229531
+computing Loopless FVA to model from scratch

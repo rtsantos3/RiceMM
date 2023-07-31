@@ -1,0 +1,74 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpur0wlwsn.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 07:08:45.150312
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+reaction DUMPc_M is unbounded/nan. Adding to rerun list. 0.0nan
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpc137l2q0.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 07:39:50.295766
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_250_debugging_[20230730-07:39:44] _before_pruning.csv
+printing model objective:
+<Solution 0.125 at 0x7fd027355210>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2430
+final model objective (Final feasibility check):
+<Solution 0.125 at 0x7fd02a91dc00>
+end time for parametrize_model():  2023-07-30 08:16:52.679907
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_250_before_sampling.csv
+Read LP format model from file /tmp/tmp9p218gjm.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 08:16:59.324412
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_750_debugging_[20230730-08:16:52] _before_pruning.csv
+printing model objective:
+<Solution 0.347 at 0x7fd024220460>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2417
+final model objective (Final feasibility check):
+<Solution 0.347 at 0x7fd026e77220>
+end time for parametrize_model():  2023-07-30 08:53:25.898146
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_750_before_sampling.csv
+Read LP format model from file /tmp/tmpdsl5wdrv.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model():  2023-07-30 08:53:31.806241
+computing Loopless FVA to model from scratch
+setting FVA constraints to model
+Checking done. Length of reactions that cause infeasibility issues/unbounded:  0
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/for_debugging/07292023/TR_1500_debugging_[20230730-08:53:25] _before_pruning.csv
+printing model objective:
+<Solution 0.357 at 0x7fd01f5622c0>
+reactions number (before pruning):  4945
+reactions number (after pruning):  2450
+final model objective (Final feasibility check):
+<Solution 0.357 at 0x7fd022d37820>
+end time for parametrize_model():  2023-07-30 09:28:21.793841
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/tr_1500_before_sampling.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons.csv
+bounds file saved to flux_sample_TR_250_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons.csv
+bounds file saved to flux_sample_TR_750_updated_model_cons.csv
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons.csv
+bounds file saved to flux_sample_TR_1500_updated_model_cons.csv
+generating flux samples for parametrized models
+Starting OPTGP sampler:
+num_samples:  12000
+Thinning coefficient:  100000
+generating sampler for model
+Read LP format model from file /tmp/tmp5fy6qwf_.lp
+Reading time = 0.01 seconds
+: 3975 rows, 4871 columns, 20963 nonzeros
+done generating OPTGP sampler
+saving output to  ./flux_results/flux_sampling//flux_sample_TR_250_updated_model_cons.csv
+Generating batch 1/2

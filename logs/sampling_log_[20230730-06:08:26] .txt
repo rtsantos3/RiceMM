@@ -1,0 +1,1793 @@
+Generating parametrized models for flux sampling
+Read LP format model from file /tmp/tmpf6ii4tao.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Help on module cobra.util.solver in cobra.util:
+
+NAME
+    cobra.util.solver - Additional helper functions for the optlang solvers.
+
+DESCRIPTION
+    All functions integrate well with the context manager, meaning that
+    all operations defined here are automatically reverted when used in a
+    `with model:` block.
+    
+    The functions defined here together with the existing model functions
+    should allow you to implement custom flux analysis methods with ease.
+
+CLASSES
+    builtins.tuple(builtins.object)
+        Components
+    
+    class Components(builtins.tuple)
+     |  Components(variable: optlang.interface.Variable, upper_constraint: optlang.interface.Constraint, lower_constraint: optlang.interface.Constraint)
+     |  
+     |  Define an object for adding absolute expressions.
+     |  
+     |  Method resolution order:
+     |      Components
+     |      builtins.tuple
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  __getnewargs__(self)
+     |      Return self as a plain tuple.  Used by copy and pickle.
+     |  
+     |  __repr__(self)
+     |      Return a nicely formatted representation string
+     |  
+     |  _asdict(self)
+     |      Return a new dict which maps field names to their values.
+     |  
+     |  _replace(self, /, **kwds)
+     |      Return a new Components object replacing specified fields with new values
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods defined here:
+     |  
+     |  _make(iterable) from builtins.type
+     |      Make a new Components object from a sequence or iterable
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  __new__(_cls, variable: optlang.interface.Variable, upper_constraint: optlang.interface.Constraint, lower_constraint: optlang.interface.Constraint)
+     |      Create new instance of Components(variable, upper_constraint, lower_constraint)
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  variable
+     |      Alias for field number 0
+     |  
+     |  upper_constraint
+     |      Alias for field number 1
+     |  
+     |  lower_constraint
+     |      Alias for field number 2
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  __annotations__ = {'lower_constraint': <class 'optlang.interface.Const...
+     |  
+     |  __match_args__ = ('variable', 'upper_constraint', 'lower_constraint')
+     |  
+     |  __orig_bases__ = (<function NamedTuple>,)
+     |  
+     |  _field_defaults = {}
+     |  
+     |  _fields = ('variable', 'upper_constraint', 'lower_constraint')
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.tuple:
+     |  
+     |  __add__(self, value, /)
+     |      Return self+value.
+     |  
+     |  __contains__(self, key, /)
+     |      Return key in self.
+     |  
+     |  __eq__(self, value, /)
+     |      Return self==value.
+     |  
+     |  __ge__(self, value, /)
+     |      Return self>=value.
+     |  
+     |  __getattribute__(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  __getitem__(self, key, /)
+     |      Return self[key].
+     |  
+     |  __gt__(self, value, /)
+     |      Return self>value.
+     |  
+     |  __hash__(self, /)
+     |      Return hash(self).
+     |  
+     |  __iter__(self, /)
+     |      Implement iter(self).
+     |  
+     |  __le__(self, value, /)
+     |      Return self<=value.
+     |  
+     |  __len__(self, /)
+     |      Return len(self).
+     |  
+     |  __lt__(self, value, /)
+     |      Return self<value.
+     |  
+     |  __mul__(self, value, /)
+     |      Return self*value.
+     |  
+     |  __ne__(self, value, /)
+     |      Return self!=value.
+     |  
+     |  __rmul__(self, value, /)
+     |      Return value*self.
+     |  
+     |  count(self, value, /)
+     |      Return number of occurrences of value.
+     |  
+     |  index(self, value, start=0, stop=9223372036854775807, /)
+     |      Return first index of value.
+     |      
+     |      Raises ValueError if the value is not present.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Class methods inherited from builtins.tuple:
+     |  
+     |  __class_getitem__(...) from builtins.type
+     |      See PEP 585
+
+FUNCTIONS
+    add_absolute_expression(model: 'Model', expression: str, name: str = 'abs_var', ub: Optional[float] = None, difference: float = 0.0, add: bool = True) -> cobra.util.solver.Components
+        Add the absolute value of an expression to the model.
+        
+        Also defines a variable for the absolute value that can be used in
+        other objectives or constraints.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+           The model to which to add the absolute expression.
+        expression : str
+           Must be a valid symbolic expression within the model's solver object.
+           The absolute value is applied automatically on the expression.
+        name : str, optional
+           The name of the newly created variable (default "abs_var").
+        ub : positive float, optional
+           The upper bound for the variable (default None).
+        difference : positive float, optional
+            The difference between the expression and the variable
+            (default 0.0).
+        add : bool, optional
+            Whether to add the variable to the model at once (default True).
+        
+        Returns
+        -------
+        Components
+            A named tuple with variable and two constraints (upper_constraint,
+            lower_constraint) describing the new variable and the constraints
+            that assign the absolute value of the expression to it.
+    
+    add_cons_vars_to_problem(model: 'Model', what: Union[List[Union[optlang.interface.Constraint, optlang.interface.Variable]], Tuple[Union[optlang.interface.Constraint, optlang.interface.Variable]], cobra.util.solver.Components], **kwargs) -> None
+        Add variables and constraints to a model's solver object.
+        
+        Useful for variables and constraints that can not be expressed with
+        reactions and lower/upper bounds. It will integrate with the model's
+        context manager in order to revert changes upon leaving the context.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+           The model to which to add the variables and constraints.
+        what : list or tuple of optlang.interface.Variable or
+               optlang.interface.Constraint
+           The variables and constraints to add to the model.
+        **kwargs : keyword arguments
+           Keyword arguments passed to solver's add() method.
+    
+    add_lexicographic_constraints(model: 'Model', objectives: List[ForwardRef('Reaction')], objective_direction: Union[str, List[str]] = 'max') -> pandas.core.series.Series
+        Successively optimize separate targets in a specific order.
+        
+        For each objective, optimize the model and set the optimal value as a
+        constraint. Proceed in the order of the objectives given. Due to the
+        specific order this is called lexicographic FBA [1]_. This procedure
+        is useful for returning unique solutions for a set of important
+        fluxes. Typically this is applied to exchange fluxes.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The model to be optimized.
+        objectives : list of cobra.Reaction
+            A list of reactions (or objectives) in the model for which unique
+            fluxes are to be determined.
+        objective_direction : str or list of str, optional
+            The desired objective direction for each reaction (if a list) or
+            the objective direction to use for all reactions (default "max").
+        
+        Returns
+        -------
+        pandas.Series
+            A pandas Series containing the optimized fluxes for each of the
+            given reactions in `objectives`.
+        
+        References
+        ----------
+        .. [1] Gomez, Jose A., Kai Höffner, and Paul I. Barton.
+        “DFBAlab: A Fast and Reliable MATLAB Code for Dynamic Flux Balance
+        Analysis.” BMC Bioinformatics 15, no. 1 (December 18, 2014): 409.
+        https://doi.org/10.1186/s12859-014-0409-8.
+    
+    add_lp_feasibility(model: 'Model') -> None
+        Add a new objective and variables to ensure a feasible solution.
+        
+        The optimized objective will be zero for a feasible solution and
+        otherwise represent the distance from feasibility (please see [1]_
+        for more information).
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The model whose feasibility is to be tested.
+        
+        Returns
+        -------
+        None
+        
+        References
+        ----------
+        .. [1] Gomez, Jose A., Kai Höffner, and Paul I. Barton.
+        “DFBAlab: A Fast and Reliable MATLAB Code for Dynamic Flux Balance
+        Analysis.” BMC Bioinformatics 15, no. 1 (December 18, 2014): 409.
+        https://doi.org/10.1186/s12859-014-0409-8.
+    
+    assert_optimal(model: 'Model', message: str = 'Optimization failed') -> None
+        Assert model solver status is optimal.
+        
+        Do nothing if model solver status is optimal, otherwise throw
+        appropriate exception depending on the status.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The model to check the solver status for.
+        message : str, optional
+            Message for the exception if solver status is not optimal
+            (default "Optimization failed").
+        
+        Returns
+        -------
+        None
+        
+        Raises
+        ------
+        OptimizationError
+           If solver status is not optimal.
+    
+    check_solver(obj)
+        Check whether the chosen solver is valid.
+        
+        Check whether chosen solver is valid and also warn when using
+        a specialized solver. Will return the optlang interface for the
+        requested solver.
+        
+        Parameters
+        ----------
+        obj : str or optlang.interface or optlang.interface.Model
+            The chosen solver.
+        
+        Raises
+        ------
+        SolverNotFound
+            If the solver is not valid.
+    
+    check_solver_status(status: str = None, raise_error: bool = False) -> None
+        Perform standard checks on a solver's status.
+        
+        Parameters
+        ----------
+        status: str, optional
+            The status string obtained from the solver (default None).
+        raise_error: bool, optional
+            If True, raise error or display warning if False (default False).
+        
+        Returns
+        -------
+        None
+        
+        Warns
+        -----
+        UserWarning
+            If `status` is not optimal and `raise_error` is set to True.
+        
+        Raises
+        ------
+        OptimizationError
+            If `status` is None or is not optimal and `raise_error` is set to
+            True.
+    
+    choose_solver(model: 'Model', solver: Optional[str] = None, qp: bool = False) -> module
+        Choose a solver given a solver name and model.
+        
+        This will choose a solver compatible with the model and required
+        capabilities. Also respects model.solver where it can.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The model for which to choose the solver.
+        solver : str, optional
+            The name of the solver to be used (default None).
+        qp : boolean, optional
+            True if the solver needs quadratic programming capabilities
+            (default False).
+        
+        Returns
+        -------
+        optlang.interface
+            Valid solver for the problem.
+        
+        Raises
+        ------
+        SolverNotFound
+            If no suitable solver could be found.
+    
+    fix_objective_as_constraint(model: 'Model', fraction: float = 1.0, bound: Optional[float] = None, name: str = 'fixed_objective_{}') -> float
+        Fix current objective as an additional constraint.
+        
+        When adding constraints to a model, such as done in pFBA which
+        minimizes total flux, these constraints can become too powerful,
+        resulting in solutions that satisfy optimality but sacrifices too
+        much for the original objective function. To avoid that, we can fix
+        the current objective value as a constraint to ignore solutions that
+        give a lower (or higher depending on the optimization direction)
+        objective value than the original model.
+        
+        When done with the model as a context, the modification to the
+        objective will be reverted when exiting that context.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The model to operate on.
+        fraction : float, optional
+            The fraction of the optimum the objective is allowed to reach
+            (default 1.0).
+        bound : float, optional
+            The bound to use instead of fraction of maximum optimal value.
+            If not None, `fraction` is ignored (default None).
+        name : str, optional
+            Name of the objective. May contain one "{}" placeholder which is
+            filled with the name of the old objective
+            (default "fixed_objective_{}").
+        
+        Returns
+        -------
+        float
+            The value of the optimized objective * fraction
+    
+    get_solver_name(mip: bool = False, qp: bool = False) -> str
+        Select a solver for a given optimization problem.
+        
+        Parameters
+        ----------
+        mip : bool
+            True if the solver requires mixed integer linear programming capabilities.
+        qp : bool
+            True if the solver requires quadratic programming capabilities.
+        
+        Returns
+        -------
+        str
+            The name of the feasible solver.
+        
+        Raises
+        ------
+        SolverNotFound
+            If no suitable solver could be found.
+    
+    interface_to_str(interface: Union[str, module]) -> str
+        Give a string representation for an optlang interface.
+        
+        Parameters
+        ----------
+        interface : str, ModuleType
+            Full name of the interface in optlang or cobra representation.
+            For instance, 'optlang.glpk_interface' or 'optlang-glpk'.
+        
+        Returns
+        -------
+        str
+           The name of the interface as a string.
+    
+    linear_reaction_coefficients(model: 'Model', reactions: Optional[List[ForwardRef('Reaction')]] = None) -> Dict[ForwardRef('Reaction'), float]
+        Retrieve coefficient for the reactions in a linear objective.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+            The cobra model defining the linear objective.
+        reactions : list of cobra.Reaction, optional
+            An optional list of the reactions to get the coefficients for.
+            By default, all reactions are considered (default None).
+        
+        Returns
+        -------
+        dict
+            A dictionary where the keys are the reaction objects and the values
+            are the corresponding coefficient. Empty dictionary if there are no
+            linear terms in the objective.
+    
+    remove_cons_vars_from_problem(model: 'Model', what: Union[List[Union[optlang.interface.Constraint, optlang.interface.Variable]], Tuple[Union[optlang.interface.Constraint, optlang.interface.Variable]], cobra.util.solver.Components]) -> None
+        Remove variables and constraints from a model's solver object.
+        
+        Useful to temporarily remove variables and constraints from a model's
+        solver object.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+           The model from which to remove the variables and constraints.
+        what : list or tuple of optlang.interface.Variable or
+               optlang.interface.Constraint
+           The variables and constraints to remove from the model.
+    
+    set_objective(model: 'Model', value: Union[optlang.interface.Objective, sympy.core.basic.Basic, Dict[ForwardRef('Reaction'), float]], additive: bool = False) -> None
+        Set the model objective.
+        
+        Parameters
+        ----------
+        model : cobra.Model
+           The model to set the objective for.
+        value : optlang.interface.Objective, optlang.symbolics.Basic, dict
+            If the model objective is linear, then the value can be a new
+            optlang.interface.Objective or a dictionary with linear
+            coefficients where each key is a reaction and the corresponding
+            value is the new coefficient (float).
+            If the objective is non-linear and `additive` is True, then only
+            values of class optlang.interface.Objective, are accepted.
+        additive : bool
+            If True, add the terms to the current objective, otherwise start with
+            an empty objective.
+        
+        Raises
+        ------
+        ValueError
+            If model objective is non-linear and the `value` is a dict.
+        TypeError
+            If the type of `value` is not one of the accepted ones.
+    
+    warn(message, category=None, stacklevel=1, source=None)
+        Issue a warning, or maybe ignore it or raise an exception.
+
+DATA
+    CONS_VARS = typing.Union[optlang.interface.Constraint, optlang.interfa...
+    Dict = typing.Dict
+        A generic version of dict.
+    
+    FEASIBLE = 'feasible'
+    INFEASIBLE = 'infeasible'
+    ITERATION_LIMIT = 'iteration_limit'
+    List = typing.List
+        A generic version of list.
+    
+    NUMERIC = 'numeric'
+    OPTIMAL = 'optimal'
+    OPTLANG_TO_EXCEPTIONS_DICT = {'feasible': <class 'cobra.exceptions.Fea...
+    Optional = typing.Optional
+        Optional type.
+        
+        Optional[X] is equivalent to Union[X, None].
+    
+    SUBOPTIMAL = 'suboptimal'
+    TIME_LIMIT = 'time_limit'
+    TYPE_CHECKING = False
+    Tuple = typing.Tuple
+        Tuple type; Tuple[X, Y] is the cross-product type of X and Y.
+        
+        Example: Tuple[T1, T2] is a tuple of two elements corresponding
+        to type variables T1 and T2.  Tuple[int, float, str] is a tuple
+        of an int, a float and a string.
+        
+        To specify a variable-length tuple of homogeneous type, use Tuple[T, ...].
+    
+    Union = typing.Union
+        Union type; Union[X, Y] means either X or Y.
+        
+        To define a union, use e.g. Union[int, str].  Details:
+        - The arguments must be types and there must be at least one.
+        - None as an argument is a special case and is replaced by
+          type(None).
+        - Unions of unions are flattened, e.g.::
+        
+            Union[Union[int, str], float] == Union[int, str, float]
+        
+        - Unions of a single argument vanish, e.g.::
+        
+            Union[int] == int  # The constructor actually returns int
+        
+        - Redundant arguments are skipped, e.g.::
+        
+            Union[int, str, int] == Union[int, str]
+        
+        - When comparing unions, the argument order is ignored, e.g.::
+        
+            Union[int, str] == Union[str, int]
+        
+        - You cannot subclass or instantiate a union.
+        - You can use Optional[X] as a shorthand for Union[X, None].
+    
+    Zero = 0.0
+    has_primals = ['numeric', 'feasible', 'infeasible', 'suboptimal', 'ite...
+    logger = <Logger cobra.util.solver (WARNING)>
+    qp_solvers = ['cplex', 'gurobi', 'osqp']
+    solvers = {'cplex': <module 'optlang.cplex_interface' from '/home/ar.....
+
+FILE
+    /home/articulatus/anaconda3/envs/RiceMM/lib/python3.10/site-packages/cobra/util/solver.py
+
+
+Generating parametrized models for flux sampling
+Set parameter OutputFlag to value 1
+Read LP format model from file /tmp/tmp6fl5nxcg.lp
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+Set parameter OutputFlag to value 1
+Set parameter FeasibilityTol to value 1e-07
+Set parameter OptimalityTol to value 1e-07
+Set parameter IntFeasTol to value 1e-07
+Set parameter FeasibilityTol to value 1e-09
+Set parameter OptimalityTol to value 1e-09
+Set parameter IntFeasTol to value 1e-09
+start time for parametrize_model():  2023-07-30 06:12:36.355879
+computing Loopless FVA to model from scratch
+Discarded solution information
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3975 rows, 9901 columns and 43101 nonzeros
+Model fingerprint: 0x28e67ab5
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -0.0000000e+00   2.862626e+01   2.350004e+06      0s
+    5385    1.2544287e-01   0.000000e+00   0.000000e+00      1s
+
+Solved in 5385 iterations and 0.54 seconds (0.66 work units)
+Optimal objective  1.254428750e-01
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3976 rows, 9902 columns and 43108 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.2544287e-01   3.136072e-03   4.853606e+07      0s
+       1    1.2544287e-01   0.000000e+00   0.000000e+00      0s
+
+Solved in 1 iterations and 0.01 seconds (0.00 work units)
+Optimal objective  1.254428750e-01
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9902 columns and 43114 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.0248574e+03   0.000000e+00   1.888505e+05      0s
+     761    1.4272091e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 761 iterations and 0.03 seconds (0.04 work units)
+Optimal objective  1.427209106e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Coefficient statistics:
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+  Matrix range     [2e-04, 3e+01]
+
+  Objective range  [1e+00, 1e+00]
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+  Bounds range     [1e-01, 1e+06]
+Coefficient statistics:
+Coefficient statistics:
+  RHS range        [6e-01, 2e+02]
+  Matrix range     [2e-04, 3e+01]
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+  RHS range        [6e-01, 2e+02]
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+
+Solved in 28 iterations and 0.02 seconds (0.01 work units)
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Optimal objective  0.000000000e+00
+Solved in 28 iterations and 0.01 seconds (0.01 work units)
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+Optimal objective  0.000000000e+00
+
+Solved in 28 iterations and 0.02 seconds (0.01 work units)
+Optimal objective  0.000000000e+00
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Coefficient statistics:
+Coefficient statistics:
+
+  Matrix range     [2e-04, 3e+01]
+  Matrix range     [2e-04, 3e+01]
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+  Objective range  [1e+00, 1e+00]
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+  Objective range  [1e+00, 1e+00]
+
+Coefficient statistics:
+  Bounds range     [1e-01, 1e+06]
+Solved in 28 iterations and 0.02 seconds (0.01 work units)
+  Matrix range     [2e-04, 3e+01]
+Optimal objective  0.000000000e+00
+  RHS range        [6e-01, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  RHS range        [6e-01, 2e+02]
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Solved in 28 iterations and 0.03 seconds (0.01 work units)
+       0    0.0000000e+00   1.784011e+01   2.734714e+11      0s
+Optimal objective  0.000000000e+00
+      28    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 28 iterations and 0.03 seconds (0.01 work units)
+      29    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+Optimal objective  0.000000000e+00
+Solved in 29 iterations and 0.04 seconds (0.01 work units)
+Optimal objective  0.000000000e+00
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+
+Warning: excessive time spent in model updates.
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Warning: excessive time spent in model updates.
+Warning: excessive time spent in model updates.
+Coefficient statistics:
+Consider calling update less frequently.
+
+Consider calling update less frequently.
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+  Matrix range     [2e-04, 3e+01]
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Solved in 970 iterations and 0.12 seconds (0.07 work units)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+  RHS range        [6e-01, 2e+02]
+Optimal objective  1.005365539e+03
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 970 iterations and 0.10 seconds (0.07 work units)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+Optimal objective  1.005365539e+03
+       0    1.0767260e+03   8.920057e+00   1.048363e+11      0s
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 970 iterations and 0.09 seconds (0.07 work units)
+Optimal objective  1.005365539e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 970 iterations and 0.10 seconds (0.07 work units)
+Optimal objective  1.005365539e+03
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+  Matrix range     [2e-04, 3e+01]
+
+  Objective range  [1e+00, 1e+00]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  Matrix range     [2e-04, 3e+01]
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+Solved in 970 iterations and 0.11 seconds (0.07 work units)
+     970    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+
+Optimal objective  1.005365539e+03
+Solved in 970 iterations and 0.13 seconds (0.07 work units)
+Optimal objective  1.005365539e+03
+     792    1.0053655e+03   0.000000e+00   0.000000e+00      0s
+  Objective range  [1e+00, 1e+00]
+
+  Bounds range     [1e-01, 1e+06]
+Solved in 792 iterations and 0.11 seconds (0.06 work units)
+  RHS range        [6e-01, 2e+02]
+Optimal objective  1.005365539e+03
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.759898e+03   1.492364e+11      0s
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   3.913984e+03   2.322927e+11      0s
+    3888    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3888 iterations and 0.63 seconds (0.64 work units)
+Optimal objective  0.000000000e+00
+    3491    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3491 iterations and 0.69 seconds (0.59 work units)
+Optimal objective  0.000000000e+00
+    3737    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3737 iterations and 0.66 seconds (0.66 work units)
+Optimal objective  0.000000000e+00
+    3352    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3352 iterations and 0.66 seconds (0.55 work units)
+Optimal objective  0.000000000e+00
+    4416    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 4416 iterations and 0.74 seconds (0.74 work units)
+Optimal objective  0.000000000e+00
+    3737    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3737 iterations and 0.74 seconds (0.66 work units)
+Optimal objective  0.000000000e+00
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0942621e+03   4.602388e+00   1.049787e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+    4222    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+Consider calling update less frequently.
+
+
+Solved in 4222 iterations and 0.82 seconds (0.70 work units)
+Optimal objective  0.000000000e+00
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0948596e+03   4.654488e+00   2.029634e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0894254e+03   5.124998e+00   3.455796e+10      0s
+    1144    1.0501041e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1144 iterations and 0.14 seconds (0.10 work units)
+Optimal objective  1.050104077e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+
+       0    0.0000000e+00   4.583937e+02   8.179586e+09      0s
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+
+Consider calling update less frequently.
+
+
+    1493    1.0405077e+03   0.000000e+00   0.000000e+00      0s
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Warning: excessive time spent in model updates.
+
+Solved in 1493 iterations and 0.18 seconds (0.11 work units)
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Consider calling update less frequently.
+Optimal objective  1.040507687e+03
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Coefficient statistics:
+
+       0    1.0942621e+03   4.602388e+00   1.049787e+10      0s
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+    1142    1.0432967e+03   0.000000e+00   0.000000e+00      0s
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+  Matrix range     [2e-04, 3e+01]
+
+  Objective range  [1e+00, 1e+00]
+
+  Bounds range     [1e-01, 1e+06]
+Warning: excessive time spent in model updates.
+  RHS range        [6e-01, 2e+02]
+Consider calling update less frequently.
+
+
+Solved in 1142 iterations and 0.12 seconds (0.09 work units)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Optimal objective  1.043296678e+03
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+       0    1.0297929e+03   0.000000e+00   9.258790e+03      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0972513e+03   4.178235e+00   1.824753e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+     636    1.0256539e+03   0.000000e+00   0.000000e+00      0s
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   5.497367e+02   1.123328e+10      0s
+
+    1144    1.0501041e+03   0.000000e+00   0.000000e+00      0s
+Solved in 636 iterations and 0.10 seconds (0.05 work units)
+
+Optimal objective  1.025653902e+03
+Solved in 1144 iterations and 0.11 seconds (0.10 work units)
+Optimal objective  1.050104077e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   6.134838e+02   1.356582e+10      0s
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0963967e+03   4.251270e+00   2.752981e+10      0s
+    1419    1.0564546e+03   0.000000e+00   0.000000e+00      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+
+Solved in 1419 iterations and 0.18 seconds (0.12 work units)
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Optimal objective  1.056454551e+03
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+       0    0.0000000e+00   4.045802e+02   8.333544e+09      0s
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   4.583937e+02   8.179586e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+    1103    1.0431610e+03   0.000000e+00   0.000000e+00      0s
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Solved in 1103 iterations and 0.13 seconds (0.09 work units)
+Coefficient statistics:
+Optimal objective  1.043161020e+03
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   1.010722e+03   1.899901e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   4.963144e+02   5.178166e+09      0s
+    2181    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 2181 iterations and 0.43 seconds (0.35 work units)
+Optimal objective  0.000000000e+00
+    3599    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3599 iterations and 0.70 seconds (0.62 work units)
+Optimal objective  0.000000000e+00
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0379910e+03   0.000000e+00   1.372591e+04      0s
+    3518    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3518 iterations and 0.71 seconds (0.62 work units)
+Optimal objective  0.000000000e+00
+    3242    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3242 iterations and 0.63 seconds (0.51 work units)
+Optimal objective  0.000000000e+00
+     818    1.0297999e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 818 iterations and 0.13 seconds (0.06 work units)
+Optimal objective  1.029799884e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0868324e+03   5.188376e+00   4.778257e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+    3599    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+
+Solved in 3599 iterations and 0.77 seconds (0.62 work units)
+Optimal objective  0.000000000e+00
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+     840    1.0376565e+03   0.000000e+00   0.000000e+00      0s
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   8.220395e+02   5.699596e+10      0s
+Solved in 840 iterations and 0.08 seconds (0.06 work units)
+Optimal objective  1.037656456e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+  Matrix range     [2e-04, 3e+01]
+Coefficient statistics:
+  Objective range  [1e+00, 1e+00]
+  Matrix range     [2e-04, 3e+01]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+  Objective range  [1e+00, 1e+00]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   5.237568e+02   3.641016e+09      0s
+       0    1.0973078e+03   4.201109e+00   7.041220e+10      0s
+    4541    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Solved in 4541 iterations and 0.90 seconds (0.76 work units)
+
+Optimal objective  0.000000000e+00
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+    4806    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Solved in 4806 iterations and 0.86 seconds (0.81 work units)
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+Optimal objective  0.000000000e+00
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0441794e+03   0.000000e+00   3.834337e+05      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+     882    1.0307550e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 882 iterations and 0.11 seconds (0.06 work units)
+Optimal objective  1.030755019e+03
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+    1419    1.0375588e+03   0.000000e+00   0.000000e+00      0s
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Solved in 1419 iterations and 0.20 seconds (0.12 work units)
+Optimal objective  1.037558802e+03
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0868324e+03   5.188376e+00   4.778257e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+     840    1.0376565e+03   0.000000e+00   0.000000e+00      0s
+
+  Bounds range     [1e-01, 1e+06]
+  Bounds range     [1e-01, 1e+06]
+Solved in 840 iterations and 0.11 seconds (0.06 work units)
+  RHS range        [6e-01, 2e+02]
+Optimal objective  1.037656456e+03
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   8.432630e+02   6.070245e+10      0s
+       0    0.0000000e+00   1.485561e+03   5.521434e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1090907e+03   5.380531e+00   4.683326e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Warning: excessive time spent in model updates.
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   5.237568e+02   3.641016e+09      0s
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3167    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3167 iterations and 0.56 seconds (0.54 work units)
+Optimal objective  0.000000000e+00
+       0    1.1033127e+03   3.495711e+00   2.792841e+10      0s
+    1151    1.0538706e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1151 iterations and 0.11 seconds (0.08 work units)
+Optimal objective  1.053870606e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+    1172    1.0669733e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1172 iterations and 0.17 seconds (0.10 work units)
+Coefficient statistics:
+Optimal objective  1.066973300e+03
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   4.773969e+02   7.954241e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+    3803    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 3803 iterations and 0.71 seconds (0.65 work units)
+Optimal objective  0.000000000e+00
+       0    0.0000000e+00   1.029627e+03   1.484094e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0933085e+03   4.339218e+00   1.768966e+11      0s
+     822    1.0489590e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 822 iterations and 0.11 seconds (0.06 work units)
+Optimal objective  1.048958954e+03
+    2944    0.0000000e+00   0.000000e+00   0.000000e+00      0s
+
+Solved in 2944 iterations and 0.48 seconds (0.44 work units)
+Optimal objective  0.000000000e+00
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.326945e+03   1.823026e+10      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+    4116    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Solved in 4116 iterations and 0.73 seconds (0.60 work units)
+
+Optimal objective  0.000000000e+00
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0877841e+03   1.006953e+01   5.933031e+10      0s
+    5503   -7.9649771e-02   0.000000e+00   0.000000e+00      1s
+
+Solved in 5503 iterations and 0.83 seconds (0.70 work units)
+Optimal objective -7.964977114e-02
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+    1009    1.0389224e+03   0.000000e+00   0.000000e+00      0s
+
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+Solved in 1009 iterations and 0.13 seconds (0.08 work units)
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Optimal objective  1.038922388e+03
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0928658e+03   8.820574e+00   1.659164e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.953777e+03   1.371151e+11      0s
+    1240    1.0436323e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1240 iterations and 0.15 seconds (0.10 work units)
+Optimal objective  1.043632307e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0854190e+03   0.000000e+00   1.792231e+06      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+     708    1.0663177e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 708 iterations and 0.10 seconds (0.05 work units)
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+  RHS range        [6e-01, 2e+02]
+
+Optimal objective  1.066317723e+03
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+Warning: excessive time spent in model updates.
+       0    0.0000000e+00   9.802485e+02   1.113482e+10      0s
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+    4069    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 4069 iterations and 0.77 seconds (0.66 work units)
+Optimal objective  0.000000000e+00
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1362602e+03   0.000000e+00   1.616548e+04      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   9.468252e+02   1.554363e+10      0s
+    1039    1.0707857e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1039 iterations and 0.16 seconds (0.08 work units)
+Optimal objective  1.070785702e+03
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+    5246    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 5246 iterations and 1.13 seconds (1.06 work units)
+       0    1.0707857e+03   1.991244e-02   3.221432e+06      0s
+Optimal objective  0.000000000e+00
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [4e-04, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1168922e+03   1.902485e+00   1.244661e+10      0s
+     659    1.1362602e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 659 iterations and 0.10 seconds (0.06 work units)
+Optimal objective  1.136260224e+03
+    1108    1.0634436e+03   0.000000e+00   0.000000e+00      0s
+
+Solved in 1108 iterations and 0.10 seconds (0.09 work units)
+Optimal objective  1.063443627e+03
+    4720    0.0000000e+00   0.000000e+00   0.000000e+00      1s
+
+Solved in 4720 iterations and 0.87 seconds (0.79 work units)
+Optimal objective  0.000000000e+00
+    4330   -7.9471339e-01   0.000000e+00   0.000000e+00      1s
+
+Solved in 4330 iterations and 0.61 seconds (0.59 work units)
+Optimal objective -7.947133944e-01
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   4.536070e+02   9.957568e+09      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.433313e+03   1.177807e+11      0s
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+
+Warning: excessive time spent in model updates.
+Consider calling update less frequently.
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.1053070e+03   3.181954e+00   1.030793e+10      0s
+
+
+
+Stopped in 617 iterations and 0.10 seconds (0.06 work units)
+
+
+Stopped in 1020 iterations and 0.17 seconds (0.14 work units)
+Stopped in 51 iterations and 0.05 seconds (0.01 work units)
+Solve interrupted
+Stopped in 2934 iterations and 0.54 seconds (0.39 work units)
+Solve interrupted
+Solve interrupted
+Stopped in 3537 iterations and 0.66 seconds (0.56 work units)
+Solve interrupted
+Discarded solution information
+Gurobi Optimizer version 10.0.1 build v10.0.1rc0 (linux64)
+
+CPU model: 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+
+Optimize a model with 3977 rows, 9903 columns and 52999 nonzeros
+Model fingerprint: 0xb02221d4
+Coefficient statistics:
+  Matrix range     [2e-04, 3e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e-01, 1e+06]
+  RHS range        [6e-01, 2e+02]
+Solve interrupted
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    0.0000000e+00   2.865449e+01   3.350000e+06      0s

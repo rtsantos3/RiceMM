@@ -1,0 +1,93 @@
+Generating parametrized models for flux sampling
+Generating parametrized models for flux samplingGenerating parametrized models for flux sampling
+
+Read LP format model from file /tmp/tmpmiq7obva.lp
+Read LP format model from file /tmp/tmpmiq7obva.lp
+Reading time = 0.01 seconds
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model(): start time for parametrize_model():   2023-08-01 03:42:34.2107242023-08-01 03:42:34.210724
+
+reading previous FVA boundsreading previous FVA bounds
+
+Reactions to remove: 2899Reactions to remove: 2899
+
+Solution checking before sammpling: Solution checking before sammpling:   0.46544462698742030.4654446269874203
+
+Read LP format model from file /tmp/tmpmt38d_cy.lp
+Read LP format model from file /tmp/tmpmt38d_cy.lp
+Reading time = 0.02 seconds
+Reading time = 0.02 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model(): start time for parametrize_model():   2023-08-01 03:42:56.1136052023-08-01 03:42:56.113605
+
+reading previous FVA boundsreading previous FVA bounds
+
+Reactions to remove: 3733Reactions to remove: 3733
+
+Solution checking before sammpling: Solution checking before sammpling:   0.118053122778499070.11805312277849907
+
+Read LP format model from file /tmp/tmphbtru69n.lp
+Read LP format model from file /tmp/tmphbtru69n.lp
+Reading time = 0.01 seconds
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model(): start time for parametrize_model():   2023-08-01 03:43:20.1160252023-08-01 03:43:20.116025
+
+reading previous FVA boundsreading previous FVA bounds
+
+Reactions to remove: 3383Reactions to remove: 3383
+
+Solution checking before sammpling: Solution checking before sammpling:   0.30364131976956580.3036413197695658
+
+Read LP format model from file /tmp/tmptinm7_cs.lp
+Read LP format model from file /tmp/tmptinm7_cs.lp
+Reading time = 0.01 seconds
+Reading time = 0.01 seconds
+: 3956 rows, 9880 columns, 42914 nonzeros
+: 3956 rows, 9880 columns, 42914 nonzeros
+start time for parametrize_model(): start time for parametrize_model():   2023-08-01 03:43:41.0017282023-08-01 03:43:41.001728
+
+reading previous FVA boundsreading previous FVA bounds
+
+Reactions to remove: 3612Reactions to remove: 3612
+
+Solution checking before sammpling: Solution checking before sammpling:   0.35630588686623230.3563058868662323
+
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons_08012023.csvModel bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_WT_1500_updated_model_cons_08012023.csv
+
+bounds file saved to flux_sample_WT_1500_updated_model_cons_08012023.csvbounds file saved to flux_sample_WT_1500_updated_model_cons_08012023.csv
+
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons_08012023.csvModel bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_250_updated_model_cons_08012023.csv
+
+bounds file saved to flux_sample_TR_250_updated_model_cons_08012023.csvbounds file saved to flux_sample_TR_250_updated_model_cons_08012023.csv
+
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons_08012023.csvModel bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_750_updated_model_cons_08012023.csv
+
+bounds file saved to flux_sample_TR_750_updated_model_cons_08012023.csvbounds file saved to flux_sample_TR_750_updated_model_cons_08012023.csv
+
+Model bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons_08012023.csvModel bounds saved to: ./flux_results/flux_sampling/model_bounds/flux_sample_TR_1500_updated_model_cons_08012023.csv
+
+bounds file saved to flux_sample_TR_1500_updated_model_cons_08012023.csvbounds file saved to flux_sample_TR_1500_updated_model_cons_08012023.csv
+
+generating flux samples for parametrized modelsgenerating flux samples for parametrized models
+
+start time for sampler: start time for sampler:   2023-08-01 03:43:54.8969162023-08-01 03:43:54.896916
+
+Starting OPTGP sampler:Starting OPTGP sampler:
+
+num_samples: num_samples:   1200012000
+
+Thinning coefficient: Thinning coefficient:   100000100000
+
+generating sampler for modelgenerating sampler for model
+
+Read LP format model from file /tmp/tmp6icuwtlh.lp
+Read LP format model from file /tmp/tmp6icuwtlh.lp
+Reading time = 0.01 seconds
+Reading time = 0.01 seconds
+: 3970 rows, 4088 columns, 16916 nonzeros
+: 3970 rows, 4088 columns, 16916 nonzeros

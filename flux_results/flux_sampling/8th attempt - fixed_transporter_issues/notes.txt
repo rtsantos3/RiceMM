@@ -1,0 +1,16 @@
+02/08/2023
+
+Modelling parameters:
+
+Opened malate transporters in each compartment.
+Revised Malate dehydrogenase constraint (MDHys instead of MDHm and MDHs)
+Added MDHym reaaction
+
+Fixed the MDH2s reactions
+
+Other constraints carried over from old
+
+Sampling size:2,500
+Thinning: 10000
+
+FVA computed from scratch -- reuse later for resampling

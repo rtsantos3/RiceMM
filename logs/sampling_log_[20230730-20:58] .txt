@@ -88,3 +88,4 @@ Reading time = 0.01 seconds
 done generating OPTGP sampler
 saving output to  ./flux_results/flux_sampling//flux_sample_WT_1500_updated_model_cons_07302023.csv
 Generating batch 1/2
+Generating batch 2/2

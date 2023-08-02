@@ -15,15 +15,25 @@ from cobra import Reaction
 
 
 
-#Define inf as 1e6
+#Define inf as 1e6#This codeblock is to define some of the functions used for modelling
+
+##UPDATED JULY 28 2023
+
+##NOTES:
+##Fixed wrong encoding of reactions for Malate dehydrogenase as well as NADP ME.
+
+
+
+#Define linear relationship between PPFD and Cellular maintainance costs
+#This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light
 inf=1e6
 
-#Define linear relationship between PPFD and Cellular maintainance costs
-#This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light
-#This codeblock is to define some of the functions used for modelling
+def generate_constraint(model,reaction, name, lb, ub):
+    reaction_fex = model.reactions.get_by_id(name).flux_expression
+    constraint = model.problem.Constraint(reaction_fex, lb=lb, ub=ub)
+    constraint.name = name + '_constraint'
+    model.add_cons_vars
 
-#Define linear relationship between PPFD and Cellular maintainance costs
-#This formula comes from Topfer et al (2020) where she defined NGAM in a linear relationship with incident light
 def compute_ngam_atp(ppfd):
     v_atp = 0.0049*ppfd + 2.7851
     return v_atp
@@ -96,26 +106,41 @@ def add_tissue_constraints(model):
     model.reactions.NO3tex_M.bounds = (0,0)
     
     #Model will also constraint H2O input to BS cell only as it is also assumed that BS tissue in rice is specialized for H2O transport (Hua et al. 2021)
-    #The model also will allow one-way flux of H2O out of the M cell in the form of evaporation (shown by -inf lower bound for the reaction)
-    model.reactions.H2Otex_M.bounds = (-inf, 0)
+    #There is a demand reaction naman for H2O for the M cell which is not connected to the BS H2Otex
+    #Restrict H2O transport to be unidirectional from the BS cell
+    model.reactions.H2Otex_M.bounds = (0, 0)
+    model.reactions.h2o_pd.bounds = (-inf, 0)
     
     #need to turn off HCO import as the model incorrectly transfers fixed HCO to the BS cell via the common pool compartment
     model.reactions.HCO3tex_M.bounds = (0,0)
     model.reactions.HCO3tex_BS.bounds = (0,0)
     
-    #No constraints will be implemented for H+ availability allowing the model to use protons on-demand.
-
-    # #This code block contains constraints specific for enzyme rate constraints
-    #This approach is derived from Bogart & Myers (2016) where they constrained the enzyme rate 
-    #fluxes in each of the 2-cell segments to a specific upper bound while keeping the lower bound
-    #At 0. For reversible reactions the lower bounds are set to the same value
+    #Turn off extracellular Glycine transport 
+    model.reactions.GLYtex_M.bounds = (0,0)
+    model.reactions.GLYtex_BS.bounds = (0,0)
     
+    #Turn off other Demand reactions that may serve as sinks for the model except DM_Phloem_BS (Which represents the output of photoassimilate thru the BS cell
+    model.reactions.DM_Phloem_M.bounds = (0,0)
+    model.reactions.Straw_Biomass_M.bounds = (0,0)
+    model.reactions.Straw_Biomass_BS.bounds = (0,0)
+    model.reactions.Coleoptile_Biomass_M.bounds = (0,0)
+    model.reactions.Coleoptile_Biomass_BS.bounds = (0,0)
+    model.reactions.DM_Phloem_BS.bounds = (0, inf)
+    
+
 def add_enzyme_constraints(model, 
                            wt_pepc = 0, 
                            wt_mdh = 11.18, 
                            wt_nadp_me = 0.14, 
                            wt_ppdk=0.31,
                           wt_CA=7.5):
+    
+    
+    # #This code block contains constraints specific for enzyme rate constraints
+    #This approach is derived from Bogart & Myers (2016) where they constrained the enzyme rate 
+    #fluxes in each of the 2-cell segments to a specific upper bound while keeping the lower bound
+    #At 0. For reversible reactions the lower bounds are set to the same value
+    
     
     #PEPC constraint (Reaction id: PPCc)
     #Need to constrain it to 0 since reaction is only detected in Vascular tissue
@@ -139,23 +164,40 @@ def add_enzyme_constraints(model,
                                              lb = 0, ub = wt_ppdk)
     wt_ppdks_cons.name = 'wt_ppdks_cons'
     model.add_cons_vars(wt_ppdks_cons)
+    
+    
     #Malate Dehydrogenase 
     #Only mitochondrial in WT Rice M cells
+    #Reactions encoded in the model include MDHs, MDHc, MDHx.
+    model.reactions.MDHs_M.bounds = (0,0)
+    model.reactions.MDHc_M.bounds = (0,0)
+    model.reactions.MDHx_M.bounds = (0,0)
+    model.reactions.MDHs_BS.bounds = (0,0)
+    model.reactions.MDHc_BS.bounds = (0,0)
+    model.reactions.MDHx_BS.bounds = (0,0)
+    model.reactions.MDHm_BS.bounds = (0,0)
+    #Add constraints to MDHm
     mdhm_M = model.reactions.MDHm_M
-
-
+    
     wt_mdh_cons = model.problem.Constraint(mdhm_M.flux_expression,
-                                           lb= 0, ub=wt_mdh)
+                                           lb= -wt_mdh, ub=wt_mdh)
     wt_mdh_cons.name = "wt_mdh_cons"
     model.add_cons_vars(wt_mdh_cons)
 
+    
+    
     #NADP-ME (Since no signal is detected in WT, no locational constraints are imposed)
     #Let's see if I can force it to have a small amount of flux 
-    nadp_me_M = model.reactions.MDHys_M
-    nadp_me_BS = model.reactions.MDHys_BS
+    mdh2s_M = model.reactions.MDH2s_M
+    mdh2s_BS = model.reactions.MDH2s_BS
+    mdh2c_M = model.reactions.MDH2s_M
+    mdh2c_BS = model.reactions.MDH2s_BS
 
-    wt_nadpme_cons = model.problem.Constraint(nadp_me_M.flux_expression
-                                             + nadp_me_BS.flux_expression,
+
+    wt_nadpme_cons = model.problem.Constraint(mdh2s_M.flux_expression
+                                             + mdh2s_BS.flux_expression
+                                              + mdh2c_M.flux_expression
+                                              + mdh2c_BS.flux_expression,
                                              lb= 0, ub=wt_nadp_me)
     wt_nadpme_cons.name = "wt_nadpme_cons"
     model.add_cons_vars(wt_nadpme_cons)
@@ -164,7 +206,7 @@ def add_enzyme_constraints(model,
     #I should add constraints for Carbonic Anhydrase
     #I should constrain it to 0.4 ubar, which would constitute ambient CO2 partial pressure
     #Flux is reversible so constraints are bi-directional
-
+    #This should be revised considering that it allows reversible reactions  and an abnormally high flux thru carbonic anhydrase, which shouldn't be the case
 
     hco3es_m = model.reactions.HCO3Es_M.flux_expression
     hco3ec_m = model.reactions.HCO3Ec_M.flux_expression
@@ -178,6 +220,8 @@ def add_enzyme_constraints(model,
                                       lb = -wt_CA, ub = wt_CA)
     ca_cons.name = 'Carbonic_anhydrase_constraint'
     model.add_cons_vars(ca_cons)
+
+
     #Rbcl constaints
     #Retrieve flux expressions oof each RBCl reaction
     rbpc_M = model.reactions.RBPCs_M.flux_expression
@@ -273,7 +317,7 @@ def add_ngam_cons(model, ppfd):
     
 #This code  block gives a snapshot of the relevant fluxes on each of the cell types based on the saved sample_fluxes values above
 
-def print_summary(sample_fluxes_df):
+def print_summary(model, sample_fluxes_df):
     print('rbcl M cell: ', sample_fluxes['RBPCs_M'], 'rbcl BS cell: ',sample_fluxes['RBPCs_BS'])
     print('rbcl M cell (photorespiration)', sample_fluxes['RBPOs_M'], 'rbcl BS cell (PR)', sample_fluxes['RBPOs_BS'])
     print('vc/vo M:', sample_fluxes['RBPCs_M']/sample_fluxes['RBPOs_M'], 'vc/vo BS:', sample_fluxes['RBPCs_BS']/sample_fluxes['RBPOs_BS'])
@@ -319,76 +363,78 @@ def add_trans_reactions(model):
     trans_ppcs.add_metabolites({hco3_s0:-1, pep_s0:-1, oaa_s0:1, pi_s0:1})
     trans_ppcs.bounds= model.reactions.PPCc_M.bounds
     trans_ppcs.subsystem = model.reactions.PPCc_M.subsystem
+    trans_ppcs.notes['SUBSYSTEM'] = model.reactions.PPCc_M.notes['SUBSYSTEM']
     
-    trans_ppcs.notes['SUBSYSTEM']=model.reactions.PPCc_M.notes['SUBSYSTEM']
+
     trans_list.append(trans_ppcs)
 
 
     #Transgenic PPDK Copy
-    #Since it already exists I'll just copy and readd it
     trans_ppdks_m = Reaction('trans_PPDKs_M')
     trans_ppdks_m.add_metabolites(model.reactions.PPDKs_M.metabolites)
     trans_ppdks_m.bounds = model.reactions.PPDKs_M.bounds
     trans_ppdks_m.name = "Pyruvate phosphate dikinase, plastidic (Transgenic)"
-    trans_ppdks_m.notes['SUBSYSTEM']=model.reactions.PPDKs_M.notes['SUBSYSTEM']
+    trans_ppdks_m.notes['SUBSYSTEM'] =model.reactions.PPDKs_BS.notes['SUBSYSTEM']
+    
 
     trans_ppdks_bs = Reaction('trans_PPDKs_BS')
     trans_ppdks_bs.add_metabolites(model.reactions.PPDKs_BS.metabolites)
     trans_ppdks_bs.bounds = model.reactions.PPDKs_BS.bounds
     trans_ppdks_bs.name = "Pyruvate phosphate dikinase, plastidic (Transgenic)"
-    trans_ppdks_bs.notes['SUBSYSTEM']=model.reactions.PPDKs_BS.notes['SUBSYSTEM']
+    trans_ppdks_bs.notes['SUBSYSTEM'] =model.reactions.PPDKs_BS.notes['SUBSYSTEM']
+
     trans_list.append(trans_ppdks_m)
     trans_list.append(trans_ppdks_bs)
-    
- 
+
     #Transgenic NADP-ME
     #NADP-ME = Mitochondrial in M
-    trans_nadp_me = Reaction('trans_MDHym_M')
+    trans_nadp_me = Reaction('trans_MDH2m_M')
 
     #retrieve reactants
     mal_m0 = model.metabolites.get_by_id('mal-L_m0')
     nadp_m0 = model.metabolites.nadp_m0
-    h_m0 = model.metabolites.h_m0
-    nadph_m0 = model.metabolites.nadph_m0
     co2_m0 = model.metabolites.co2_m0
+    nadph_m0 = model.metabolites.nadph_m0
     pyr_m0 = model.metabolites.pyr_m0
 
     #Add to rxn
     trans_nadp_me.add_metabolites({mal_m0:-1, nadp_m0:-1, co2_m0:1, nadph_m0:1, pyr_m0:1})
-    #Add bounds
-    trans_nadp_me.bounds=(0, inf)
+    trans_nadp_me.notes['SUBSYSTEM'] = model.reactions.MDH2s_M.notes['SUBSYSTEM']
     
-    trans_nadp_me.notes['SUBSYSTEM']=model.reactions.MDHys_M.notes['SUBSYSTEM']
+    trans_nadp_me.subsystem = model.reactions.MDH2s_M.subsystem
+    #Add bounds
+    trans_nadp_me.bounds=(-inf, inf)
+
     trans_list.append(trans_nadp_me)
 
 
-
-    #Malate Dehydrogenase, mitochondrial (M cell)
-    trans_MDHm_M = Reaction('trans_MDHm_M')
-    trans_MDHm_M.name = 'Malate Dehydrogenase, Mitochondrial'
-    trans_MDHm_M.add_metabolites(model.reactions.MDHm_M.metabolites)
-    trans_MDHm_M.subsystem = model.reactions.MDHm_M.subsystem
     
-    trans_MDHm_M.notes['SUBSYSTEM']=model.reactions.MDHm_M.notes['SUBSYSTEM']
-    trans_list.append(trans_MDHm_M)
+    #Not needed anymore aas I've instead rebased the constraint to use the original reactions instead.
+#     #Malate Dehydrogenase, mitochondrial (M cell)
+#     trans_MDHm_M = Reaction('trans_MDHm_M')
+#     trans_MDHm_M.name = 'Malate Dehydrogenase, Mitochondrial'
+#     trans_MDHm_M.add_metabolites(model.reactions.MDHm_M.metabolites)
+#     trans_MDHm_M.subsystem = model.reactions.MDHm_M.subsystem
+#     trans_MDHm_M.notes['SUBSYSTEM'] = trans_MDHm_M.subsystem
 
-    #Malate dehydrogenase, plastidic (M cell)
-    trans_MDHs_M = Reaction('trans_MDHs_M')
-    trans_MDHs_M.name = 'Malate Dehydrogenase, Plastidic'
-    trans_MDHs_M.add_metabolites(model.reactions.MDHs_M.metabolites)
-    trans_MDHs_M.subsystem = model.reactions.MDHs_M.subsystem
+#     trans_list.append(trans_MDHm_M)
 
-    trans_MDHs_M.notes['SUBSYSTEM']=model.reactions.MDHs_M.notes['SUBSYSTEM']
-    trans_list.append(trans_MDHs_M)
+#     #Malate dehydrogenase, plastidic (M cell)
+#     trans_MDHs_M = Reaction('trans_MDHs_M')
+#     trans_MDHs_M.name = 'Malate Dehydrogenase, Plastidic'
+#     trans_MDHs_M.add_metabolites(model.reactions.MDHs_M.metabolites)
+#     trans_MDHs_M.subsystem = model.reactions.MDHs_M.subsystem
+#     trans_MDHs_M.notes['SUBSYSTEM'] = trans_MDHs_M.subsystem
+#     trans_list.append(trans_MDHs_M)
 
-    #Malate dehydrogenase, plastidic(BS Cell)
-    trans_MDHs_BS = Reaction('trans_MDHs_BS')
-    trans_MDHs_BS.name = 'Malate Dehydrogenase, Plastidic'
-    trans_MDHs_BS.add_metabolites(model.reactions.MDHs_BS.metabolites)
-    trans_MDHs_BS.subsystem = model.reactions.MDHs_BS.subsystem
+#     #Malate dehydrogenase, plastidic(BS Cell)
+#     trans_MDHs_BS = Reaction('trans_MDHs_BS')
+#     trans_MDHs_BS.name = 'Malate Dehydrogenase, Plastidic'
+#     trans_MDHs_BS.add_metabolites(model.reactions.MDHs_BS.metabolites)
+#     trans_MDHs_BS.subsystem = model.reactions.MDHs_BS.subsystem
+#     trans_MDHs_BS.notes['SUBSYSTEM'] = trans_MDHs_BS.subsystem
 
-    trans_MDHs_BS.notes['SUBSYSTEM']=model.reactions.MDHs_BS.notes['SUBSYSTEM']
-    trans_list.append(trans_MDHs_BS)
+#     trans_list.append(trans_MDHs_BS)
 
 
     #Trans CA
@@ -399,7 +445,7 @@ def add_trans_reactions(model):
     trans_hco3ec_M.bounds = model.reactions.HCO3Ec_M.bounds
 
     trans_hco3ec_M.subsystem = model.reactions.HCO3Ec_M.subsystem
-    trans_hco3ec_M.notes['SUBSYSTEM']=model.reactions.HCO3Ec_M.notes['SUBSYSTEM']
+    trans_hco3ec_M.notes['SUBSYSTEM'] = model.reactions.HCO3Ec_M.notes['SUBSYSTEM']
     trans_list.append(trans_hco3ec_M)
 
 
@@ -444,37 +490,41 @@ def add_trans_constraints(model,
                                              lb = 0, ub = trans_ppdks_rates)
     trans_PPDKs_cons.name = 'trans_ppdks_cons'
     model.add_cons_vars(trans_PPDKs_cons)
+    
 
 
     #Malate Dehydrogenase Constraints
-    trans_MDHm_M = mm.get_rxn(model, 'trans_MDHm_M')
-    trans_MDHs_M = mm.get_rxn(model, 'trans_MDHs_M')
-    trans_MDHs_BS = mm.get_rxn(model, 'trans_MDHs_BS')
-    wt_MDHm_M =  mm.get_rxn(model, 'MDHm_M')
-    wt_MDHs_M = mm.get_rxn(model, 'MDHs_M')
-    wt_MDHs_BS = mm.get_rxn(model, 'MDHs_BS')
+    trans_MDHm_M = mm.get_rxn(model, 'MDHm_M')
+    trans_MDHs_M = mm.get_rxn(model, 'MDHs_M')
+    trans_MDHs_BS = mm.get_rxn(model, 'MDHs_BS')
+    
+    #Change bounds to reflect the Trans state (Based on Immunoblotting)
+    trans_MDHm_M.bounds = (-inf, inf)
+    trans_MDHs_M.bounds = (-inf, inf)
+    trans_MDHs_BS.bounds = (-inf, inf)
     
     trans_mdh_cons =  model.problem.Constraint(
        trans_MDHm_M.flux_expression + 
-        wt_MDHm_M.flux_expression + 
         trans_MDHs_M.flux_expression + 
-        trans_MDHs_BS.flux_expression +
-        wt_MDHs_BS.flux_expression +
-        wt_MDHs_M.flux_expression, 
-        lb= 0, ub=trans_mdh_rates)
+        trans_MDHs_BS.flux_expression, 
+        lb= -trans_mdh_rates, ub=trans_mdh_rates)
 
     trans_mdh_cons.name = "trans_mdh_cons"
     model.add_cons_vars(trans_mdh_cons)
 
+    
+    
     #Add NADP-ME constraints
-    trans_MDHym_M = mm.get_rxn(model, 'trans_MDHym_M')
-    wt_MDHys_M = mm.get_rxn(model, 'MDHys_M')
-    wt_MDHys_BS = mm.get_rxn(model, 'MDHys_BS')
+    trans_MDH2m_M = mm.get_rxn(model, 'trans_MDH2m_M')
+    wt_MDH2s_M = mm.get_rxn(model, 'MDH2s_M')
+    wt_MDH2s_BS = mm.get_rxn(model, 'MDH2s_BS')
+    
+    
     
     trans_nadpme_cons = model.problem.Constraint(
-        trans_MDHym_M.flux_expression + 
-        wt_MDHys_M.flux_expression + 
-        wt_MDHys_BS.flux_expression,
+        trans_MDH2m_M.flux_expression + 
+        wt_MDH2s_M.flux_expression + 
+        wt_MDH2s_BS.flux_expression,
         lb= 0, ub=trans_nadp_me_rates)
     
     trans_nadpme_cons.name = "trans_nadpme"
@@ -501,4 +551,4 @@ def add_trans_constraints(model,
     trans_ca_cons.name = 'Trans_CA_cons'
     model.add_cons_vars(trans_ca_cons)
     model.repair()
-#     print('Successfully added Transgenic-specific constraints')
+    
